@@ -1,5 +1,5 @@
 //
-//  Milestone.swift
+//  ToDoList.swift
 //  BLT
 //
 //  Created by Jiahua Chen on 11/10/19.
@@ -8,8 +8,10 @@
 
 import Foundation
 
-struct Milestone {
-    var title: String
-    var dueDate: Date
-    var completed: boolean
+class ToDoList {
+    var list: [ToDoItem]
+    
+    init() {
+        self.list = []
+    }
 }

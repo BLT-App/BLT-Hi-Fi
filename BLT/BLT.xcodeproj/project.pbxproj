@@ -15,7 +15,14 @@
 		3FE3EA78237718DB002B5303 /* BLTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3EA77237718DB002B5303 /* BLTTests.swift */; };
 		3FE3EA83237718DB002B5303 /* BLTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3EA82237718DB002B5303 /* BLTUITests.swift */; };
 		5EC4BDA89C3F094DB85D29C1 /* Pods_BLT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AD7BB0B401C38CBCB198C5 /* Pods_BLT.framework */; };
-		D7769DAD2378A1CC002925B3 /* ModelClasses in Resources */ = {isa = PBXBuildFile; fileRef = D7769DAC2378A1CB002925B3 /* ModelClasses */; };
+		D721FD562378AA0300ABD1EF /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD552378AA0300ABD1EF /* ToDoTableViewCell.swift */; };
+		D721FD5C2378ACA300ABD1EF /* MilestoneItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD572378ACA300ABD1EF /* MilestoneItem.swift */; };
+		D721FD5D2378ACA300ABD1EF /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD582378ACA300ABD1EF /* Milestone.swift */; };
+		D721FD5E2378ACA300ABD1EF /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD592378ACA300ABD1EF /* ToDoItem.swift */; };
+		D721FD5F2378ACA300ABD1EF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD5A2378ACA300ABD1EF /* UserData.swift */; };
+		D721FD602378ACA300ABD1EF /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD5B2378ACA300ABD1EF /* ToDoList.swift */; };
+		D721FD632378ACA600ABD1EF /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD612378ACA600ABD1EF /* NewItemViewController.swift */; };
+		D721FD642378ACA600ABD1EF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD622378ACA600ABD1EF /* ListViewController.swift */; };
 		D7F0D7302378A06E0044E694 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7F0D72F2378A06E0044E694 /* Podfile */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +60,15 @@
 		3FE3EA84237718DB002B5303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		624A30B37FCA4FC9A8B86B67 /* Pods-BLT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLT.debug.xcconfig"; path = "Target Support Files/Pods-BLT/Pods-BLT.debug.xcconfig"; sourceTree = "<group>"; };
 		B8AD7BB0B401C38CBCB198C5 /* Pods_BLT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7769DAC2378A1CB002925B3 /* ModelClasses */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ModelClasses; sourceTree = "<group>"; };
-		D7F0D72F2378A06E0044E694 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		D721FD552378AA0300ABD1EF /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		D721FD572378ACA300ABD1EF /* MilestoneItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneItem.swift; sourceTree = "<group>"; };
+		D721FD582378ACA300ABD1EF /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
+		D721FD592378ACA300ABD1EF /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		D721FD5A2378ACA300ABD1EF /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		D721FD5B2378ACA300ABD1EF /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
+		D721FD612378ACA600ABD1EF /* NewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
+		D721FD622378ACA600ABD1EF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		D7F0D72F2378A06E0044E694 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +137,14 @@
 				3FE3EA69237718DB002B5303 /* Assets.xcassets */,
 				3FE3EA6B237718DB002B5303 /* LaunchScreen.storyboard */,
 				3FE3EA6E237718DB002B5303 /* Info.plist */,
-				D7769DAC2378A1CB002925B3 /* ModelClasses */,
+				D721FD552378AA0300ABD1EF /* ToDoTableViewCell.swift */,
+				D721FD582378ACA300ABD1EF /* Milestone.swift */,
+				D721FD572378ACA300ABD1EF /* MilestoneItem.swift */,
+				D721FD592378ACA300ABD1EF /* ToDoItem.swift */,
+				D721FD5B2378ACA300ABD1EF /* ToDoList.swift */,
+				D721FD5A2378ACA300ABD1EF /* UserData.swift */,
+				D721FD622378ACA600ABD1EF /* ListViewController.swift */,
+				D721FD612378ACA600ABD1EF /* NewItemViewController.swift */,
 			);
 			path = BLT;
 			sourceTree = "<group>";
@@ -264,7 +285,6 @@
 				3FE3EA6A237718DB002B5303 /* Assets.xcassets in Resources */,
 				D7F0D7302378A06E0044E694 /* Podfile in Resources */,
 				3FE3EA68237718D3002B5303 /* Main.storyboard in Resources */,
-				D7769DAD2378A1CC002925B3 /* ModelClasses in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +334,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D721FD562378AA0300ABD1EF /* ToDoTableViewCell.swift in Sources */,
+				D721FD5C2378ACA300ABD1EF /* MilestoneItem.swift in Sources */,
+				D721FD632378ACA600ABD1EF /* NewItemViewController.swift in Sources */,
+				D721FD5F2378ACA300ABD1EF /* UserData.swift in Sources */,
+				D721FD602378ACA300ABD1EF /* ToDoList.swift in Sources */,
+				D721FD5E2378ACA300ABD1EF /* ToDoItem.swift in Sources */,
 				3FE3EA65237718D3002B5303 /* ViewController.swift in Sources */,
+				D721FD5D2378ACA300ABD1EF /* Milestone.swift in Sources */,
+				D721FD642378ACA600ABD1EF /* ListViewController.swift in Sources */,
 				3FE3EA63237718D3002B5303 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
