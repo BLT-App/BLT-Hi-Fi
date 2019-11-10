@@ -31,8 +31,10 @@ class NewItemViewController: UIViewController {
     
     @IBAction func addButton(_ sender: UIButton) {
         if let classTxt = classText.text, let titleTxt = titleText.text, let descTxt = descText.text {
-            let newToDo = ToDoItem(className: classTxt, title: titleTxt, description: descTxt, dueDate: datePicker.date, completed: false)
-            myToDoList.list.insert(newToDo, at: 0)
+            if (classTxt != "" && titleTxt != "") {
+                let newToDo = ToDoItem(className: classTxt, title: titleTxt, description: descTxt, dueDate: datePicker.date, completed: false)
+                myToDoList.list.insert(newToDo, at: 0)
+            }
             self.dismiss(animated: true)
         }
     }
