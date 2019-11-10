@@ -9,5 +9,16 @@
 import Foundation
 
 class ToDoItem {
+    var title: String
+    var description: String
+    var dueDate: Date
+    var completed: boolean
     
+    init(title: String, description: String,
+         dueDate: Date, completed: Boolean) {
+        self.title = title
+        self.description = description
+        self.dueDate = dueDate
+        self.completed = completed
+    }
 }

@@ -9,5 +9,5 @@
 import Foundation
 
 class MilestoneItem: ToDoItem {
-    
+    var milestones: [Milestone]
 }
