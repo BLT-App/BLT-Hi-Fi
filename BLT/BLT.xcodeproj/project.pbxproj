@@ -15,6 +15,7 @@
 		3FE3EA78237718DB002B5303 /* BLTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3EA77237718DB002B5303 /* BLTTests.swift */; };
 		3FE3EA83237718DB002B5303 /* BLTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3EA82237718DB002B5303 /* BLTUITests.swift */; };
 		5EC4BDA89C3F094DB85D29C1 /* Pods_BLT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AD7BB0B401C38CBCB198C5 /* Pods_BLT.framework */; };
+		D7769DAD2378A1CC002925B3 /* ModelClasses in Resources */ = {isa = PBXBuildFile; fileRef = D7769DAC2378A1CB002925B3 /* ModelClasses */; };
 		D7F0D7302378A06E0044E694 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7F0D72F2378A06E0044E694 /* Podfile */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		3FE3EA84237718DB002B5303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		624A30B37FCA4FC9A8B86B67 /* Pods-BLT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLT.debug.xcconfig"; path = "Target Support Files/Pods-BLT/Pods-BLT.debug.xcconfig"; sourceTree = "<group>"; };
 		B8AD7BB0B401C38CBCB198C5 /* Pods_BLT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7769DAC2378A1CB002925B3 /* ModelClasses */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ModelClasses; sourceTree = "<group>"; };
 		D7F0D72F2378A06E0044E694 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 				3FE3EA69237718DB002B5303 /* Assets.xcassets */,
 				3FE3EA6B237718DB002B5303 /* LaunchScreen.storyboard */,
 				3FE3EA6E237718DB002B5303 /* Info.plist */,
+				D7769DAC2378A1CB002925B3 /* ModelClasses */,
 			);
 			path = BLT;
 			sourceTree = "<group>";
@@ -149,7 +152,6 @@
 				624A30B37FCA4FC9A8B86B67 /* Pods-BLT.debug.xcconfig */,
 				3BD6BFEBB320243A67A7513E /* Pods-BLT.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -262,6 +264,7 @@
 				3FE3EA6A237718DB002B5303 /* Assets.xcassets in Resources */,
 				D7F0D7302378A06E0044E694 /* Podfile in Resources */,
 				3FE3EA68237718D3002B5303 /* Main.storyboard in Resources */,
+				D7769DAD2378A1CC002925B3 /* ModelClasses in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
