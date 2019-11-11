@@ -147,25 +147,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GI8-eN-TpD">
-                                <rect key="frame" x="117" y="112" width="180" height="41"/>
+                                <rect key="frame" x="117" y="112" width="180" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="e2i-zg-LFj"/>
+                                    <constraint firstAttribute="width" constant="180" id="zKD-ym-84H"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugR-Bz-WuA">
-                                <rect key="frame" x="102" y="180" width="210" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Task" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugR-Bz-WuA">
+                                <rect key="frame" x="102.5" y="184" width="209.5" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="KHf-Ia-emX"/>
+                                    <constraint firstAttribute="height" constant="140" id="rhq-Kl-pEf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Oc-RX-9Op">
-                                <rect key="frame" x="161" y="343" width="92" height="43"/>
+                                <rect key="frame" x="161" y="580" width="92" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8C-pt-Izd">
-                                <rect key="frame" x="118" y="530" width="178" height="46"/>
+                                <rect key="frame" x="118" y="653" width="178" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Complete Task"/>
                                 <connections>
@@ -189,10 +197,10 @@
                             <constraint firstItem="GI8-eN-TpD" firstAttribute="top" secondItem="54u-8A-3Xb" secondAttribute="top" constant="68" id="66W-K1-ye9"/>
                             <constraint firstItem="B8C-pt-Izd" firstAttribute="centerX" secondItem="f3S-L5-YSf" secondAttribute="centerX" id="986-0U-xJL"/>
                             <constraint firstItem="GI8-eN-TpD" firstAttribute="centerX" secondItem="f3S-L5-YSf" secondAttribute="centerX" id="F5M-ki-8BG"/>
-                            <constraint firstItem="B8C-pt-Izd" firstAttribute="top" secondItem="1Oc-RX-9Op" secondAttribute="bottom" constant="144" id="FNa-Nd-WET"/>
                             <constraint firstItem="ugR-Bz-WuA" firstAttribute="centerX" secondItem="f3S-L5-YSf" secondAttribute="centerX" id="Hrx-W1-P0J"/>
-                            <constraint firstItem="1Oc-RX-9Op" firstAttribute="top" secondItem="ugR-Bz-WuA" secondAttribute="bottom" constant="116" id="Hws-eQ-Bs7"/>
                             <constraint firstItem="RRH-ic-pC4" firstAttribute="centerX" secondItem="f3S-L5-YSf" secondAttribute="centerX" id="Qjg-h6-T6g"/>
+                            <constraint firstItem="B8C-pt-Izd" firstAttribute="top" secondItem="1Oc-RX-9Op" secondAttribute="bottom" constant="30" id="baH-nn-Lb4"/>
+                            <constraint firstItem="RRH-ic-pC4" firstAttribute="top" secondItem="B8C-pt-Izd" secondAttribute="bottom" constant="20" id="f4U-D1-Mgu"/>
                             <constraint firstItem="1Oc-RX-9Op" firstAttribute="centerX" secondItem="f3S-L5-YSf" secondAttribute="centerX" id="gep-hY-qHR"/>
                             <constraint firstItem="ugR-Bz-WuA" firstAttribute="top" secondItem="GI8-eN-TpD" secondAttribute="bottom" constant="27" id="vh3-82-rS4"/>
                         </constraints>
@@ -206,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cde-Mv-hzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1000" y="992"/>
+            <point key="canvasLocation" x="1000.0000000000001" y="991.74107142857133"/>
         </scene>
         <!--New Item View Controller-->
         <scene sceneID="3ac-Wj-hTW">

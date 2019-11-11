@@ -41,15 +41,20 @@ class SettingsViewController: UIViewController {
                     }
                 }
             }
-            currentTask = myToDoList.list[currentTaskNum]
-            lblCurrentTask.text = currentTask.title
+            if !notFoundNextItem {
+                currentTask = myToDoList.list[currentTaskNum]
+                lblCurrentTask.text = currentTask.title
+            } else {
+                lblCurrentTask.text = "No Items Left Todo"
+                btnCompleteTask.isEnabled = false
+                btnCompleteTask.isHidden = true
+            }
         }
         else {
             lblCurrentTask.text = "No Items In Todo List"
             btnCompleteTask.isEnabled = false
             btnCompleteTask.isHidden = true
         }
-        
     }
     
     override func viewDidLoad() {
