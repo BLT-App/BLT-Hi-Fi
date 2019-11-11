@@ -11,4 +11,4 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Start xcodebuild test
-      run: xcodebuild clean test -project BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8"
+      run: xcodebuild clean test -project BLT/BLT.xcodeproj -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8"
