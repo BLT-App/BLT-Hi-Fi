@@ -10,7 +10,6 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    var myToDoList : ToDoList = ToDoList()
     var currentTask : ToDoItem = ToDoItem(className: "", title: "", description: "", dueDate: Date(), completed: true)
     var currentTaskNum : Int = 0
 
