@@ -1,4 +1,4 @@
-name: Swift Tests
+name: Swift Project Build Test
 
 on: 
   push:
