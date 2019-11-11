@@ -25,7 +25,7 @@ class ListViewController: UIViewController {
         myToDoList = createExampleList()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.tableView.reloadData()
     }
