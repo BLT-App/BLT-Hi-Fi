@@ -1,4 +1,4 @@
-name: CI
+name: Swift Tests
 
 on: 
   push:
@@ -11,4 +11,4 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Start xcodebuild test
-      run: xcodebuild clean test -project BLT.xcodeproj -scheme TodoSampleApp -destination "platform=iOS Simulator,name=iPhone 8"
+      run: xcodebuild clean test -project BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8"
