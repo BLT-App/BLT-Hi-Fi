@@ -13,6 +13,9 @@ class ToDoItem {
     var title: String
     var description: String
     var dueDate: Date
+    var dueInterval: TimeInterval {
+        return self.dueDate.timeIntervalSinceNow
+    }
     var completed: Bool
     
     init(className: String, title: String, description: String,
