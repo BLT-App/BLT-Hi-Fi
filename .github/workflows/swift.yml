@@ -1,10 +1,7 @@
-name: CI
+name: Basic Swift Workflow
 # This workflow is triggered on pushes to the repository.
 on:
   push:
-    branches:
-    - develop
-    - feature/*
 
 jobs:
   test:
@@ -14,8 +11,8 @@ jobs:
     runs-on: macOS-latest
     strategy:
       matrix:
-        destination: ['platform=iOS Simulator,OS=13.1,name=iPhone 8']
-        xcode: ['/Applications/Xcode_11.1.app/Contents/Developer']
+        destination: ['platform=iOS Simulator,OS=13.1,name=iPhone X']
+        xcode: ['/Applications/Xcode_10.1.app/Contents/Developer']
     steps:
       - name: Checkout
         uses: actions/checkout@v1
