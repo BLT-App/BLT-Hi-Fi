@@ -109,7 +109,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
         if let indexPath = deleteListIndexPath {
             myToDoList.list.remove(at: indexPath.row)
             tableView.beginUpdates()
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.deleteRows(at: [indexPath], with: .left)
             tableView.endUpdates()
             
             deleteListIndexPath = nil
