@@ -109,6 +109,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="RNs-5a-mnN">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Settings" style="plain" id="nJb-oL-3Dy">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Fp-rA-gd8">
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Settings"/>
+                                <state key="normal" title="Settings"/>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add Task" id="Qkn-Qn-9ou">
                             <connections>
                                 <segue destination="af1-3d-i5j" kind="presentation" identifier="AddTask" id="rgj-uV-lw2"/>
@@ -131,13 +140,23 @@
                     <view key="view" contentMode="scaleToFill" id="OhR-h3-WGB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC6-st-1Wj">
+                                <rect key="frame" x="141" y="64" width="140" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.39934828133695144" green="1" blue="0.95268206034602365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="oEi-fr-2pX"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3bx-05-tZ6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybU-Mj-Wnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="854"/>
+            <point key="canvasLocation" x="1075.3623188405797" y="853.79464285714278"/>
         </scene>
         <!--New Item View Controller-->
         <scene sceneID="3ac-Wj-hTW">
