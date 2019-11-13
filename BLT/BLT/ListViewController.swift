@@ -27,15 +27,14 @@ class ListViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         roundContainerView(cornerRadius: 40, view: tableContainerView, shadowView: shadowView)
-        addShadow(view: shadowView, color: UIColor.gray.cgColor, opacity: 0.1, radius: 10, offset: CGSize(width: 0, height: -5))
-        
+        addShadow(view: shadowView, color: UIColor.gray.cgColor, opacity: 0.2, radius: 10, offset: CGSize(width: 0, height: 5))
         addShadow(view: addButton, color: UIColor.blue.cgColor, opacity: 0.1, radius: 5, offset: .zero)
                 
         /// Debug only!
         myToDoList = createExampleList()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         if (myToDoList.list.count != tableView.numberOfRows(inSection: 0)) {
@@ -52,13 +51,14 @@ class ListViewController: UIViewController {
     }
     
     func roundContainerView(cornerRadius: Double, view: UIView, shadowView: UIView) {
-        let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
+        let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
         let maskLayer = CAShapeLayer()
         maskLayer.frame = view.bounds
         maskLayer.path = path.cgPath
         view.layer.mask = maskLayer
         
         shadowView.layer.cornerRadius = CGFloat(cornerRadius)
+        shadowView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     }
     
     func insertNewTask() {

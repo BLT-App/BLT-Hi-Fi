@@ -26,7 +26,7 @@ class NewItemViewController: UIViewController {
     
 
     @IBAction func exitButton(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func addButton(_ sender: UIButton) {
@@ -35,7 +35,7 @@ class NewItemViewController: UIViewController {
                 let newToDo = ToDoItem(className: classTxt, title: titleTxt, description: descTxt, dueDate: datePicker.date, completed: false)
                 myToDoList.list.insert(newToDo, at: 0)
             }
-            self.dismiss(animated: true)
+            self.dismiss(animated: true, completion: nil)
         }
     }
     

@@ -13,9 +13,24 @@ class ToDoItem {
     var title: String
     var description: String
     var dueDate: Date
-    var dueInterval: TimeInterval {
-        return self.dueDate.timeIntervalSinceNow
+    var dueCounter: Int {
+        let calendar = NSCalendar.current
+        let dueDay = calendar.startOfDay(for: dueDate)
+        let nowDay = calendar.startOfDay(for: Date())
+        let inBetween = calendar.dateComponents([.day], from: nowDay, to: dueDay).day
+        return inBetween!
     }
+    
+    var dueString: String {
+        if (dueCounter == 0) {
+            return "Due today"
+        } else if (dueCounter < 0) {
+            return "Due \(abs(dueCounter)) days ago"
+        } else {
+            return "Due in \(dueCounter) days"
+        }
+    }
+
     var completed: Bool
     
     init(className: String, title: String, description: String,

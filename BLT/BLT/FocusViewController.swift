@@ -17,14 +17,27 @@ class FocusViewController: UIViewController {
     
     @IBOutlet weak var btnCompleteTask: UIButton!
     
-    @IBAction func completeTaskPress(_ sender: UIButton) {
-        myToDoList.list[currentTaskNum].completed = true
-        setCurrentTask()
-    }
+    @IBOutlet weak var endFocusModeButton: UIButton!
     
-    @IBAction func endFocusModeHit(_ sender: UIButton) {
-        showTabBar()
-        self.tabBarController?.selectedIndex = 0
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Sets up curves
+        btnCompleteTask.layer.cornerRadius = 25.0
+        btnCompleteTask.layer.shadowColor = UIColor.blue.cgColor
+        btnCompleteTask.layer.shadowOpacity = 0.2
+        btnCompleteTask.layer.shadowOffset = CGSize(width: 0, height: 0)
+        btnCompleteTask.layer.shadowRadius = 5.0
+        btnCompleteTask.layer.masksToBounds = false
+        
+        endFocusModeButton.layer.cornerRadius = 18.0
+        endFocusModeButton.layer.shadowColor = UIColor.red.cgColor
+        endFocusModeButton.layer.shadowOpacity = 0.2
+        endFocusModeButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        endFocusModeButton.layer.shadowRadius = 5.0
+        endFocusModeButton.layer.masksToBounds = false
+
+        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -82,12 +95,15 @@ class FocusViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBAction func completeTaskPress(_ sender: UIButton) {
+        myToDoList.list[currentTaskNum].completed = true
+        setCurrentTask()
     }
     
+    @IBAction func endFocusModeHit(_ sender: UIButton) {
+        showTabBar()
+        self.tabBarController?.selectedIndex = 0
+    }
 
     /*
     // MARK: - Navigation
