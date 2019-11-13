@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class FocusViewController: UIViewController {
     
     var currentTask : ToDoItem = ToDoItem(className: "", title: "", description: "", dueDate: Date(), completed: true)
     var currentTaskNum : Int = 0
@@ -23,7 +23,32 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func endFocusModeHit(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        showTabBar()
+        self.tabBarController?.selectedIndex = 0
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        hideTabBar()
+    }
+    
+    /// Hides or shows the Tab Bar controller
+    func hideTabBar() {
+        var frame = self.tabBarController?.tabBar.frame
+        let height = (frame?.size.height)!
+        frame?.origin.y = self.view.frame.size.height + height
+        UIView.animate(withDuration: 0.5, animations: {
+            self.tabBarController?.tabBar.frame = frame!
+        })
+    }
+
+    func showTabBar() {
+        var frame = self.tabBarController?.tabBar.frame
+        let height = (frame?.size.height)!
+        frame?.origin.y = self.view.frame.size.height - height
+        UIView.animate(withDuration: 0.5, animations: {
+            self.tabBarController?.tabBar.frame = frame!
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
