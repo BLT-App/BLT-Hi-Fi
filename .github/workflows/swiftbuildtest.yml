@@ -12,24 +12,27 @@ jobs:
     
     steps:
     - uses: actions/checkout@master
-    - name: Start Build and Upload App
+    - name: Clean Before Build
       run: |
-        echo START TEST
         xcodebuild clean -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8"
         echo Cleaning Done
+    - name: Build App
+      run: |
         echo Starting Build...
         xcodebuild -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8" 
         echo Build Done
+    - name: Copy App File
+      run: |
         echo Copying App File...
         cp -R /Users/runner/Library/Developer/Xcode/DerivedData/*/Build/Products/Debug-iphonesimulator/BLT.app ./BLT
         echo App File Copied
-        echo Adding Files to be Committed...
+    - name: Commit files
+    run: |
+        git config --local user.email "nlorentzen@hotchkiss.org"
+        git config --local user.name "BLT-BOT"
         git add -A
-        echo Files Added
-        echo Committing Files...
-        git commit -a -m "Upload Built App"
-        echo Files Committed
-        echo Pushing Files...
-        git push
-        echo Push Done
-        echo END OF TEST
+        git commit -m "Upload App" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
