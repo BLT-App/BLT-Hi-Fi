@@ -27,12 +27,12 @@ jobs:
         cp -R /Users/runner/Library/Developer/Xcode/DerivedData/*/Build/Products/Debug-iphonesimulator/BLT.app ./BLT
         echo App File Copied
     - name: Commit files
-    run: |
+      run: |
         git config --local user.email "nlorentzen@hotchkiss.org"
         git config --local user.name "BLT-BOT"
         git add -A
         git commit -m "Upload App" -a
+    - name: Push App To Repository
     - uses: ad-m/github-push-action@master
-    - name: Push changes
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
