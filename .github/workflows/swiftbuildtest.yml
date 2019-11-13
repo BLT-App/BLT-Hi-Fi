@@ -15,7 +15,16 @@ jobs:
     - name: Start xcodebuild test
       run: |
         xcodebuild clean -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8"
+        echo Cleaning Done
+        echo Starting Build...
         xcodebuild -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8" 
+        echo Build Done
+        echo Copying App File...
         cp -R /Users/student/Library/Developer/Xcode/DerivedData/*/Debug-iphonesimulator/BLT.app ./BLT
+        echo App File Copied
+        echo Committing Files...
         git commit -a -m "Upload Built App"
+        echo Files Committed
+        echo Pushing Files...
         git push
+        echo Push Done
