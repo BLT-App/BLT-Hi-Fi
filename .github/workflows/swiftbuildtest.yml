@@ -1,6 +1,9 @@
 name: Swift Project Build Test
 
-on: push
+on: 
+  push:
+    paths-ignore:
+    - '**/BLT.app'
 
 jobs:
   build:
@@ -11,5 +14,8 @@ jobs:
     - uses: actions/checkout@master
     - name: Start xcodebuild test
       run: |
-        xcodebuild clean test -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8"
-        cp */Library/Developer/CoreSimulator/Devices/*/data/Containers/Bundle/Application/*/BLT.app /BLT
+        xcodebuild clean -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8"
+        xcodebuild -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8" 
+        cp -R /Users/student/Library/Developer/Xcode/DerivedData/*/Debug-iphonesimulator/BLT.app ./BLT
+        git commit -a -m "Upload Built App"
+        git push
