@@ -32,7 +32,7 @@ jobs:
         git config --local user.name "BLT-BOT"
         git add -A
         git commit -m "Upload App" -a
+    - uses: ad-m/github-push-action@master
     - name: Push changes
-      uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
