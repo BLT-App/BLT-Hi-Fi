@@ -25,10 +25,11 @@ class ToDoTableViewCell: UITableViewCell {
         classLabel.clipsToBounds = true
         
         itemView.layer.cornerRadius = 20.0
-        itemView.layer.shadowColor = UIColor.gray.cgColor
-        itemView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        itemView.layer.shadowRadius = 4.0
-        itemView.layer.shadowOpacity = 0.6
+        itemView.layer.shadowColor = UIColor.black.cgColor
+        itemView.layer.shadowOpacity = 0.1
+        itemView.layer.shadowOffset = CGSize(width: 0, height: 4)
+        itemView.layer.shadowRadius = 0.0
+        itemView.layer.masksToBounds = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
