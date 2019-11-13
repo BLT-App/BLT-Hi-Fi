@@ -18,8 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJq-N5-U4V">
+                                <rect key="frame" x="0.0" y="769" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Focus Mode" style="plain" id="eUT-vr-Var">
+                                        <connections>
+                                            <segue destination="8Ou-6j-48c" kind="presentation" identifier="StartFocusModeSegue" id="8mY-yE-XWn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egg-sz-gdj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" rowHeight="163" id="rgP-Pk-mxg" customClass="ToDoTableViewCell" customModule="BLT" customModuleProvider="target">
@@ -101,13 +111,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="EJq-N5-U4V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MR2-WL-5yF"/>
                             <constraint firstItem="egg-sz-gdj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PCc-M4-3Qx"/>
-                            <constraint firstAttribute="bottom" secondItem="egg-sz-gdj" secondAttribute="bottom" id="RYX-Na-XMJ"/>
                             <constraint firstItem="egg-sz-gdj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XIP-0z-LKA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EJq-N5-U4V" secondAttribute="bottom" id="e2e-PO-IqI"/>
                             <constraint firstItem="egg-sz-gdj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hbZ-ft-ttc"/>
+                            <constraint firstItem="EJq-N5-U4V" firstAttribute="top" secondItem="egg-sz-gdj" secondAttribute="bottom" id="vu6-ke-6DY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="RNs-5a-mnN">
                         <barButtonItem key="rightBarButtonItem" title="Add Task" id="Qkn-Qn-9ou">
                             <connections>
@@ -115,6 +128,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addTaskButton" destination="Qkn-Qn-9ou" id="Bc1-98-0Zo"/>
                         <outlet property="tableView" destination="egg-sz-gdj" id="WYX-MC-djl"/>
@@ -123,6 +137,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="CvB-yk-jrt">
+            <objects>
+                <viewController title="Settings" id="8Ou-6j-48c" customClass="SettingsViewController" customModule="BLT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f3S-L5-YSf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GI8-eN-TpD">
+                                <rect key="frame" x="117" y="112" width="180" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="e2i-zg-LFj"/>
+                                    <constraint firstAttribute="width" constant="180" id="zKD-ym-84H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Task" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugR-Bz-WuA">
+                                <rect key="frame" x="102.5" y="184" width="209.5" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="KHf-Ia-emX"/>
+                                    <constraint firstAttribute="height" constant="140" id="rhq-Kl-pEf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Oc-RX-9Op">
+                                <rect key="frame" x="161" y="580" width="92" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8C-pt-Izd">
+                                <rect key="frame" x="118" y="653" width="178" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Complete Task"/>
+                                <connections>
+                                    <action selector="completeTaskPress:" destination="8Ou-6j-48c" eventType="touchUpInside" id="ImR-EO-FVG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRH-ic-pC4">
+                                <rect key="frame" x="139" y="719" width="136" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="End Focus Mode">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="endFocusModeHit:" destination="8Ou-6j-48c" eventType="touchUpInside" id="kOa-p9-JhO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="54u-8A-3Xb" firstAttribute="bottom" secondItem="RRH-ic-pC4" secondAttribute="bottom" constant="109" id="4Cx-Uh-ZvH"/>
+                            <constraint firstItem="GI8-eN-TpD" firstAttribute="top" secondItem="54u-8A-3Xb" secondAttribute="top" constant="68" id="66W-K1-ye9"/>
+                            <constraint firstItem="B8C-pt-Izd" firstAttribute="centerX" secondItem="f3S-L5-YSf" secondAttribute="centerX" id="986-0U-xJL"/>
+                            <constraint firstItem="GI8-eN-TpD" firstAttribute="centerX" secondItem="f3S-L5-YSf" secondAttribute="centerX" id="F5M-ki-8BG"/>
+                            <constraint firstItem="ugR-Bz-WuA" firstAttribute="centerX" secondItem="f3S-L5-YSf" secondAttribute="centerX" id="Hrx-W1-P0J"/>
+                            <constraint firstItem="RRH-ic-pC4" firstAttribute="centerX" secondItem="f3S-L5-YSf" secondAttribute="centerX" id="Qjg-h6-T6g"/>
+                            <constraint firstItem="B8C-pt-Izd" firstAttribute="top" secondItem="1Oc-RX-9Op" secondAttribute="bottom" constant="30" id="baH-nn-Lb4"/>
+                            <constraint firstItem="RRH-ic-pC4" firstAttribute="top" secondItem="B8C-pt-Izd" secondAttribute="bottom" constant="20" id="f4U-D1-Mgu"/>
+                            <constraint firstItem="1Oc-RX-9Op" firstAttribute="centerX" secondItem="f3S-L5-YSf" secondAttribute="centerX" id="gep-hY-qHR"/>
+                            <constraint firstItem="ugR-Bz-WuA" firstAttribute="top" secondItem="GI8-eN-TpD" secondAttribute="bottom" constant="27" id="vh3-82-rS4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="54u-8A-3Xb"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnCompleteTask" destination="B8C-pt-Izd" id="tdX-Na-KPO"/>
+                        <outlet property="lblCurrentTask" destination="ugR-Bz-WuA" id="hCs-Lh-n3E"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="endFocusModeSegue" id="wuF-ds-FxP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cde-Mv-hzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.0000000000001" y="991.74107142857133"/>
         </scene>
         <!--New Item View Controller-->
         <scene sceneID="3ac-Wj-hTW">
@@ -224,4 +316,8 @@
             <point key="canvasLocation" x="1048" y="-585"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8mY-yE-XWn"/>
+        <segue reference="wuF-ds-FxP"/>
+    </inferredMetricsTieBreakers>
 </document>

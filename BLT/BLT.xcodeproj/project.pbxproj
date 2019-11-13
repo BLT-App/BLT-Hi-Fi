@@ -14,6 +14,7 @@
 		3FE3EA6D237718DB002B5303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE3EA6B237718DB002B5303 /* LaunchScreen.storyboard */; };
 		3FE3EA78237718DB002B5303 /* BLTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3EA77237718DB002B5303 /* BLTTests.swift */; };
 		3FE3EA83237718DB002B5303 /* BLTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3EA82237718DB002B5303 /* BLTUITests.swift */; };
+		3FE3EA912378DA82002B5303 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3EA902378DA82002B5303 /* SettingsViewController.swift */; };
 		5EC4BDA89C3F094DB85D29C1 /* Pods_BLT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AD7BB0B401C38CBCB198C5 /* Pods_BLT.framework */; };
 		D721FD562378AA0300ABD1EF /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD552378AA0300ABD1EF /* ToDoTableViewCell.swift */; };
 		D721FD5C2378ACA300ABD1EF /* MilestoneItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD572378ACA300ABD1EF /* MilestoneItem.swift */; };
@@ -58,6 +59,7 @@
 		3FE3EA7E237718DB002B5303 /* BLTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE3EA82237718DB002B5303 /* BLTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLTUITests.swift; sourceTree = "<group>"; };
 		3FE3EA84237718DB002B5303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE3EA902378DA82002B5303 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		624A30B37FCA4FC9A8B86B67 /* Pods-BLT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLT.debug.xcconfig"; path = "Target Support Files/Pods-BLT/Pods-BLT.debug.xcconfig"; sourceTree = "<group>"; };
 		B8AD7BB0B401C38CBCB198C5 /* Pods_BLT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D721FD552378AA0300ABD1EF /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				3FE3EA62237718D3002B5303 /* AppDelegate.swift */,
 				3FE3EA64237718D3002B5303 /* ViewController.swift */,
 				3FE3EA66237718D3002B5303 /* Main.storyboard */,
+				3FE3EA902378DA82002B5303 /* SettingsViewController.swift */,
 				3FE3EA69237718DB002B5303 /* Assets.xcassets */,
 				3FE3EA6B237718DB002B5303 /* LaunchScreen.storyboard */,
 				3FE3EA6E237718DB002B5303 /* Info.plist */,
@@ -343,6 +346,7 @@
 				3FE3EA65237718D3002B5303 /* ViewController.swift in Sources */,
 				D721FD5D2378ACA300ABD1EF /* Milestone.swift in Sources */,
 				D721FD642378ACA600ABD1EF /* ListViewController.swift in Sources */,
+				3FE3EA912378DA82002B5303 /* SettingsViewController.swift in Sources */,
 				3FE3EA63237718D3002B5303 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
