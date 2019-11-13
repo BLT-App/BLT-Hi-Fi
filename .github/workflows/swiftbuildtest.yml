@@ -20,7 +20,7 @@ jobs:
         xcodebuild -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8" 
         echo Build Done
         echo Copying App File...
-        cp -R /Users/*/Library/Developer/Xcode/DerivedData/*/Debug-iphonesimulator/BLT.app ./BLT
+        cp -R /Users/runner/Library/Developer/Xcode/DerivedData/*/Build/Products/Debug-iphonesimulator/BLT.app ./BLT
         echo App File Copied
         echo Committing Files...
         git commit -a -m "Upload Built App"
