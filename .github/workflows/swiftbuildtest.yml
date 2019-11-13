@@ -12,8 +12,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@master
-    - name: Start xcodebuild test
+    - name: Start Build and Upload App
       run: |
+        echo START TEST
         xcodebuild clean -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8"
         echo Cleaning Done
         echo Starting Build...
@@ -22,9 +23,13 @@ jobs:
         echo Copying App File...
         cp -R /Users/runner/Library/Developer/Xcode/DerivedData/*/Build/Products/Debug-iphonesimulator/BLT.app ./BLT
         echo App File Copied
+        echo Adding Files to be Committed...
+        git add -A
+        echo Files Added
         echo Committing Files...
         git commit -a -m "Upload Built App"
         echo Files Committed
         echo Pushing Files...
         git push
         echo Push Done
+        echo END OF TEST
