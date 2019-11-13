@@ -1,14 +1,22 @@
 name: Swift Project Build Test
 
-on: 
-  push:
+on: push
 
 jobs:
   build:
-
+    name: Build App
     runs-on: macOS-latest
     
     steps:
-    - uses: actions/checkout@master
     - name: Start xcodebuild test
-      run: xcodebuild clean test -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8"
+      run: 
+        xcodebuild clean test -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8"
+
+  upload:
+    needs: build
+    name: Upload App File
+     steps:
+      run:
+        cp */Library/Developer/CoreSimulator/Devices/*/data/Containers/Bundle/Application/*/BLT.app /BLT
+    
+
