@@ -11,6 +11,8 @@ import UIKit
 var myToDoList: ToDoList = ToDoList()
 
 class ListViewController: UIViewController {
+    
+    var deleteListIndexPath: IndexPath? = nil
 
     @IBOutlet weak var addTaskButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
@@ -27,7 +29,17 @@ class ListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.tableView.reloadData()
+        
+        if (myToDoList.list.count != tableView.numberOfRows(inSection: 0)) {
+            insertNewTask()
+        }
+    }
+    
+    func insertNewTask() {
+        let indexPath = IndexPath(row: 0, section: 0)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [indexPath], with: .right)
+        tableView.endUpdates()
     }
     
     /// Creates example content for the ToDoList
@@ -72,5 +84,39 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
         cell.setItem(item: toDoItem)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            deleteListIndexPath = indexPath
+            let itemToDelete = myToDoList.list[indexPath.row]
+            confirmDelete(itemToDelete)
+        }
+    }
+    
+    func confirmDelete(_ itemToDelete: ToDoItem) {
+        let alert = UIAlertController(title: "Delete To-Do Item", message: "Are you sure you want to delete the item \(itemToDelete.title)?", preferredStyle: .actionSheet)
+        let DeleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: handleDeleteItem)
+        let CancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelDeleteItem)
+        
+        alert.addAction(DeleteAction)
+        alert.addAction(CancelAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func handleDeleteItem(alertAction: UIAlertAction!) {
+        if let indexPath = deleteListIndexPath {
+            myToDoList.list.remove(at: indexPath.row)
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .left)
+            tableView.endUpdates()
+            
+            deleteListIndexPath = nil
+        }
+    }
+    
+    func cancelDeleteItem(alertAction: UIAlertAction!) {
+        deleteListIndexPath = nil
     }
 }

@@ -1,0 +1,39 @@
+name: Swift Project Build Test
+
+on: 
+  push:
+    paths-ignore:
+    - '**/BLT.app'
+
+jobs:
+  build:
+    name: Build App
+    runs-on: macOS-latest
+    
+    steps:
+    - uses: actions/checkout@master
+    - name: Clean Before Build
+      run: |
+        xcodebuild clean -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8"
+        echo Cleaning Done
+    - name: Build App
+      run: |
+        echo Starting Build...
+        xcodebuild -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8" 
+        echo Build Done
+    - name: Copy App File
+      run: |
+        echo Copying App File...
+        cp -R /Users/runner/Library/Developer/Xcode/DerivedData/*/Build/Products/Debug-iphonesimulator/BLT.app ./BLT
+        echo App File Copied
+    - name: Commit Files
+      run: |
+        git config --local user.email "blt.bot.github@gmail.com"
+        git config --local user.name "BLT-BOT"
+        git add -A
+        git commit -m "Upload App" -a
+    - name: Push App To Repository
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
