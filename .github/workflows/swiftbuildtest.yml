@@ -10,7 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Start xcodebuild test
-      run: 
+      run: |
         xcodebuild clean test -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8"
-      run:
         cp */Library/Developer/CoreSimulator/Devices/*/data/Containers/Bundle/Application/*/BLT.app /BLT
