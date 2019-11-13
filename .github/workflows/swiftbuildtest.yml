@@ -12,10 +12,5 @@ jobs:
     - uses: actions/checkout@master
       run: 
         xcodebuild clean test -workspace BLT/BLT.xcworkspace -scheme BLT -destination "platform=iOS Simulator,name=iPhone 8"
-
-    upload:
-      needs: build
-      name: Upload App File
-      steps:
-        run:
-          cp */Library/Developer/CoreSimulator/Devices/*/data/Containers/Bundle/Application/*/BLT.app /BLT
+        cp */Library/Developer/CoreSimulator/Devices/*/data/Containers/Bundle/Application/*/BLT.app /BLT
+        
