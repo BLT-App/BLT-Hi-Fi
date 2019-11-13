@@ -28,7 +28,7 @@ jobs:
         echo App File Copied
     - name: Commit Files
       env:
-        BOT_EMAIL: ${{ BOT_EMAIL }}
+        BOT_EMAIL: ${{ secrets.BOT_EMAIL }}
       run: |
         git config --local user.email BOT_EMAIL
         git config --local user.name "BLT-BOT"
