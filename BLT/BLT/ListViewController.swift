@@ -17,22 +17,61 @@ class ListViewController: UIViewController {
     @IBOutlet weak var addTaskButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var waterView: UIView!
+    @IBOutlet weak var tableContainerView: UIView!
+    @IBOutlet weak var shadowView: UIView!
+    @IBOutlet weak var addButton: UIButton!
+    
+    var wave: SPWaterProgressIndicatorView = SPWaterProgressIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
+        wave = SPWaterProgressIndicatorView(frame: waterView.bounds)
+        wave.center = waterView.center
+//        wave.alpha = 0.5
+        waterView.addSubview(wave)
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = waterView.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        waterView.addSubview(blurEffectView)
+        roundContainerView(cornerRadius: 40, view: tableContainerView, shadowView: shadowView)
+        addShadow(view: shadowView, color: UIColor.gray.cgColor, opacity: 0.2, radius: 10, offset: CGSize(width: 0, height: 5))
+        addShadow(view: addButton, color: UIColor.blue.cgColor, opacity: 0.1, radius: 5, offset: .zero)
+                
         /// Debug only!
-        
+        wave.completionInPercent = 30
         myToDoList = createExampleList()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         if (myToDoList.list.count != tableView.numberOfRows(inSection: 0)) {
             insertNewTask()
         }
+    }
+        
+    func addShadow(view: UIView, color: CGColor, opacity: Float, radius: CGFloat, offset: CGSize) {
+        view.layer.shadowColor = color
+        view.layer.shadowOpacity = opacity
+        view.layer.shadowOffset = offset
+        view.layer.shadowRadius = radius
+        view.layer.masksToBounds = false
+    }
+    
+    func roundContainerView(cornerRadius: Double, view: UIView, shadowView: UIView) {
+        let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = view.bounds
+        maskLayer.path = path.cgPath
+        view.layer.mask = maskLayer
+        
+        shadowView.layer.cornerRadius = CGFloat(cornerRadius)
+        shadowView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     }
     
     func insertNewTask() {
