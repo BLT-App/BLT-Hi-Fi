@@ -24,7 +24,7 @@ jobs:
     - name: Copy App File
       run: |
         echo Copying App File...
-        cp -R /Users/runner/Library/Developer/Xcode/DerivedData/*/Build/Products/Debug-iphonesimulator/BLT.app ./BLT
+        cp -R /Users/runner/Library/Developer/Xcode/DerivedData/*/Build/Products/Debug-iphonesimulator/BLT.app ./
         echo App File Copied
     - name: Commit Files
       run: |
