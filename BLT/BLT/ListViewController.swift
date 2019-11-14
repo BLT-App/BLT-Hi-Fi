@@ -16,27 +16,39 @@ class ListViewController: UIViewController {
 
     @IBOutlet weak var addTaskButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var waterView: UIView!
     @IBOutlet weak var tableContainerView: UIView!
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var addButton: UIButton!
-    
+    var wave: SPWaterProgressIndicatorView = SPWaterProgressIndicatorView()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
+        wave = SPWaterProgressIndicatorView(frame: waterView.bounds)
+        wave.center = waterView.center
+//        wave.alpha = 0.5
+        waterView.addSubview(wave)
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = waterView.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        waterView.addSubview(blurEffectView)
         roundContainerView(cornerRadius: 40, view: tableContainerView, shadowView: shadowView)
         addShadow(view: shadowView, color: UIColor.gray.cgColor, opacity: 0.2, radius: 10, offset: CGSize(width: 0, height: 5))
         addShadow(view: addButton, color: UIColor.blue.cgColor, opacity: 0.1, radius: 5, offset: .zero)
                 
         /// Debug only!
+
         
         myToDoList.retrieveList()
         
         if myToDoList.list.count == 0 {
             myToDoList.createExampleList()
         }
+        wave.completionInPercent = 30
+        myToDoList = createExampleList()
     }
     
     override func viewDidAppear(_ animated: Bool) {
