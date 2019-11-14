@@ -48,7 +48,6 @@ class ListViewController: UIViewController {
             myToDoList.createExampleList()
         }
         wave.completionInPercent = 30
-        myToDoList = createExampleList()
     }
     
     override func viewDidAppear(_ animated: Bool) {
