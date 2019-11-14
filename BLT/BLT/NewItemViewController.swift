@@ -31,7 +31,10 @@ class NewItemViewController: UIViewController {
     
     @IBAction func addButton(_ sender: UIButton) {
         if let classTxt = classText.text, let titleTxt = titleText.text, let descTxt = descText.text {
-            if (classTxt != "" && titleTxt != "") {
+            if (titleTxt == "clear_entire_list") {
+                myToDoList.list = []
+                myToDoList.storeList()
+            } else if (classTxt != "" && titleTxt != "") {
                 let newToDo = ToDoItem(className: classTxt, title: titleTxt, description: descTxt, dueDate: datePicker.date, completed: false)
                 myToDoList.list.insert(newToDo, at: 0)
                 myToDoList.storeList()
