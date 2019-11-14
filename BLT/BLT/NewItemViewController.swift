@@ -38,6 +38,7 @@ class NewItemViewController: UIViewController {
                 let newToDo = ToDoItem(className: classTxt, title: titleTxt, description: descTxt, dueDate: datePicker.date, completed: false)
                 myToDoList.list.insert(newToDo, at: 0)
                 myToDoList.storeList()
+                myToDoList.sortList()
             }
             self.dismiss(animated: true, completion: nil)
         }

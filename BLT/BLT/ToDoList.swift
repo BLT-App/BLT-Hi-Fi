@@ -41,8 +41,20 @@ class ToDoList: Codable {
         let propertyListDecoder = PropertyListDecoder()
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let archiveURL = documentsDirectory.appendingPathComponent("todolist").appendingPathExtension("plist")
-        if let retrievedNoteData = try? Data(contentsOf: archiveURL), let decodedNote = try? propertyListDecoder.decode(ToDoList.self, from: retrievedNoteData) {
-            self.list = decodedNote.list
+        if let retrievedNoteData = try? Data(contentsOf: archiveURL), let decodedToDoList = try? propertyListDecoder.decode(ToDoList.self, from: retrievedNoteData) {
+            self.list = decodedToDoList.list
+        }
+    }
+    
+    func sortList() {
+        for i in 0..<self.list.count {
+            for j in 1..<self.list.count - i {
+                if self.list[j].dueDate < self.list[j-1].dueDate {
+                    let tmp = self.list[j-1]
+                    self.list[j-1] = self.list[j]
+                    self.list[j] = tmp
+                }
+            }
         }
     }
 }
