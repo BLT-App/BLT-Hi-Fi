@@ -51,3 +51,13 @@ class ToDoItem: Codable {
         self.completed = completed
     }
 }
+
+extension ToDoItem: Comparable {
+    static func < (lhs: ToDoItem, rhs: ToDoItem) -> Bool {
+        return lhs.dueCounter < rhs.dueCounter
+    }
+    
+    static func == (lhs: ToDoItem, rhs: ToDoItem) -> Bool {
+        return lhs.dueCounter == rhs.dueCounter
+    }
+}

@@ -138,6 +138,7 @@
 				3FE3EA66237718D3002B5303 /* Main.storyboard */,
 				D721FD622378ACA600ABD1EF /* ListViewController.swift */,
 				D721FD552378AA0300ABD1EF /* ToDoTableViewCell.swift */,
+				D721FD612378ACA600ABD1EF /* NewItemViewController.swift */,
 				3FE3EA902378DA82002B5303 /* FocusViewController.swift */,
 				3FE3EA69237718DB002B5303 /* Assets.xcassets */,
 				3FE3EA6B237718DB002B5303 /* LaunchScreen.storyboard */,
@@ -147,7 +148,6 @@
 				D721FD592378ACA300ABD1EF /* ToDoItem.swift */,
 				D721FD5B2378ACA300ABD1EF /* ToDoList.swift */,
 				D721FD5A2378ACA300ABD1EF /* UserData.swift */,
-				D721FD612378ACA600ABD1EF /* NewItemViewController.swift */,
 			);
 			path = BLT;
 			sourceTree = "<group>";

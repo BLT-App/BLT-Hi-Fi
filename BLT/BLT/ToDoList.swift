@@ -33,6 +33,7 @@ class ToDoList: Codable {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let archiveURL = documentsDirectory.appendingPathComponent("todolist").appendingPathExtension("plist")
         let propertyListEncoder = PropertyListEncoder()
+        
         let encodedNote = try? propertyListEncoder.encode(self)
         try? encodedNote?.write(to: archiveURL, options: .noFileProtection)
     }
@@ -47,14 +48,6 @@ class ToDoList: Codable {
     }
     
     func sortList() {
-        for i in 0..<self.list.count {
-            for j in 1..<self.list.count - i {
-                if self.list[j].dueDate < self.list[j-1].dueDate {
-                    let tmp = self.list[j-1]
-                    self.list[j-1] = self.list[j]
-                    self.list[j] = tmp
-                }
-            }
-        }
+        list = list.sorted()
     }
 }
