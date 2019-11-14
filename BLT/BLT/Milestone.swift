@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Milestone {
+struct Milestone: Codable {
     var title: String
     var dueDate: Date
     var completed: Bool
