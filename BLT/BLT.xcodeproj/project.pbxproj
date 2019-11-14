@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,7 @@
 		D721FD602378ACA300ABD1EF /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD5B2378ACA300ABD1EF /* ToDoList.swift */; };
 		D721FD632378ACA600ABD1EF /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD612378ACA600ABD1EF /* NewItemViewController.swift */; };
 		D721FD642378ACA600ABD1EF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD622378ACA600ABD1EF /* ListViewController.swift */; };
+		D7EAE7DD237D0038001FBE91 /* SPWaterProgressIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EAE7DC237D0038001FBE91 /* SPWaterProgressIndicatorView.swift */; };
 		D7F0D7302378A06E0044E694 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7F0D72F2378A06E0044E694 /* Podfile */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		D721FD5B2378ACA300ABD1EF /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		D721FD612378ACA600ABD1EF /* NewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		D721FD622378ACA600ABD1EF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		D7EAE7DC237D0038001FBE91 /* SPWaterProgressIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPWaterProgressIndicatorView.swift; sourceTree = "<group>"; };
 		D7F0D72F2378A06E0044E694 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 				D721FD5B2378ACA300ABD1EF /* ToDoList.swift */,
 				D721FD5A2378ACA300ABD1EF /* UserData.swift */,
 				D721FD612378ACA600ABD1EF /* NewItemViewController.swift */,
+				D7EAE7DC237D0038001FBE91 /* SPWaterProgressIndicatorView.swift */,
 			);
 			path = BLT;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				3FE3EA5B237718D3002B5303 /* Sources */,
 				3FE3EA5C237718D3002B5303 /* Frameworks */,
 				3FE3EA5D237718D3002B5303 /* Resources */,
+				C6895446B56B295E89B53784 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,6 +334,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C6895446B56B295E89B53784 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BLT/Pods-BLT-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BLT/Pods-BLT-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BLT/Pods-BLT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -337,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7EAE7DD237D0038001FBE91 /* SPWaterProgressIndicatorView.swift in Sources */,
 				D721FD562378AA0300ABD1EF /* ToDoTableViewCell.swift in Sources */,
 				D721FD5C2378ACA300ABD1EF /* MilestoneItem.swift in Sources */,
 				D721FD632378ACA600ABD1EF /* NewItemViewController.swift in Sources */,
@@ -530,7 +552,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.Hotchkiss.BLT;
+				PRODUCT_BUNDLE_IDENTIFIER = io.jiahua.BLT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -549,7 +571,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.Hotchkiss.BLT;
+				PRODUCT_BUNDLE_IDENTIFIER = io.jiahua.BLT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
