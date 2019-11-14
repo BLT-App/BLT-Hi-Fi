@@ -15,6 +15,7 @@ class ToDoItem {
     var dueDate: Date
     var completed: Bool
     
+    
     init(className: String, title: String, description: String,
          dueDate: Date, completed: Bool) {
         self.className = className

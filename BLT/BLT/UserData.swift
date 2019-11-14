@@ -10,4 +10,13 @@ import Foundation
 
 class UserData {
     
+    var itemTypeList: [String]
+    
+    func addItemType(type: String) {
+        itemTypeList.append(type)
+    }
+    
+    init() {
+        self.itemTypeList = []
+    }
 }

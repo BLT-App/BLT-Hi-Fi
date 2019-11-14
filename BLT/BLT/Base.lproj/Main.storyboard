@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IoG-FB-323">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bjj-Ju-aNb">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -116,6 +116,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Settings"/>
                                 <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="h9E-Ii-imC" kind="push" id="krr-gh-wbk"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add Task" id="Qkn-Qn-9ou">
@@ -131,32 +134,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="tEa-nA-3bz">
             <objects>
-                <viewController id="h9E-Ii-imC" sceneMemberID="viewController">
+                <viewController id="h9E-Ii-imC" customClass="SettingsViewController" customModule="BLT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OhR-h3-WGB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC6-st-1Wj">
-                                <rect key="frame" x="141" y="64" width="140" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Item description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lys-3J-mRe">
+                                <rect key="frame" x="20" y="124" width="203" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="backgroundColor" red="1" green="0.55400339109999996" blue="0.61122002109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.29656326490000001" green="1" blue="0.38007153989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XHg-Zg-TCk">
+                                <rect key="frame" x="20" y="166" width="145" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88I-VY-pT9">
+                                <rect key="frame" x="72" y="204" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Enter "/>
+                                <connections>
+                                    <action selector="enterItemType:" destination="h9E-Ii-imC" eventType="touchUpInside" id="NYM-jy-6A0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.39934828133695144" green="1" blue="0.95268206034602365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="oEi-fr-2pX"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3bx-05-tZ6"/>
+                    <navigationItem key="navigationItem" title="Settings" id="pxp-OE-Zds"/>
+                    <connections>
+                        <outlet property="itemTypeEntry" destination="XHg-Zg-TCk" id="aHq-56-GXa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybU-Mj-Wnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075.3623188405797" y="853.79464285714278"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="868.52678571428567"/>
         </scene>
         <!--New Item View Controller-->
         <scene sceneID="3ac-Wj-hTW">
@@ -270,26 +294,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZw-yO-yAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786.9565217391305" y="136.60714285714286"/>
+            <point key="canvasLocation" x="2697.1014492753625" y="136.60714285714286"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="yw2-Dr-bby">
+        <scene sceneID="ZBc-Ln-P9g">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IoG-FB-323" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bjj-Ju-aNb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pAr-cA-cn9">
+                    <navigationItem key="navigationItem" id="1Vj-T8-TKH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oti-zk-n0J">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kjg-Ql-Hhc"/>
-                        <segue destination="h9E-Ii-imC" kind="show" id="LAT-GQ-kvG"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gL2-ib-Qef"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SCu-mR-6cn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBB-LG-Xnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
