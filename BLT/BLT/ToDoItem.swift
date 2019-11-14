@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ToDoItem {
+class ToDoItem: Codable {
     var className: String
     var title: String
     var description: String
@@ -33,6 +33,15 @@ class ToDoItem {
 
     var completed: Bool
     
+    init(from: Decodable, className: String, title: String, description: String,
+         dueDate: Date, completed: Bool) {
+        self.className = className
+        self.title = title
+        self.description = description
+        self.dueDate = dueDate
+        self.completed = completed
+    }
+    
     init(className: String, title: String, description: String,
          dueDate: Date, completed: Bool) {
         self.className = className
@@ -40,5 +49,15 @@ class ToDoItem {
         self.description = description
         self.dueDate = dueDate
         self.completed = completed
+    }
+}
+
+extension ToDoItem: Comparable {
+    static func < (lhs: ToDoItem, rhs: ToDoItem) -> Bool {
+        return lhs.dueCounter < rhs.dueCounter
+    }
+    
+    static func == (lhs: ToDoItem, rhs: ToDoItem) -> Bool {
+        return lhs.dueCounter == rhs.dueCounter
     }
 }

@@ -16,14 +16,11 @@ class ListViewController: UIViewController {
 
     @IBOutlet weak var addTaskButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var waterView: UIView!
     @IBOutlet weak var tableContainerView: UIView!
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var addButton: UIButton!
-    
     var wave: SPWaterProgressIndicatorView = SPWaterProgressIndicatorView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +40,13 @@ class ListViewController: UIViewController {
         addShadow(view: addButton, color: UIColor.blue.cgColor, opacity: 0.1, radius: 5, offset: .zero)
                 
         /// Debug only!
+
+        
+        myToDoList.retrieveList()
+        
+        if myToDoList.list.count == 0 {
+            myToDoList.createExampleList()
+        }
         wave.completionInPercent = 30
         myToDoList = createExampleList()
     }
@@ -82,19 +86,6 @@ class ListViewController: UIViewController {
     }
     
     /// Creates example content for the ToDoList
-    func createExampleList() -> ToDoList {
-        let tempList = ToDoList()
-        
-        tempList.list.append(ToDoItem(className: "Math", title: "Complete Calculus Homework", description: "Discover Calculus pg. 103 - 120", dueDate: Date(), completed: false))
-        tempList.list.append(ToDoItem(className: "English", title: "Read Dalloway", description: "Page 48 - 64", dueDate: Date(), completed: false))
-        tempList.list.append(ToDoItem(className: "Computer Science", title: "Complete Lo-Fi Prototype", description: "Use Invision and upload to Canvas", dueDate: Date(), completed: false))
-        tempList.list.append(ToDoItem(className: "Supreme Court", title: "Brief Rucho", description: "Read Rucho v United States and write brief", dueDate: Date(), completed: false))
-        tempList.list.append(ToDoItem(className: "Photo", title: "Print photos", description: "Print and mount pieces from last week", dueDate: Date(), completed: false))
-        tempList.list.append(ToDoItem(className: "Econ", title: "Read Unit 7", description: "Read Unit 7 and respond to prompt online", dueDate: Date(), completed: false))
-        tempList.list.append(ToDoItem(className: "Philosophy", title: "Paine", description: "Read Paine's Common Sense from Philosophy reader", dueDate: Date(), completed: false))
-        
-        return tempList
-    }
     
 
     /*
@@ -147,6 +138,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     func handleDeleteItem(alertAction: UIAlertAction!) {
         if let indexPath = deleteListIndexPath {
             myToDoList.list.remove(at: indexPath.row)
+            myToDoList.storeList()
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .left)
             tableView.endUpdates()
