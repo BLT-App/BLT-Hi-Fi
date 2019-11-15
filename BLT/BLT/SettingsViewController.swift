@@ -13,12 +13,14 @@ var globalData = UserData()
 class SettingsViewController: UIViewController {
     
     
+    
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var itemTypeEntry: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ // this was test code
+//        labelTest.text = globalData.itemTypeListToString()
         // Do any additional setup after loading the view.
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -26,8 +28,12 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func enterItemType(_ sender: UIButton) {
-        if (itemTypeEntry.text == nil) {
+        if (itemTypeEntry.text != nil || itemTypeEntry.text != "") {
             globalData.addItemType(type: itemTypeEntry.text!)
+            globalData.SaveList()
+// this was a code test
+//            labelTest.text = globalData.itemTypeListToString()
+            itemTypeEntry.text = nil
         }
             
         }
@@ -43,4 +49,4 @@ class SettingsViewController: UIViewController {
     }
     */
 
-}
+

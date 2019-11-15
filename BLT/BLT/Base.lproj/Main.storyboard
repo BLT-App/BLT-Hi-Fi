@@ -144,33 +144,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Item description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lys-3J-mRe">
-                                <rect key="frame" x="20" y="124" width="203" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.55400339109999996" blue="0.61122002109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.29656326490000001" green="1" blue="0.38007153989999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XHg-Zg-TCk">
-                                <rect key="frame" x="20" y="166" width="145" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XHg-Zg-TCk">
+                                <rect key="frame" x="20" y="174" width="200" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88I-VY-pT9">
-                                <rect key="frame" x="72" y="204" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88I-VY-pT9">
+                                <rect key="frame" x="72" y="214" width="40" height="20"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Df7-Qc-4pS"/>
+                                    <constraint firstAttribute="width" constant="40" id="gud-PR-2ky"/>
+                                </constraints>
                                 <state key="normal" title="Enter "/>
                                 <connections>
                                     <action selector="enterItemType:" destination="h9E-Ii-imC" eventType="touchUpInside" id="NYM-jy-6A0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Add New Item Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lys-3J-mRe">
+                                <rect key="frame" x="20" y="124" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.46512409161206392" green="0.50647313905433866" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="m3m-nD-CSe"/>
+                                    <constraint firstAttribute="width" constant="200" id="siJ-8w-WpG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.39934828133695144" green="1" blue="0.95268206034602365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oEi-fr-2pX" firstAttribute="bottom" secondItem="88I-VY-pT9" secondAttribute="bottom" constant="628" id="BqL-gC-PyE"/>
+                            <constraint firstItem="88I-VY-pT9" firstAttribute="top" secondItem="XHg-Zg-TCk" secondAttribute="bottom" constant="10" id="GHz-fd-MSB"/>
+                            <constraint firstItem="Lys-3J-mRe" firstAttribute="leading" secondItem="OhR-h3-WGB" secondAttribute="leadingMargin" id="NA2-be-urg"/>
+                            <constraint firstItem="88I-VY-pT9" firstAttribute="centerX" secondItem="XHg-Zg-TCk" secondAttribute="centerX" id="RAc-Yk-PFA"/>
+                            <constraint firstItem="XHg-Zg-TCk" firstAttribute="top" secondItem="Lys-3J-mRe" secondAttribute="bottom" constant="10" id="mcO-Py-ENs"/>
+                            <constraint firstItem="88I-VY-pT9" firstAttribute="leading" secondItem="oEi-fr-2pX" secondAttribute="leading" constant="72" id="rby-nV-B3b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oEi-fr-2pX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="pxp-OE-Zds"/>
@@ -209,12 +223,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="600-NX-phh">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdq-mp-bT0">
                                                 <rect key="frame" x="52" y="0.0" width="322" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <state key="normal" title="Find Class"/>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xga-zK-KH6">
@@ -286,7 +298,6 @@
                         <viewLayoutGuide key="safeArea" id="6r4-0a-F5C"/>
                     </view>
                     <connections>
-                        <outlet property="classText" destination="600-NX-phh" id="3iI-AX-12j"/>
                         <outlet property="datePicker" destination="13B-hT-X0D" id="5G5-co-Lj3"/>
                         <outlet property="descText" destination="kir-Rr-RVG" id="Anl-zB-JoX"/>
                         <outlet property="titleText" destination="AIw-Kl-Eb0" id="WN0-wJ-ngI"/>
