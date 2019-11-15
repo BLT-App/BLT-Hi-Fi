@@ -11,15 +11,6 @@ import Foundation
 class MilestoneItem: ToDoItem {
     var milestones: [Milestone]
     
-    init(from: Decodable, className: String, title: String, description: String,
-         dueDate: Date, completed: Bool, milestones: [Milestone]) {
-        
-        self.milestones = milestones
-        super.init( className: className, title: title, description: description,
-                   dueDate: dueDate, completed: completed)
-        
-    }
-    
     init(className: String, title: String, description: String,
          dueDate: Date, completed: Bool, milestones: [Milestone]) {
         
@@ -27,9 +18,5 @@ class MilestoneItem: ToDoItem {
         super.init(className: className, title: title, description: description,
                    dueDate: dueDate, completed: completed)
         
-    }
-    
-    required init(from decoder: Decoder) throws {
-        fatalError("init(from:) has not been implemented")
     }
 }

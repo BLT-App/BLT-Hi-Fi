@@ -94,8 +94,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="7LN-ji-mF5"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Xbd-ci-dNM"/>
+                                            <outlet property="assignmentLabel" destination="B3j-cw-gjR" id="rKA-eL-iMV"/>
+                                            <outlet property="classLabel" destination="1Iw-7V-FnX" id="5NB-kl-RdW"/>
+                                            <outlet property="descLabel" destination="U4i-3S-dYq" id="01g-Dd-laU"/>
+                                            <outlet property="dueLabel" destination="US6-la-lCt" id="DRJ-KI-z2s"/>
+                                            <outlet property="itemView" destination="b3H-XA-Gj7" id="qbt-Yc-bHM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -179,7 +182,6 @@
                         <outlet property="shadowView" destination="vjA-AA-hQo" id="YMN-TZ-hXZ"/>
                         <outlet property="tableContainerView" destination="GcL-1G-LKs" id="ccU-mV-6Ir"/>
                         <outlet property="tableView" destination="egg-sz-gdj" id="WYX-MC-djl"/>
-                        <outlet property="waterView" destination="Gx1-ez-8eU" id="wBw-t5-lRV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

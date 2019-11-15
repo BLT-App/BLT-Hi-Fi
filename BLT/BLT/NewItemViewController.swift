@@ -31,15 +31,9 @@ class NewItemViewController: UIViewController {
     
     @IBAction func addButton(_ sender: UIButton) {
         if let classTxt = classText.text, let titleTxt = titleText.text, let descTxt = descText.text {
-            if (titleTxt == "clear_entire_list") {
-                myToDoList.list = []
-                myToDoList.storeList()
-            } else if (classTxt != "" && titleTxt != "") {
+            if (classTxt != "" && titleTxt != "") {
                 let newToDo = ToDoItem(className: classTxt, title: titleTxt, description: descTxt, dueDate: datePicker.date, completed: false)
                 myToDoList.list.insert(newToDo, at: 0)
-                myToDoList.storeList()
-//                Commented out sortList as it reorders all pages on home screen. Should have a specific prompt to sort list instead.
-//                myToDoList.sortList()
             }
             self.dismiss(animated: true, completion: nil)
         }
