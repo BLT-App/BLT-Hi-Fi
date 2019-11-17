@@ -10,43 +10,61 @@ import UIKit
 
 var globalData = UserData()
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UITableViewDataSource {
     
+    @IBOutlet weak var btnProfile: UIButton!
+    @IBOutlet weak var btnList: UIButton!
+    @IBOutlet weak var currentMenuTable: UITableView!
     
-    
-    @IBOutlet weak var testLabel: UILabel!
-    @IBOutlet weak var itemTypeEntry: UITextField!
+    var currentMenu: String = "profile"
     
     override func viewDidLoad() {
         super.viewDidLoad()
- // this was test code
-//        labelTest.text = globalData.itemTypeListToString()
-        // Do any additional setup after loading the view.
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        currentMenu = "profile"
+        loadCurrentMenu()
+    }
+    
+    func loadCurrentMenu() {
+        if(currentMenu == "profile") {
+            loadProfileMenu()
+        }
+        if(currentMenu == "list") {
+            loadListMenu()
+        }
+    }
+    
+    func loadProfileMenu() {
+        btnProfile.isSelected = true
+        print("Profile Menu Set")
+        currentMenuTable.numberOfRows(inSection: 0)
+    }
+    
+    func loadListMenu() {
+        btnList.isSelected = true
+        print("List Menu Set")
+    }
+    
+    @IBAction func profileChosen(_ sender: UIButton) {
+        currentMenu = "profile"
+        loadCurrentMenu()
+    }
+    @IBAction func listChosen(_ sender: UIButton) {
+        currentMenu = "list"
+        loadCurrentMenu()
+    }
+    
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Ask for a cell of the appropriate type.
+        let cell = tableView.dequeueReusableCell(withIdentifier: "basicStyleCell", for: indexPath)
         
+        // Configure the cell’s contents with the row and section number.
+        // The Basic cell style guarantees a label view is present in textLabel.
+        cell.textLabel!.text = "Row \(indexPath.row)"
+        return cell
     }
     
-    @IBAction func enterItemType(_ sender: UIButton) {
-        if (itemTypeEntry.text != nil || itemTypeEntry.text != "") {
-            globalData.addItemType(type: itemTypeEntry.text!)
-            globalData.SaveList()
-// this was a code test
-//            labelTest.text = globalData.itemTypeListToString()
-            itemTypeEntry.text = nil
-        }
-            
-        }
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
+}

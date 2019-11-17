@@ -10,34 +10,32 @@ import Foundation
 
 class UserData {
     
-    var itemTypeList: [String]
+    var subjectList: [String]
+    var wantsListByDate: Bool
     
-    func addItemType(type: String) {
-        itemTypeList.append(type)
+    func addSubject(name: String) {
+        self.subjectList.append(name)
     }
     
-    func itemTypeListToString()-> String{
-        var val: String = ""
-        for i in itemTypeList {
-            val = val + i
-        }
-        return val
-    }
-    func SaveList()
-    {
+    func saveUserData() {
         let documentsDirectory =
             FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let archiveURL = documentsDirectory.appendingPathComponent("list_test").appendingPathExtension("plist")
         
         let propertyListEncoder = PropertyListEncoder()
-        let encodedList = try? propertyListEncoder.encode(itemTypeList)
+        let encodedList = try? propertyListEncoder.encode("")
         try? encodedList?.write(to: archiveURL,
             options: .noFileProtection)
         
         
     }
     
+    func retrieveUserData() {
+        
+    }
+    
     init() {
-        self.itemTypeList = []
+        subjectList = [""]
+        wantsListByDate = true
     }
 }
