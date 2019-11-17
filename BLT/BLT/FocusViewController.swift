@@ -8,9 +8,12 @@
 
 import UIKit
 
+/// The ViewController that controls the Focus View.
 class FocusViewController: UIViewController {
     
+    /// The ToDoItem of the current task.
     var currentTask : ToDoItem = ToDoItem(className: "", title: "", description: "", dueDate: Date(), completed: true)
+    
     var currentTaskNum : Int = 0
 
     @IBOutlet weak var lblCurrentTask: UILabel!
@@ -21,7 +24,19 @@ class FocusViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupButtons()
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        hideTabBar()
+    }
+    
+    /// Stylizes buttons with curves.
+    func setupButtons() {
         // Sets up curves
         btnCompleteTask.layer.cornerRadius = 25.0
         btnCompleteTask.layer.shadowColor = UIColor.blue.cgColor
@@ -37,15 +52,9 @@ class FocusViewController: UIViewController {
         endFocusModeButton.layer.shadowRadius = 5.0
         endFocusModeButton.layer.masksToBounds = false
 
-        // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        hideTabBar()
-    }
-    
-    /// Hides or shows the Tab Bar controller
+    /// Hides the Tab Bar controller.
     func hideTabBar() {
         var frame = self.tabBarController?.tabBar.frame
         let height = (frame?.size.height)!
@@ -55,6 +64,7 @@ class FocusViewController: UIViewController {
         })
     }
 
+    /// Shows the Tab Bar controller.
     func showTabBar() {
         var frame = self.tabBarController?.tabBar.frame
         let height = (frame?.size.height)!
@@ -68,6 +78,7 @@ class FocusViewController: UIViewController {
         setCurrentTask()
     }
     
+    /// Sets the current task to the first task in the to-do list.
     func setCurrentTask() {
         var notFoundNextItem : Bool = true
         if(myToDoList.list.count > 0) {
@@ -95,11 +106,13 @@ class FocusViewController: UIViewController {
         }
     }
     
+    /// Pressing on complete task that queues the next task.
     @IBAction func completeTaskPress(_ sender: UIButton) {
         myToDoList.list[currentTaskNum].completed = true
         setCurrentTask()
     }
     
+    /// Ending focus mode brings user back to the list view.
     @IBAction func endFocusModeHit(_ sender: UIButton) {
         showTabBar()
         self.tabBarController?.selectedIndex = 0

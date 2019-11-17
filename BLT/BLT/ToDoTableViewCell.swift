@@ -40,6 +40,11 @@ class ToDoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    /**
+     Configures the ToDoTableViewCell to a specific ToDoItem.
+     - parameters:
+        - item: The ToDoItem that this TableViewCell will be representing.
+     */
     func setItem(item: ToDoItem) {
         classLabel.text = item.className
         assignmentLabel.text = item.title
@@ -49,6 +54,7 @@ class ToDoTableViewCell: UITableViewCell {
     }
 }
 
+/// A type of label that is inset so there is additional space to the sides of the text. Allows for rounded background. 
 class InsetLabel: UILabel {
     let topInset = CGFloat(3.5)
     let bottomInset = CGFloat(3.5)
