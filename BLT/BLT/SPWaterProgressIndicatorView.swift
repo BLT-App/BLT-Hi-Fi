@@ -49,7 +49,7 @@ class SPWaterProgressIndicatorView: UIView {
     
     /// Designate Initializer
     override init(frame: CGRect) {
-        self.waveColor = UIColor(red: 0.3, green: 0.3, blue: 1, alpha: 0.8)
+        self.waveColor = .blue
         
         self.completionInPercent = kDefaultPercent
         

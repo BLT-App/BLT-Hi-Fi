@@ -28,22 +28,24 @@ class ListViewController: UIViewController {
         
         wave = SPWaterProgressIndicatorView(frame: waterView.bounds)
         wave.center = waterView.center
-//        wave.alpha = 0.5
+        wave.alpha = 0.3
         waterView.addSubview(wave)
-        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = waterView.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        waterView.addSubview(blurEffectView)
+        
+//        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = waterView.bounds
+//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        waterView.addSubview(blurEffectView)
+        
         roundContainerView(cornerRadius: 40, view: tableContainerView, shadowView: shadowView)
         addShadow(view: shadowView, color: UIColor.gray.cgColor, opacity: 0.2, radius: 10, offset: CGSize(width: 0, height: 5))
         addShadow(view: addButton, color: UIColor.blue.cgColor, opacity: 0.1, radius: 5, offset: .zero)
                 
         /// Debug only!
 
-        
         myToDoList.retrieveList()
         
+        /// This creates an example list if there is nothing on the list. Should fix this.
         if myToDoList.list.count == 0 {
             myToDoList.createExampleList()
         }
