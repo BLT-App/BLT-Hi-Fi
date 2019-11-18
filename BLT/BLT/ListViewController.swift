@@ -170,6 +170,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     func handleDeleteItem(alertAction: UIAlertAction!) {
         if let indexPath = deleteListIndexPath {
             myToDoList.list.remove(at: indexPath.row)
+            myToDoList.storeList()
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .left)
             tableView.endUpdates()
