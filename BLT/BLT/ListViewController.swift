@@ -9,6 +9,7 @@
 import UIKit
 
 var myToDoList: ToDoList = ToDoList()
+var globalData = UserData()
 
 class ListViewController: UIViewController {
     
