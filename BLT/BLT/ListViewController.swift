@@ -10,11 +10,12 @@ import UIKit
 
 /// Global ToDoList variable. 
 var myToDoList: ToDoList = ToDoList()
+var globalData = UserData()
 
 class ListViewController: UIViewController {
     @IBOutlet weak var addTaskButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var waterView: UIView!
+    
     @IBOutlet weak var tableContainerView: UIView!
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var addButton: UIButton!
@@ -169,7 +170,6 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     func handleDeleteItem(alertAction: UIAlertAction!) {
         if let indexPath = deleteListIndexPath {
             myToDoList.list.remove(at: indexPath.row)
-            myToDoList.storeList()
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .left)
             tableView.endUpdates()

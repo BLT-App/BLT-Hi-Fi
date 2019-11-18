@@ -7,125 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01703887E0DCD3984A20C4FF2C730646 /* UICircularProgressRing.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C98660F2D137C9051E41CC1709AB476 /* UICircularProgressRing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0345A707900DED4AB521608F096B0EC3 /* Pods-BLT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD858F54FDB11E575209B06BE4A5917 /* Pods-BLT-dummy.m */; };
-		5DAE820C14F6075A3DD225DEBE486F3B /* UICircularRingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A8D0E8A440209D1CA8428B65804D6 /* UICircularRingStyle.swift */; };
-		63CCA7BC47479ABCC8FE95E6FFCCCDE3 /* UICircularProgressRing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE2BA80F926B2225539FEFA551BEDC61 /* UICircularProgressRing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		87D868E6B115E52367675B20851961D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		96DCF70A91D0D1A10577377C830C8046 /* UICircularProgressRing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 523A71D9C8F6A400889B2FE7E46A0CFD /* UICircularProgressRing-dummy.m */; };
-		99BF049052E3D8581B4FEFF92DA5F5A4 /* UICircularProgressRingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC7A4AEFFB0CDF0239191646005FF8B /* UICircularProgressRingDelegate.swift */; };
-		9C8AF2C5EE16F0175BB0896BF67E3C83 /* Pods-BLT-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97DE78AC8341F9919CDDB6E45DCB516F /* Pods-BLT-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A15F2F8D8BE0E58B744AD17AE7203CC6 /* UICircularRingValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87053B78A316F02B4C8FC6C12DA1BC51 /* UICircularRingValueFormatter.swift */; };
-		A1B655F050F899094F984A769BF9C2A3 /* UICircularProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8300FF518839839766B31903F81B3BE /* UICircularProgressRing.swift */; };
-		A22C2711A391D061FA208C17FBEB7D68 /* UICircularTimerRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2F989AB912E06C716EF784BD62D63 /* UICircularTimerRing.swift */; };
-		AB2C883B140EFBD2CD1E250622305815 /* UICircularRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F09E088798A5527A9C7FA9D3FDCC28F /* UICircularRing.swift */; };
-		C6E71A6A01DD351236A123C0688D28FF /* UICircularRingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059DA0DECC8E857A1B13942BEA89EF7E /* UICircularRingLayer.swift */; };
-		E69E6BA1F067F2531F7F344DEC526CAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993083D677260B776EAD112B81FC0DCA /* Extensions.swift */; };
-		ED989AA0535CD669C981A011665DF5C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		68E902F78A3E62566FE1659742F713CD /* Pods-BLT-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAAAB255D4D900422B68D2B3AEED3EF /* Pods-BLT-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCD2A4B2F7B5028FADA1BD3C808C1503 /* Pods-BLT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B0779F807788DD91864B1A926132D1 /* Pods-BLT-dummy.m */; };
+		E13C9BE2C9F8168654A29EB000720839 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		637E63E147B8ECF436E82A9382803BCC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BC04B7D809D1E684160A8C1A81497B98;
-			remoteInfo = UICircularProgressRing;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		059DA0DECC8E857A1B13942BEA89EF7E /* UICircularRingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularRingLayer.swift; path = src/UICircularProgressRing/UICircularRingLayer.swift; sourceTree = "<group>"; };
-		0C98660F2D137C9051E41CC1709AB476 /* UICircularProgressRing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UICircularProgressRing.h; path = src/UICircularProgressRing/UICircularProgressRing.h; sourceTree = "<group>"; };
-		0F09E088798A5527A9C7FA9D3FDCC28F /* UICircularRing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularRing.swift; path = src/UICircularProgressRing/UICircularRing.swift; sourceTree = "<group>"; };
+		1AAAAB255D4D900422B68D2B3AEED3EF /* Pods-BLT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLT-umbrella.h"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		393EAD55E46AE5EA23976D883F34D90F /* Pods-BLT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLT.debug.xcconfig"; sourceTree = "<group>"; };
-		4DC846CFBFCEAA2AAA1432D6B1AC5C29 /* Pods-BLT-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLT-acknowledgements.markdown"; sourceTree = "<group>"; };
-		523A71D9C8F6A400889B2FE7E46A0CFD /* UICircularProgressRing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICircularProgressRing-dummy.m"; sourceTree = "<group>"; };
-		5DC7A4AEFFB0CDF0239191646005FF8B /* UICircularProgressRingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRingDelegate.swift; path = src/UICircularProgressRing/UICircularProgressRingDelegate.swift; sourceTree = "<group>"; };
-		639A8D0E8A440209D1CA8428B65804D6 /* UICircularRingStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularRingStyle.swift; path = src/UICircularProgressRing/UICircularRingStyle.swift; sourceTree = "<group>"; };
-		64E8134549B7558F47636E7F3B4822EB /* Pods-BLT-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLT-Info.plist"; sourceTree = "<group>"; };
+		4DB10DCECF088CD5CAB7B50650D4CB51 /* Pods-BLT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLT.debug.xcconfig"; sourceTree = "<group>"; };
 		6CC41D08D6B55FB858C97C74D597FBFA /* Pods_BLT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLT.framework; path = "Pods-BLT.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		78E6655A89A366C140DF10D63DEFDB91 /* UICircularProgressRing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICircularProgressRing.xcconfig; sourceTree = "<group>"; };
-		7CB2F989AB912E06C716EF784BD62D63 /* UICircularTimerRing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularTimerRing.swift; path = src/UICircularProgressRing/UICircularTimerRing.swift; sourceTree = "<group>"; };
-		87053B78A316F02B4C8FC6C12DA1BC51 /* UICircularRingValueFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularRingValueFormatter.swift; path = src/UICircularProgressRing/UICircularRingValueFormatter.swift; sourceTree = "<group>"; };
-		8BD858F54FDB11E575209B06BE4A5917 /* Pods-BLT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLT-dummy.m"; sourceTree = "<group>"; };
-		94A46DA07EDA54983B3114D1229BD49D /* UICircularProgressRing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UICircularProgressRing.modulemap; sourceTree = "<group>"; };
-		96C485612DD74468B45BB1010FEA1831 /* Pods-BLT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLT.release.xcconfig"; sourceTree = "<group>"; };
-		97DE78AC8341F9919CDDB6E45DCB516F /* Pods-BLT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLT-umbrella.h"; sourceTree = "<group>"; };
-		993083D677260B776EAD112B81FC0DCA /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = src/UICircularProgressRing/Extensions.swift; sourceTree = "<group>"; };
-		9C0A79CC8D9DA62460796410B7E163E0 /* Pods-BLT-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLT-frameworks.sh"; sourceTree = "<group>"; };
+		97866DEBDED243B5B834625672FC3974 /* Pods-BLT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BLT.modulemap"; sourceTree = "<group>"; };
+		97E6E3B385290E4DE7D23E63EFC44C89 /* Pods-BLT-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLT-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A08F6923CC88B707B128AB0A12404159 /* Pods-BLT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BLT.modulemap"; sourceTree = "<group>"; };
-		A3B31CC9E20D3415478923B3E98A75B0 /* UICircularProgressRing-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UICircularProgressRing-Info.plist"; sourceTree = "<group>"; };
-		A90BF78D294F25B90F011898BF31169B /* UICircularProgressRing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICircularProgressRing-prefix.pch"; sourceTree = "<group>"; };
-		ABF0428A896A265FB11714620C23C6E4 /* Pods-BLT-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLT-acknowledgements.plist"; sourceTree = "<group>"; };
-		CE2BA80F926B2225539FEFA551BEDC61 /* UICircularProgressRing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICircularProgressRing-umbrella.h"; sourceTree = "<group>"; };
-		E74B916B8BACF5D57AE6A89CD8D0C546 /* UICircularProgressRing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UICircularProgressRing.framework; path = UICircularProgressRing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8300FF518839839766B31903F81B3BE /* UICircularProgressRing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRing.swift; path = src/UICircularProgressRing/UICircularProgressRing.swift; sourceTree = "<group>"; };
+		B5B0779F807788DD91864B1A926132D1 /* Pods-BLT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLT-dummy.m"; sourceTree = "<group>"; };
+		C614B462DCE7E44E08F6F976CDACB20A /* Pods-BLT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLT.release.xcconfig"; sourceTree = "<group>"; };
+		D65DC2CFB6D7745EC3FBF93CDF7E1519 /* Pods-BLT-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLT-acknowledgements.plist"; sourceTree = "<group>"; };
+		FBBECD842EC49950EB306937B10554C5 /* Pods-BLT-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLT-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A719C03A81180C4B65DAB93BD75443E8 /* Frameworks */ = {
+		DE9AF03BDE2F092DBB4C8F072DCF4392 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED989AA0535CD669C981A011665DF5C1 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA25E4F128BF152416ADF072F1DD1DA6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				87D868E6B115E52367675B20851961D9 /* Foundation.framework in Frameworks */,
+				E13C9BE2C9F8168654A29EB000720839 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F1368D7E95009FA029EC10C8E7C0CEA /* Products */ = {
+		02235F5EB0A081E2F5184514324B0B04 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6CC41D08D6B55FB858C97C74D597FBFA /* Pods_BLT.framework */,
-				E74B916B8BACF5D57AE6A89CD8D0C546 /* UICircularProgressRing.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		411110D9B6D28E46EF3DE4E9E65AB80F /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DB2FC2F758561FC43E78305C355F9326 /* Pods-BLT */,
+				9E76078B54B2F7100C64A333B3E9FDE6 /* Pods-BLT */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A62845C343A9BAEBB39536F838740912 /* UICircularProgressRing */ = {
+		681F94F166A1AF78DB5312AF97AB21E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				993083D677260B776EAD112B81FC0DCA /* Extensions.swift */,
-				0C98660F2D137C9051E41CC1709AB476 /* UICircularProgressRing.h */,
-				F8300FF518839839766B31903F81B3BE /* UICircularProgressRing.swift */,
-				5DC7A4AEFFB0CDF0239191646005FF8B /* UICircularProgressRingDelegate.swift */,
-				0F09E088798A5527A9C7FA9D3FDCC28F /* UICircularRing.swift */,
-				059DA0DECC8E857A1B13942BEA89EF7E /* UICircularRingLayer.swift */,
-				639A8D0E8A440209D1CA8428B65804D6 /* UICircularRingStyle.swift */,
-				87053B78A316F02B4C8FC6C12DA1BC51 /* UICircularRingValueFormatter.swift */,
-				7CB2F989AB912E06C716EF784BD62D63 /* UICircularTimerRing.swift */,
-				DEFA7D8EA23BB82AE8659F0FDB78E060 /* Support Files */,
+				6CC41D08D6B55FB858C97C74D597FBFA /* Pods_BLT.framework */,
 			);
-			name = UICircularProgressRing;
-			path = UICircularProgressRing;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		AD8D83BEA0F44CF8B740FF39051B6E0E /* Pods */ = {
+		9E76078B54B2F7100C64A333B3E9FDE6 /* Pods-BLT */ = {
 			isa = PBXGroup;
 			children = (
-				A62845C343A9BAEBB39536F838740912 /* UICircularProgressRing */,
+				97866DEBDED243B5B834625672FC3974 /* Pods-BLT.modulemap */,
+				97E6E3B385290E4DE7D23E63EFC44C89 /* Pods-BLT-acknowledgements.markdown */,
+				D65DC2CFB6D7745EC3FBF93CDF7E1519 /* Pods-BLT-acknowledgements.plist */,
+				B5B0779F807788DD91864B1A926132D1 /* Pods-BLT-dummy.m */,
+				FBBECD842EC49950EB306937B10554C5 /* Pods-BLT-Info.plist */,
+				1AAAAB255D4D900422B68D2B3AEED3EF /* Pods-BLT-umbrella.h */,
+				4DB10DCECF088CD5CAB7B50650D4CB51 /* Pods-BLT.debug.xcconfig */,
+				C614B462DCE7E44E08F6F976CDACB20A /* Pods-BLT.release.xcconfig */,
 			);
-			name = Pods;
+			name = "Pods-BLT";
+			path = "Target Support Files/Pods-BLT";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -141,9 +83,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				AD8D83BEA0F44CF8B740FF39051B6E0E /* Pods */,
-				1F1368D7E95009FA029EC10C8E7C0CEA /* Products */,
-				411110D9B6D28E46EF3DE4E9E65AB80F /* Targets Support Files */,
+				681F94F166A1AF78DB5312AF97AB21E4 /* Products */,
+				02235F5EB0A081E2F5184514324B0B04 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,91 +96,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DB2FC2F758561FC43E78305C355F9326 /* Pods-BLT */ = {
-			isa = PBXGroup;
-			children = (
-				A08F6923CC88B707B128AB0A12404159 /* Pods-BLT.modulemap */,
-				4DC846CFBFCEAA2AAA1432D6B1AC5C29 /* Pods-BLT-acknowledgements.markdown */,
-				ABF0428A896A265FB11714620C23C6E4 /* Pods-BLT-acknowledgements.plist */,
-				8BD858F54FDB11E575209B06BE4A5917 /* Pods-BLT-dummy.m */,
-				9C0A79CC8D9DA62460796410B7E163E0 /* Pods-BLT-frameworks.sh */,
-				64E8134549B7558F47636E7F3B4822EB /* Pods-BLT-Info.plist */,
-				97DE78AC8341F9919CDDB6E45DCB516F /* Pods-BLT-umbrella.h */,
-				393EAD55E46AE5EA23976D883F34D90F /* Pods-BLT.debug.xcconfig */,
-				96C485612DD74468B45BB1010FEA1831 /* Pods-BLT.release.xcconfig */,
-			);
-			name = "Pods-BLT";
-			path = "Target Support Files/Pods-BLT";
-			sourceTree = "<group>";
-		};
-		DEFA7D8EA23BB82AE8659F0FDB78E060 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				94A46DA07EDA54983B3114D1229BD49D /* UICircularProgressRing.modulemap */,
-				78E6655A89A366C140DF10D63DEFDB91 /* UICircularProgressRing.xcconfig */,
-				523A71D9C8F6A400889B2FE7E46A0CFD /* UICircularProgressRing-dummy.m */,
-				A3B31CC9E20D3415478923B3E98A75B0 /* UICircularProgressRing-Info.plist */,
-				A90BF78D294F25B90F011898BF31169B /* UICircularProgressRing-prefix.pch */,
-				CE2BA80F926B2225539FEFA551BEDC61 /* UICircularProgressRing-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/UICircularProgressRing";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		36652652F11A87C1F225F1587DF2CCF2 /* Headers */ = {
+		57E24BB65B9DD07EBA94FF9E4FFA31FF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63CCA7BC47479ABCC8FE95E6FFCCCDE3 /* UICircularProgressRing-umbrella.h in Headers */,
-				01703887E0DCD3984A20C4FF2C730646 /* UICircularProgressRing.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D5E5FE46BDE234C952C6C3336E62B19 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C8AF2C5EE16F0175BB0896BF67E3C83 /* Pods-BLT-umbrella.h in Headers */,
+				68E902F78A3E62566FE1659742F713CD /* Pods-BLT-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		BC04B7D809D1E684160A8C1A81497B98 /* UICircularProgressRing */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0A71B86C264CB035A7A40F5DAF0C0651 /* Build configuration list for PBXNativeTarget "UICircularProgressRing" */;
-			buildPhases = (
-				36652652F11A87C1F225F1587DF2CCF2 /* Headers */,
-				8B0806B303251C03DA02A714EF6ADC4D /* Sources */,
-				DA25E4F128BF152416ADF072F1DD1DA6 /* Frameworks */,
-				DE578BC195FEE9F077DD75E36C6EFC93 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = UICircularProgressRing;
-			productName = UICircularProgressRing;
-			productReference = E74B916B8BACF5D57AE6A89CD8D0C546 /* UICircularProgressRing.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		CAB279B4CD47F6B365CBDEB3C61267C9 /* Pods-BLT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 625B624E74411913CC4371BA230ABEA7 /* Build configuration list for PBXNativeTarget "Pods-BLT" */;
+			buildConfigurationList = 050E4373F0FDD2960FF0FCD8F87E9304 /* Build configuration list for PBXNativeTarget "Pods-BLT" */;
 			buildPhases = (
-				3D5E5FE46BDE234C952C6C3336E62B19 /* Headers */,
-				CAD9EB7F2A59CBE0C6472E4212B98CF5 /* Sources */,
-				A719C03A81180C4B65DAB93BD75443E8 /* Frameworks */,
-				233957BC2D0BBC7C5FC4FDD4E7F78CE7 /* Resources */,
+				57E24BB65B9DD07EBA94FF9E4FFA31FF /* Headers */,
+				481AE80AD689A4F21E7A5B68F5F5A670 /* Sources */,
+				DE9AF03BDE2F092DBB4C8F072DCF4392 /* Frameworks */,
+				43B09B11F009D8F071798D04971297E6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B26A80BE36FF07A1DEE470838A390F66 /* PBXTargetDependency */,
 			);
 			name = "Pods-BLT";
 			productName = "Pods-BLT";
@@ -264,25 +146,17 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 1F1368D7E95009FA029EC10C8E7C0CEA /* Products */;
+			productRefGroup = 681F94F166A1AF78DB5312AF97AB21E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				CAB279B4CD47F6B365CBDEB3C61267C9 /* Pods-BLT */,
-				BC04B7D809D1E684160A8C1A81497B98 /* UICircularProgressRing */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		233957BC2D0BBC7C5FC4FDD4E7F78CE7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE578BC195FEE9F077DD75E36C6EFC93 /* Resources */ = {
+		43B09B11F009D8F071798D04971297E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,77 +166,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8B0806B303251C03DA02A714EF6ADC4D /* Sources */ = {
+		481AE80AD689A4F21E7A5B68F5F5A670 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E69E6BA1F067F2531F7F344DEC526CAD /* Extensions.swift in Sources */,
-				96DCF70A91D0D1A10577377C830C8046 /* UICircularProgressRing-dummy.m in Sources */,
-				A1B655F050F899094F984A769BF9C2A3 /* UICircularProgressRing.swift in Sources */,
-				99BF049052E3D8581B4FEFF92DA5F5A4 /* UICircularProgressRingDelegate.swift in Sources */,
-				AB2C883B140EFBD2CD1E250622305815 /* UICircularRing.swift in Sources */,
-				C6E71A6A01DD351236A123C0688D28FF /* UICircularRingLayer.swift in Sources */,
-				5DAE820C14F6075A3DD225DEBE486F3B /* UICircularRingStyle.swift in Sources */,
-				A15F2F8D8BE0E58B744AD17AE7203CC6 /* UICircularRingValueFormatter.swift in Sources */,
-				A22C2711A391D061FA208C17FBEB7D68 /* UICircularTimerRing.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CAD9EB7F2A59CBE0C6472E4212B98CF5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0345A707900DED4AB521608F096B0EC3 /* Pods-BLT-dummy.m in Sources */,
+				BCD2A4B2F7B5028FADA1BD3C808C1503 /* Pods-BLT-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		B26A80BE36FF07A1DEE470838A390F66 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = UICircularProgressRing;
-			target = BC04B7D809D1E684160A8C1A81497B98 /* UICircularProgressRing */;
-			targetProxy = 637E63E147B8ECF436E82A9382803BCC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		0C32B19E9EB041717B625280D00A2B37 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78E6655A89A366C140DF10D63DEFDB91 /* UICircularProgressRing.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/UICircularProgressRing/UICircularProgressRing-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UICircularProgressRing/UICircularProgressRing-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/UICircularProgressRing/UICircularProgressRing.modulemap";
-				PRODUCT_MODULE_NAME = UICircularProgressRing;
-				PRODUCT_NAME = UICircularProgressRing;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		32C2FB3BD9A2402E2347CE50F405010A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -487,45 +301,9 @@
 			};
 			name = Debug;
 		};
-		870C1724BFD523A848E27F6F8A718ABF /* Release */ = {
+		9D2A6C2E82B03578CE4A2E605719863D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78E6655A89A366C140DF10D63DEFDB91 /* UICircularProgressRing.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/UICircularProgressRing/UICircularProgressRing-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UICircularProgressRing/UICircularProgressRing-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/UICircularProgressRing/UICircularProgressRing.modulemap";
-				PRODUCT_MODULE_NAME = UICircularProgressRing;
-				PRODUCT_NAME = UICircularProgressRing;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BE676147DD61DF2C4DA3314B210D2E64 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96C485612DD74468B45BB1010FEA1831 /* Pods-BLT.release.xcconfig */;
+			baseConfigurationReference = C614B462DCE7E44E08F6F976CDACB20A /* Pods-BLT.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -562,9 +340,9 @@
 			};
 			name = Release;
 		};
-		E471F1F8DB7974B14A945958B241A49C /* Debug */ = {
+		C9A367601740DFDEAF2F7FC8B9CD292D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 393EAD55E46AE5EA23976D883F34D90F /* Pods-BLT.debug.xcconfig */;
+			baseConfigurationReference = 4DB10DCECF088CD5CAB7B50650D4CB51 /* Pods-BLT.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -603,11 +381,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A71B86C264CB035A7A40F5DAF0C0651 /* Build configuration list for PBXNativeTarget "UICircularProgressRing" */ = {
+		050E4373F0FDD2960FF0FCD8F87E9304 /* Build configuration list for PBXNativeTarget "Pods-BLT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C32B19E9EB041717B625280D00A2B37 /* Debug */,
-				870C1724BFD523A848E27F6F8A718ABF /* Release */,
+				C9A367601740DFDEAF2F7FC8B9CD292D /* Debug */,
+				9D2A6C2E82B03578CE4A2E605719863D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -617,15 +395,6 @@
 			buildConfigurations = (
 				65E8432CA1AC1817F746BE6B5C4F067E /* Debug */,
 				32C2FB3BD9A2402E2347CE50F405010A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		625B624E74411913CC4371BA230ABEA7 /* Build configuration list for PBXNativeTarget "Pods-BLT" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E471F1F8DB7974B14A945958B241A49C /* Debug */,
-				BE676147DD61DF2C4DA3314B210D2E64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
