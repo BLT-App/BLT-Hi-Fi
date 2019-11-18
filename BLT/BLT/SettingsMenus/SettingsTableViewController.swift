@@ -44,6 +44,11 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
     @IBAction func sortListSwitch(_ sender: UISwitch) {
         globalData.wantsListByDate = sender.isOn
         globalData.saveUserData()
+        
+        //Sort If That Is What The User Set
+        if globalData.wantsListByDate {
+            myToDoList.sortList()
+        }
     }
     @IBAction func newClassEntered(_ sender: UITextField) {
         if sender.text != "" {

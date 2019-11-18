@@ -45,8 +45,11 @@ class NewItemViewController: UIViewController {
                 myToDoList.list.insert(newToDo, at: 0)
                 myToDoList.storeList()
                 
-                // Commented out sortList as it reorders all pages on home screen. Should have a specific prompt to sort list instead.
-                // myToDoList.sortList()
+                
+                //If Users Have it Set, Sort List By Due Date
+                if globalData.wantsListByDate {
+                    myToDoList.sortList()
+                }
             }
             self.dismiss(animated: true, completion: nil)
             
