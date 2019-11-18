@@ -32,4 +32,8 @@ class MilestoneItem: ToDoItem {
                    dueDate: dueDate, completed: completed)
         
     }
+    
+    required init(from decoder: Decoder) throws {
+        fatalError("init(from:) has not been implemented")
+    }
 }
