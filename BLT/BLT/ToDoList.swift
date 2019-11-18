@@ -8,18 +8,25 @@
 
 import Foundation
 
+/**
+ A class that represents entire lists of to-do. This is what is stored into storage by the system.
+ */
 class ToDoList: Codable {
+    /// The list of to-do items. 
     var list: [ToDoItem]
     
+    /// Initializer from decodable.
     init(from:Decodable) {
         self.list = []
     }
+    
+    /// Initializer.
     init() {
         self.list = []
     }
     
-    //Adds some example tasks to the to do list
-    func createExampleList(){
+    /// Adds example tasks to the to do list, for example funcionality.
+    func createExampleList() {
         self.list.append(ToDoItem(className: "Math", title: "Complete Calculus Homework", description: "Discover Calculus pg. 103 - 120", dueDate: Date(), completed: false))
         self.list.append(ToDoItem(className: "English", title: "Read Dalloway", description: "Page 48 - 64", dueDate: Date(), completed: false))
         self.list.append(ToDoItem(className: "Computer Science", title: "Complete Lo-Fi Prototype", description: "Use Invision and upload to Canvas", dueDate: Date(), completed: false))
@@ -29,6 +36,7 @@ class ToDoList: Codable {
         self.list.append(ToDoItem(className: "Philosophy", title: "Paine", description: "Read Paine's Common Sense from Philosophy reader", dueDate: Date(), completed: false))
     }
     
+    /// Stores the ToDoList into local storage.
     func storeList() {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let archiveURL = documentsDirectory.appendingPathComponent("todolist").appendingPathExtension("plist")
@@ -38,6 +46,7 @@ class ToDoList: Codable {
         try? encodedNote?.write(to: archiveURL, options: .noFileProtection)
     }
     
+    /// Retrieves the ToDoList from local storage.
     func retrieveList() {
         let propertyListDecoder = PropertyListDecoder()
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -47,6 +56,7 @@ class ToDoList: Codable {
         }
     }
     
+    /// Sorts the ToDoList.
     func sortList() {
         list = list.sorted()
     }

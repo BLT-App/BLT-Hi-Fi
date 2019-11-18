@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ A class that stores user data. 
+ */
 class UserData {
     
 }

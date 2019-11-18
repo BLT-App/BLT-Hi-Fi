@@ -8,12 +8,10 @@
 
 import UIKit
 
+/// Global ToDoList variable. 
 var myToDoList: ToDoList = ToDoList()
 
 class ListViewController: UIViewController {
-    
-    var deleteListIndexPath: IndexPath? = nil
-
     @IBOutlet weak var addTaskButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var waterView: UIView!
@@ -21,34 +19,30 @@ class ListViewController: UIViewController {
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var addButton: UIButton!
     var wave: SPWaterProgressIndicatorView = SPWaterProgressIndicatorView()
+    
+    var deleteListIndexPath: IndexPath? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
-        wave = SPWaterProgressIndicatorView(frame: waterView.bounds)
-        wave.center = waterView.center
-        wave.alpha = 0.3
-        waterView.addSubview(wave)
+        createWave()
         
-//        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
-//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-//        blurEffectView.frame = waterView.bounds
-//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        waterView.addSubview(blurEffectView)
-        
+        // Programmatically sets up
         roundContainerView(cornerRadius: 40, view: tableContainerView, shadowView: shadowView)
         addShadow(view: shadowView, color: UIColor.gray.cgColor, opacity: 0.2, radius: 10, offset: CGSize(width: 0, height: 5))
         addShadow(view: addButton, color: UIColor.blue.cgColor, opacity: 0.1, radius: 5, offset: .zero)
-                
-        /// Debug only!
-
+        
+        // Loads list from filesystem
         myToDoList.retrieveList()
         
-        /// This creates an example list if there is nothing on the list. Should fix this.
+        // This creates an example list if there is nothing on the list. Debug only.
         if myToDoList.list.count == 0 {
             myToDoList.createExampleList()
         }
+        
+        // Sets wave completion percentage, debug only.
         wave.completionInPercent = 30
     }
     
@@ -59,7 +53,16 @@ class ListViewController: UIViewController {
             insertNewTask()
         }
     }
-        
+    
+    /**
+     Creates shadows for a view.
+     - parameters:
+        - view: The view to add a shadow to.
+        - color: The color of the shadow.
+        - opacity: The opacity of the shadow.
+        - radius: The radius of the shadow.
+        - offset: The offset of the shadow.
+     */
     func addShadow(view: UIView, color: CGColor, opacity: Float, radius: CGFloat, offset: CGSize) {
         view.layer.shadowColor = color
         view.layer.shadowOpacity = opacity
@@ -68,6 +71,27 @@ class ListViewController: UIViewController {
         view.layer.masksToBounds = false
     }
     
+    /// Sets up wave view in the background.
+    func createWave() {
+        wave = SPWaterProgressIndicatorView(frame: waterView.bounds)
+        wave.center = waterView.center
+        wave.alpha = 0.3
+        waterView.addSubview(wave)
+        
+//        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = waterView.bounds
+//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        waterView.addSubview(blurEffectView)
+    }
+    
+    /**
+     Creates a rounded container view.
+     - parameters:
+        - cornerRadius: The corner radius of the rounded container.
+        - view: The UIView to round.
+        - shadowView: The accompanying shadowView of the main view to round.
+     */
     func roundContainerView(cornerRadius: Double, view: UIView, shadowView: UIView) {
         let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
         let maskLayer = CAShapeLayer()
@@ -79,15 +103,13 @@ class ListViewController: UIViewController {
         shadowView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     }
     
+    /// Updates and animates the insertion of a new task.
     func insertNewTask() {
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.beginUpdates()
         tableView.insertRows(at: [indexPath], with: .right)
         tableView.endUpdates()
     }
-    
-    /// Creates example content for the ToDoList
-    
 
     /*
     // MARK: - Navigation
@@ -125,6 +147,11 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    /**
+     Prompts a confirmation for a deletion of a ToDoItem.
+     - parameters:
+        - itemToDelete: The ToDoItem that is going to be deleted.
+     */
     func confirmDelete(_ itemToDelete: ToDoItem) {
         let alert = UIAlertController(title: "Delete To-Do Item", message: "Are you sure you want to delete the item \(itemToDelete.title)?", preferredStyle: .actionSheet)
         let DeleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: handleDeleteItem)
@@ -136,6 +163,9 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
+    /**
+     Handles the deletion of an item.
+     */
     func handleDeleteItem(alertAction: UIAlertAction!) {
         if let indexPath = deleteListIndexPath {
             myToDoList.list.remove(at: indexPath.row)
@@ -148,6 +178,9 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    /**
+     Cancels the deletion of an item.
+     */
     func cancelDeleteItem(alertAction: UIAlertAction!) {
         deleteListIndexPath = nil
     }
