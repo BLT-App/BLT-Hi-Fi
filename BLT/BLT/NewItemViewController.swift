@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewItemViewController: UIViewController {
+class NewItemViewController: UIViewController, UITextFieldDelegate {
 
     /// Text field for the name of the class.
     @IBOutlet weak var classText: UITextField!
@@ -24,8 +24,9 @@ class NewItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        classText.delegate = self
+        titleText.delegate = self
+        descText.delegate = self
     }
     
     /// Exits the modal view/screen. 
@@ -56,14 +57,16 @@ class NewItemViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //Tell Text Fields To Close On Hitting Enter
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.classText {
+            self.titleText.becomeFirstResponder()
+        } else if textField == self.titleText {
+            self.descText.becomeFirstResponder()
+        } else {
+            self.view.endEditing(true)
+        }
+        return false
     }
-    */
 
 }
