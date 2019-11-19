@@ -4,6 +4,7 @@ on:
   push:
     paths-ignore:
     - '**/BLT.app'
+    - '**/BLT.app/**'
 
 jobs:
   build:
