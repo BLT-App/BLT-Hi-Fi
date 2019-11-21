@@ -11,7 +11,7 @@ import iOSDropDown
 
 class NewItemViewController: UIViewController, UITextFieldDelegate  {
 
-    /// Text field for the name of the class
+    /// textfield with drop down add on
     @IBOutlet weak var classText: DropDown!
     
     /// Text field for the title of the ToDoItem
@@ -23,21 +23,17 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
     /// Date picker for the due date.
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    // variable used for obtaining value in drop down menu
     var selected: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        //classText.delegate = self
-        // The list of array to display. Can be changed dynamically
         
-        //Its Id Values and its optional
-        //classText.optionIds = [1,23,54,22]
         globalData.retrieveUserData()
         
-//        for i in globalData.subjectList {
-//            classText.optionArray.append(i)
-//        }
-        
+        // sets up the menu with options from userData
         classText.optionArray = globalData.subjectList
+        
+        //obtains the string value of the selected item in the menu
         classText.didSelect { (Selected, index, id) in (self.selected = Selected)
             
         }
