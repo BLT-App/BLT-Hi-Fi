@@ -9,12 +9,14 @@
 import UIKit
 
 /// The ViewController that controls the Focus View.
-class FocusViewController: UIViewController {
-    
+class FocusViewController: UIViewController, FocusTimerDelegate {
+
     /// The ToDoItem of the current task.
     var currentTask : ToDoItem = ToDoItem(className: "", title: "", description: "", dueDate: Date(), completed: true)
     
     var currentTaskNum : Int = 0
+    
+    var myTimer : FocusTimer = FocusTimer(15,0)
 
     @IBOutlet weak var lblCurrentTask: UILabel!
     
@@ -22,17 +24,31 @@ class FocusViewController: UIViewController {
     
     @IBOutlet weak var endFocusModeButton: UIButton!
     
+    @IBOutlet weak var timerDisplay: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupButtons()
         
-        // Do any additional setup after loading the view.
+        myTimer = FocusTimer(15,0)
+        myTimer.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         hideTabBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setCurrentTask()
+        myTimer.mins = 15
+        myTimer.secs = 00
+        myTimer.runTimer()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        myTimer.stopRunning()
     }
     
     /// Stylizes buttons with curves.
@@ -74,9 +90,6 @@ class FocusViewController: UIViewController {
         })
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        setCurrentTask()
-    }
     
     /// Sets the current task to the first task in the to-do list.
     func setCurrentTask() {
@@ -104,6 +117,14 @@ class FocusViewController: UIViewController {
             btnCompleteTask.isEnabled = false
             btnCompleteTask.isHidden = true
         }
+    }
+    
+    func valsUpdated(_ timerReadout: String) {
+        timerDisplay.text = timerReadout
+    }
+    
+    func timerEnded() {
+        
     }
     
     /// Pressing on complete task that queues the next task.
