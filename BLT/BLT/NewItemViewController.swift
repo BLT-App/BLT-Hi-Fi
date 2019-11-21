@@ -9,7 +9,7 @@
 import UIKit
 import DropDown
 
-class NewItemViewController: UIViewController {
+class NewItemViewController: UIViewController, UITextFieldDelegate {
 
     /// Text field for the name of the class.
     @IBOutlet weak var classText: UITextField!
@@ -45,6 +45,9 @@ class NewItemViewController: UIViewController {
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             self.classText.text = item
         }
+        classText.delegate = self
+        titleText.delegate = self
+        descText.delegate = self
     }
     
     /// Exits the modal view/screen. 
@@ -77,13 +80,16 @@ class NewItemViewController: UIViewController {
         }
     }
     
-    @IBAction func showDropDown(_ sender: Any) {
-        dropDown.show()
-    }
-    
-    @IBAction func hideDropDown(_ sender: UITextField) {
-        dropDown.hide()
-    }
+    //Tell Text Fields To Close On Hitting Enter
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.classText {
+            self.titleText.becomeFirstResponder()
+        } else if textField == self.titleText {
+            self.descText.becomeFirstResponder()
+        } else {
+            self.view.endEditing(true)
+        }
+        return false
     
     /*
     // MARK: - Navigation
@@ -93,6 +99,5 @@ class NewItemViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }
