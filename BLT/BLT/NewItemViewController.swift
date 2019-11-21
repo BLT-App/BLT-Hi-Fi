@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DropDown
 
 class NewItemViewController: UIViewController {
 
@@ -22,16 +23,36 @@ class NewItemViewController: UIViewController {
     /// Date picker for the due date.
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    /// Exiting button.
+    @IBOutlet weak var exitButton: UIButton!
+    
+    let dropDown: DropDown = DropDown()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        exitButton.layer.cornerRadius = 15.0
+        exitButton.layer.shadowColor = UIColor.blue.cgColor
+        exitButton.layer.shadowOpacity = 0.2
+        exitButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        exitButton.layer.shadowRadius = 5.0
+        exitButton.layer.masksToBounds = false
+        
+        dropDown.anchorView = classText
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.dataSource = ["Science", "Math", "English", "Econ"]
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.classText.text = item
+        }
     }
     
     /// Exits the modal view/screen. 
     @IBAction func exitButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
     
     /// Checks if the titles are correct, then adds it to the list.
     @IBAction func addButton(_ sender: UIButton) {
@@ -54,6 +75,14 @@ class NewItemViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
             
         }
+    }
+    
+    @IBAction func showDropDown(_ sender: Any) {
+        dropDown.show()
+    }
+    
+    @IBAction func hideDropDown(_ sender: UITextField) {
+        dropDown.hide()
     }
     
     /*
