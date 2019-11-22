@@ -13,9 +13,9 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
 
     /// The ToDoItem of the current task.
     var currentTask : ToDoItem = ToDoItem(className: "", title: "", description: "", dueDate: Date(), completed: true)
-    
+    /// Current index of the task displayed
     var currentTaskNum : Int = 0
-    
+    /// Timer that handles the countdown
     var myTimer : FocusTimer = FocusTimer(15,0)
 
     @IBOutlet weak var lblCurrentTask: UILabel!
@@ -119,10 +119,12 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
         }
     }
     
+    ///Runs when the timer has updated its own values
     func valsUpdated(_ timerReadout: String) {
         timerDisplay.text = timerReadout
     }
     
+    ///Runs when the timer has hit zero
     func timerEnded() {
         
     }

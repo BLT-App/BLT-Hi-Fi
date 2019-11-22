@@ -8,11 +8,14 @@
 
 import Foundation
 
-class FocusTimer : CustomStringConvertible {
-    
+class FocusTimer {
+    ///Timer object for running the thread
     var myTimer: Timer
+    ///Number of mins on the timer
     var mins: Int
+    ///Number of seconds on the timer
     var secs: Int
+    ///String to send to the focus mode screen for display
     var description: String
     
     weak var delegate: FocusTimerDelegate?
@@ -24,10 +27,12 @@ class FocusTimer : CustomStringConvertible {
         description = ""
     }
     
+    ///Starts the timer
     func runTimer() {
         myTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateVals)), userInfo: nil, repeats: true)
     }
     
+    ///Sets the string representation
     func stringMe(){
         if mins > 0 {
             if secs > 9 {
@@ -42,11 +47,13 @@ class FocusTimer : CustomStringConvertible {
         }
     }
     
+    ///Stops running the timer and notifies delegate
     func stopRunning() {
         myTimer.invalidate()
         delegate?.timerEnded()
     }
     
+    ///Updates the values for minutes and seconds
     @objc func updateVals() {
         if secs != 0 {
             secs = secs - 1
@@ -67,6 +74,8 @@ class FocusTimer : CustomStringConvertible {
 }
 
 protocol FocusTimerDelegate : class {
+    ///Passes the readout for the timer for display on the screen
     func valsUpdated(_ timerReadout: String)
+    ///Runs when the timer has ended
     func timerEnded()
 }
