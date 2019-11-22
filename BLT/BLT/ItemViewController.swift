@@ -18,18 +18,12 @@ class ItemViewController: UIViewController {
     @IBOutlet weak var assignmentField: UITextField!
     
     @IBOutlet weak var descriptionField: UITextView!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        exitButton.layer.cornerRadius = 15.0
-        exitButton.layer.shadowColor = UIColor.blue.cgColor
-        exitButton.layer.shadowOpacity = 0.2
-        exitButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-        exitButton.layer.shadowRadius = 5.0
-        exitButton.layer.masksToBounds = false
-
+        setupButtons()
         // Do any additional setup after loading the view.
     }
     
@@ -43,18 +37,41 @@ class ItemViewController: UIViewController {
             classNameField.text = thisToDo.className
             assignmentField.text = thisToDo.title
             descriptionField.text = thisToDo.description
-            
+            datePicker.date = thisToDo.dueDate
         }
+    }
+    
+    func setupButtons() {
+        exitButton.layer.cornerRadius = 15.0
+        exitButton.layer.shadowColor = UIColor.blue.cgColor
+        exitButton.layer.shadowOpacity = 0.2
+        exitButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        exitButton.layer.shadowRadius = 5.0
+        exitButton.layer.masksToBounds = false
     }
     
     
     
     
     @IBAction func backButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        if let classTxt = classNameField.text, let titleTxt = assignmentField.text, let descTxt = descriptionField.text, let thisIndex = targetIndex {
+            // Debug for clearing/resetting entire list.
+            if (classTxt != "" && titleTxt != "") {
+                myToDoList.list[thisIndex] = ToDoItem(className: classTxt, title: titleTxt, description: descTxt, dueDate: datePicker.date, completed: myToDoList.list[thisIndex].completed)
+                myToDoList.storeList()
+                
+                //If Users Have it Set, Sort List By Due Date
+                if globalData.wantsListByDate {
+                    myToDoList.sortList()
+                }
+            }
+            self.dismiss(animated: true, completion: nil)
+            if let thisDelegate = delegate as? ListViewController {
+                thisDelegate.update()
+            }
+        }
     }
     
-
     /*
     // MARK: - Navigation
 

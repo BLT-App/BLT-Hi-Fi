@@ -57,6 +57,10 @@ class ListViewController: UIViewController {
         }
     }
     
+    func update() {
+        tableView.reloadData()
+    }
+    
     /**
      Creates shadows for a view.
      - parameters:

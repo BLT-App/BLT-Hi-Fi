@@ -74,14 +74,12 @@ class NewItemViewController: UIViewController, UITextFieldDelegate {
                 myToDoList.list.insert(newToDo, at: 0)
                 myToDoList.storeList()
                 
-                
                 //If Users Have it Set, Sort List By Due Date
                 if globalData.wantsListByDate {
                     myToDoList.sortList()
                 }
             }
             self.dismiss(animated: true, completion: nil)
-            
         }
     }
     
