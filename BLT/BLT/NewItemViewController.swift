@@ -30,6 +30,11 @@ class NewItemViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //If Users Have it Set, Sort List By Due Date
+        if globalData.wantsListByDate {
+            myToDoList.sortList()
+        }
 
         // Do any additional setup after loading the view.
         exitButton.layer.cornerRadius = 15.0
