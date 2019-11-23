@@ -29,9 +29,6 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
         super.viewDidLoad()
         titleText.delegate = self
         descText.delegate = self
-    }
-    
-        
         globalData.retrieveUserData()
         
         // sets up the menu with options from userData
