@@ -20,6 +20,7 @@
 		3FE3EA83237718DB002B5303 /* BLTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3EA82237718DB002B5303 /* BLTUITests.swift */; };
 		3FE3EA912378DA82002B5303 /* FocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3EA902378DA82002B5303 /* FocusViewController.swift */; };
 		5EC4BDA89C3F094DB85D29C1 /* Pods_BLT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AD7BB0B401C38CBCB198C5 /* Pods_BLT.framework */; };
+		D721BD5C23830540008E934F /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721BD5B23830540008E934F /* ItemViewController.swift */; };
 		D721FD562378AA0300ABD1EF /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD552378AA0300ABD1EF /* ToDoTableViewCell.swift */; };
 		D721FD5C2378ACA300ABD1EF /* MilestoneItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD572378ACA300ABD1EF /* MilestoneItem.swift */; };
 		D721FD5D2378ACA300ABD1EF /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD582378ACA300ABD1EF /* Milestone.swift */; };
@@ -70,6 +71,7 @@
 		3FE3EA902378DA82002B5303 /* FocusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusViewController.swift; sourceTree = "<group>"; };
 		624A30B37FCA4FC9A8B86B67 /* Pods-BLT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLT.debug.xcconfig"; path = "Target Support Files/Pods-BLT/Pods-BLT.debug.xcconfig"; sourceTree = "<group>"; };
 		B8AD7BB0B401C38CBCB198C5 /* Pods_BLT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D721BD5B23830540008E934F /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		D721FD552378AA0300ABD1EF /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		D721FD572378ACA300ABD1EF /* MilestoneItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneItem.swift; sourceTree = "<group>"; };
 		D721FD582378ACA300ABD1EF /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				3FE3EA62237718D3002B5303 /* AppDelegate.swift */,
 				3FE3EA64237718D3002B5303 /* ViewController.swift */,
 				3FE3EA66237718D3002B5303 /* Main.storyboard */,
+				D721BD5B23830540008E934F /* ItemViewController.swift */,
 				3F73230723860D9300155B70 /* FocusTimer.swift */,
 				3FADDE1B23821718005DC492 /* SettingsTableViewController.swift */,
 				D721FD622378ACA600ABD1EF /* ListViewController.swift */,
@@ -360,6 +363,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F5E08907B776FA7CA79BE79D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BLT/Pods-BLT-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BLT/Pods-BLT-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BLT/Pods-BLT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -370,6 +390,7 @@
 				D721FD562378AA0300ABD1EF /* ToDoTableViewCell.swift in Sources */,
 				D721FD5C2378ACA300ABD1EF /* MilestoneItem.swift in Sources */,
 				3F73230823860D9300155B70 /* FocusTimer.swift in Sources */,
+				D721BD5C23830540008E934F /* ItemViewController.swift in Sources */,
 				D721FD632378ACA600ABD1EF /* NewItemViewController.swift in Sources */,
 				D721FD5F2378ACA300ABD1EF /* UserData.swift in Sources */,
 				D721FD602378ACA300ABD1EF /* ToDoList.swift in Sources */,

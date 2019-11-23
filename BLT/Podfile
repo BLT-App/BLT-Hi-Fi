@@ -3,5 +3,6 @@ use_frameworks!
 
 target 'BLT' do
   pod 'iOSDropDown'
+    pod 'DropDown', '2.3.4'
 end
 

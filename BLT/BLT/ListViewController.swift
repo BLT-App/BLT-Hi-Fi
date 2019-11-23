@@ -22,6 +22,8 @@ class ListViewController: UIViewController {
     var wave: SPWaterProgressIndicatorView = SPWaterProgressIndicatorView()
     
     var deleteListIndexPath: IndexPath? = nil
+    
+    var selectedIndex: Int = -1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +55,10 @@ class ListViewController: UIViewController {
         if (myToDoList.list.count != tableView.numberOfRows(inSection: 0)) {
             insertNewTask()
         }
+    }
+    
+    func update() {
+        tableView.reloadData()
     }
     
     /**
@@ -111,6 +117,17 @@ class ListViewController: UIViewController {
         tableView.insertRows(at: [indexPath], with: .right)
         tableView.endUpdates()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "itemViewSegue" {
+            if let destination = segue.destination as? ItemViewController {
+                destination.delegate = self
+                if selectedIndex != -1 {
+                    destination.targetIndex = selectedIndex
+                }
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -146,6 +163,17 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
             let itemToDelete = myToDoList.list[indexPath.row]
             confirmDelete(itemToDelete)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        performSegue(withIdentifier: "itemViewSegue", sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedItem = myToDoList.list[sourceIndexPath.row]
+        myToDoList.list.remove(at: sourceIndexPath.row)
+        myToDoList.list.insert(movedItem, at: destinationIndexPath.row)
     }
     
     /**

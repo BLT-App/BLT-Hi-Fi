@@ -8,6 +8,7 @@
 
 import UIKit
 import iOSDropDown
+import DropDown
 
 class NewItemViewController: UIViewController, UITextFieldDelegate  {
 
@@ -25,8 +26,17 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
     
     // variable used for obtaining value in drop down menu
     var selected: String = ""
+    /// Exiting button.
+    @IBOutlet weak var exitButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        exitButton.layer.cornerRadius = 15.0
+        exitButton.layer.shadowColor = UIColor.blue.cgColor
+        exitButton.layer.shadowOpacity = 0.2
+        exitButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        exitButton.layer.shadowRadius = 5.0
+        exitButton.layer.masksToBounds = false
         titleText.delegate = self
         descText.delegate = self
         globalData.retrieveUserData()
@@ -46,6 +56,8 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    
     /// Checks if the titles are correct, then adds it to the list.
     //let classTxt = classText.text
     @IBAction func addButton(_ sender: UIButton) {
@@ -61,14 +73,12 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
                 myToDoList.list.insert(newToDo, at: 0)
                 myToDoList.storeList()
                 
-                
                 //If Users Have it Set, Sort List By Due Date
                 if globalData.wantsListByDate {
                     myToDoList.sortList()
                 }
             }
             self.dismiss(animated: true, completion: nil)
-            
         }
     }
     
@@ -80,6 +90,14 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
             self.view.endEditing(true)
         }
         return false
-    }
+    
+    /*
+    // MARK: - Navigation
 
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+ */
+    }
 }
