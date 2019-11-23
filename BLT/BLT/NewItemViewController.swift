@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import iOSDropDown
 import DropDown
 
 class NewItemViewController: UIViewController, UITextFieldDelegate  {
 
     /// textfield with drop down add on
-    @IBOutlet weak var classText: DropDown!
+    @IBOutlet weak var classText: UITextField!
     
     /// Text field for the title of the ToDoItem
     @IBOutlet weak var titleText: UITextField!
@@ -26,8 +25,10 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
     
     // variable used for obtaining value in drop down menu
     var selected: String = ""
+    
     /// Exiting button.
     @IBOutlet weak var exitButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -40,14 +41,6 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
         titleText.delegate = self
         descText.delegate = self
         globalData.retrieveUserData()
-        
-        // sets up the menu with options from userData
-        classText.optionArray = globalData.subjectList
-        
-        //obtains the string value of the selected item in the menu
-        classText.didSelect { (Selected, index, id) in (self.selected = Selected)
-            
-        }
         
     }
 
@@ -90,6 +83,7 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
             self.view.endEditing(true)
         }
         return false
+    }
     
     /*
     // MARK: - Navigation
@@ -99,5 +93,4 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
  */
-    }
 }
