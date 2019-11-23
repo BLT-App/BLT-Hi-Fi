@@ -16,6 +16,7 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var sortListSwitch: UISwitch!
     @IBOutlet weak var btnAddClass: UIButton!
+    
     @IBOutlet weak var addClassField: UITextField!
     
     override func viewDidLoad() {

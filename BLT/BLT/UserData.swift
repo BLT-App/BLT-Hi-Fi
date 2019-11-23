@@ -44,11 +44,15 @@ class UserData: Codable {
     }
     
     init() {
-        subjectList = [""]
+        subjectList = []
         wantsListByDate = true
         firstName = ""
         lastName = ""
-        
         retrieveUserData()
+        if subjectList.count == 0 {
+            subjectList = ["Science", "Math", "Computer Science"]
+        }
+        
+
     }
 }
