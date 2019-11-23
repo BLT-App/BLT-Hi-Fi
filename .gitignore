@@ -68,5 +68,4 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 .DS_Store
-
-BLT.app/
+.app
