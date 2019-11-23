@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F73230823860D9300155B70 /* FocusTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F73230723860D9300155B70 /* FocusTimer.swift */; };
 		3FADDE1623804B01005DC492 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FADDE1523804B01005DC492 /* SettingsViewController.swift */; };
 		3FADDE1C23821718005DC492 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FADDE1B23821718005DC492 /* SettingsTableViewController.swift */; };
 		3FADDE1E23824DE5005DC492 /* SPWaterProgressIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FADDE1D23824DE5005DC492 /* SPWaterProgressIndicatorView.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		3BD6BFEBB320243A67A7513E /* Pods-BLT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLT.release.xcconfig"; path = "Target Support Files/Pods-BLT/Pods-BLT.release.xcconfig"; sourceTree = "<group>"; };
+		3F73230723860D9300155B70 /* FocusTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTimer.swift; sourceTree = "<group>"; };
 		3FADDE1523804B01005DC492 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3FADDE1B23821718005DC492 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = SettingsMenus/SettingsTableViewController.swift; sourceTree = "<group>"; };
 		3FADDE1D23824DE5005DC492 /* SPWaterProgressIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPWaterProgressIndicatorView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				3FE3EA62237718D3002B5303 /* AppDelegate.swift */,
 				3FE3EA64237718D3002B5303 /* ViewController.swift */,
 				3FE3EA66237718D3002B5303 /* Main.storyboard */,
+				3F73230723860D9300155B70 /* FocusTimer.swift */,
 				3FADDE1B23821718005DC492 /* SettingsTableViewController.swift */,
 				D721FD622378ACA600ABD1EF /* ListViewController.swift */,
 				D721FD552378AA0300ABD1EF /* ToDoTableViewCell.swift */,
@@ -348,6 +351,7 @@
 			files = (
 				D721FD562378AA0300ABD1EF /* ToDoTableViewCell.swift in Sources */,
 				D721FD5C2378ACA300ABD1EF /* MilestoneItem.swift in Sources */,
+				3F73230823860D9300155B70 /* FocusTimer.swift in Sources */,
 				D721FD632378ACA600ABD1EF /* NewItemViewController.swift in Sources */,
 				D721FD5F2378ACA300ABD1EF /* UserData.swift in Sources */,
 				D721FD602378ACA300ABD1EF /* ToDoList.swift in Sources */,
