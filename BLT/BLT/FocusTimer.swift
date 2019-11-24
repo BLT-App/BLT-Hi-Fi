@@ -40,7 +40,7 @@ class FocusTimer {
             } else {
                 description = "\(mins):0\(secs)"
             }
-        } else if secs > 30 {
+        } else if secs > 0 {
             description = "\(secs)"
         } else {
             description = "Timer Ended!"
@@ -60,9 +60,9 @@ class FocusTimer {
         } else {
             if mins != 0 {
                 mins = mins - 1
-                secs = 59
             }
             if mins == 0 && secs == 0 {
+                stringMe()
                 stopRunning()
             } else {
                 secs = 59
