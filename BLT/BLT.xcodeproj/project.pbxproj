@@ -20,6 +20,7 @@
 		3FE3EA83237718DB002B5303 /* BLTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3EA82237718DB002B5303 /* BLTUITests.swift */; };
 		3FE3EA912378DA82002B5303 /* FocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3EA902378DA82002B5303 /* FocusViewController.swift */; };
 		5EC4BDA89C3F094DB85D29C1 /* Pods_BLT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AD7BB0B401C38CBCB198C5 /* Pods_BLT.framework */; };
+		D7056147238CFB700030B257 /* Additional Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7056146238CFB700030B257 /* Additional Classes.swift */; };
 		D721BD5C23830540008E934F /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721BD5B23830540008E934F /* ItemViewController.swift */; };
 		D721FD562378AA0300ABD1EF /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD552378AA0300ABD1EF /* ToDoTableViewCell.swift */; };
 		D721FD5C2378ACA300ABD1EF /* MilestoneItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD572378ACA300ABD1EF /* MilestoneItem.swift */; };
@@ -71,6 +72,7 @@
 		3FE3EA902378DA82002B5303 /* FocusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusViewController.swift; sourceTree = "<group>"; };
 		624A30B37FCA4FC9A8B86B67 /* Pods-BLT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLT.debug.xcconfig"; path = "Target Support Files/Pods-BLT/Pods-BLT.debug.xcconfig"; sourceTree = "<group>"; };
 		B8AD7BB0B401C38CBCB198C5 /* Pods_BLT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7056146238CFB700030B257 /* Additional Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Additional Classes.swift"; sourceTree = "<group>"; };
 		D721BD5B23830540008E934F /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		D721FD552378AA0300ABD1EF /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		D721FD572378ACA300ABD1EF /* MilestoneItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneItem.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				D721FD572378ACA300ABD1EF /* MilestoneItem.swift */,
 				D721FD582378ACA300ABD1EF /* Milestone.swift */,
 				3FADDE1523804B01005DC492 /* SettingsViewController.swift */,
+				D7056146238CFB700030B257 /* Additional Classes.swift */,
 			);
 			path = BLT;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7056147238CFB700030B257 /* Additional Classes.swift in Sources */,
 				D721FD562378AA0300ABD1EF /* ToDoTableViewCell.swift in Sources */,
 				D721FD5C2378ACA300ABD1EF /* MilestoneItem.swift in Sources */,
 				3F73230823860D9300155B70 /* FocusTimer.swift in Sources */,

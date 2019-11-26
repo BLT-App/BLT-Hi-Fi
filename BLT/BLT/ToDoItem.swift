@@ -66,6 +66,12 @@ class ToDoItem: Codable {
         self.dueDate = dueDate
         self.completed = completed
     }
+    
+    /// Marks an item as completed
+    func markCompleted() -> Bool {
+        self.completed = true
+        return true
+    }
 }
 
 // ToDoItems have a strict ordering using the duedate. 

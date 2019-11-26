@@ -82,7 +82,7 @@ class ListViewController: UIViewController {
     func createWave() {
         wave = SPWaterProgressIndicatorView(frame: waterView.bounds)
         wave.center = waterView.center
-        wave.alpha = 0.3
+        wave.alpha = 0.4
         waterView.addSubview(wave)
         
 //        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
@@ -174,6 +174,25 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
         let movedItem = myToDoList.list[sourceIndexPath.row]
         myToDoList.list.remove(at: sourceIndexPath.row)
         myToDoList.list.insert(movedItem, at: destinationIndexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let configuration = UISwipeActionsConfiguration(actions: [contextualCompletedAction(forRowAtIndexPath: indexPath)])
+        return configuration
+    }
+    
+    func contextualCompletedAction(forRowAtIndexPath indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .normal, title: "Complete") { (contextAction: UIContextualAction, sourceView: UIView, completionHandler: (Bool) -> Void) in
+            myToDoList.list.remove(at: indexPath.row)
+            myToDoList.storeList()
+            self.tableView.beginUpdates()
+            self.tableView.deleteRows(at: [indexPath], with: .top)
+            self.tableView.endUpdates()
+            self.tableView.reloadData()
+            completionHandler(true)
+        }
+        action.backgroundColor = .blue
+        return action
     }
     
     /**

@@ -16,6 +16,7 @@ class ToDoTableViewCell: UITableViewCell {
     @IBOutlet weak var dueLabel: UILabel!
     
     @IBOutlet weak var itemView: UIView!
+    @IBOutlet weak var blurEffectView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +33,16 @@ class ToDoTableViewCell: UITableViewCell {
         itemView.layer.shadowOffset = CGSize(width: 0, height: 4)
         itemView.layer.shadowRadius = 5.0
         itemView.layer.masksToBounds = false
+        
+        blurEffectView.layer.cornerRadius = 20.0
+        blurEffectView.layer.masksToBounds = true
+        
+        let blurEffect = UIBlurEffect(style: .extraLight)
+        let blurView = CustomIntensityVisualEffectView(effect: blurEffect, intensity: 0.3)
+        blurView.frame = itemView.bounds
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurView.layer.masksToBounds = false
+        blurEffectView.insertSubview(blurView, at: 0)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
