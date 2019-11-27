@@ -35,6 +35,7 @@ class ItemViewController: UIViewController {
         if let thisIndex = targetIndex {
             let thisToDo = myToDoList.list[thisIndex]
             classNameField.text = thisToDo.className
+            classNameField.backgroundColor = globalData.subjects[thisToDo.className]?.uiColor
             assignmentField.text = thisToDo.title
             descriptionField.text = thisToDo.description
             datePicker.date = thisToDo.dueDate

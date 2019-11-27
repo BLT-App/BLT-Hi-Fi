@@ -32,7 +32,7 @@ class ListViewController: UIViewController {
         
         createWave()
         
-        // Programmatically sets up
+        // Programmatically sets up rounded views.
         roundContainerView(cornerRadius: 40, view: tableContainerView, shadowView: shadowView)
         addShadow(view: shadowView, color: UIColor.gray.cgColor, opacity: 0.2, radius: 10, offset: CGSize(width: 0, height: 5))
         addShadow(view: addButton, color: UIColor.blue.cgColor, opacity: 0.1, radius: 5, offset: .zero)
@@ -44,6 +44,8 @@ class ListViewController: UIViewController {
         if myToDoList.list.count == 0 {
             myToDoList.createExampleList()
         }
+        
+        globalData.updateCourses(fromList: myToDoList)
         
         // Sets wave completion percentage, debug only.
         wave.completionInPercent = 30

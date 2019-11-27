@@ -3,70 +3,103 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		308067693E0B4B18EEE6BA4FADFE1189 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		361F5CE2807CBD530C8C6E63FD245F5A /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DAF3194AE78F853BAD5BA0910EE3EC /* DropDownCell.swift */; };
-		4A8FE4C4F6D45B41CE01A00D24C56961 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7016EA4890B334B6819FAE0E4B8A0B /* DPDUIView+Extension.swift */; };
-		5F515237FF94DAB4C8A15B7E33A3877B /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31C6F16B4F1E556289A0012E5E44A43 /* DPDConstants.swift */; };
-		6064C623428CE711C252E442741F81AB /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2828437AFB3ECCB22931EF865157D40 /* DropDown+Appearance.swift */; };
+		361F5CE2807CBD530C8C6E63FD245F5A /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412035D7BEECA68F42766C21F193483 /* DropDownCell.swift */; };
+		4A8FE4C4F6D45B41CE01A00D24C56961 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BCA3117B2684CD2AD5B251D3B028D5 /* DPDUIView+Extension.swift */; };
+		5F515237FF94DAB4C8A15B7E33A3877B /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A90BD1EDA4F983FB7ADBC7314864CE /* DPDConstants.swift */; };
+		6064C623428CE711C252E442741F81AB /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0D928B72C4E16B65E4FD78A929B8FB /* DropDown+Appearance.swift */; };
 		618D9C6E8BFF0C7AAD509E9279488585 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		842DFBB1471889C2CA329AE05620BBE7 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC459FA892744918F4561F8ACF365D /* DropDown.swift */; };
-		9518195DB69E904D77247E0A55A0043C /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA5FE98F02943B3686AC7810F54992AE /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		95897DCFD4071A7D61AEAE1DA86BB539 /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC241BA16CA30E45DF33705BC697AE3E /* DropDown-dummy.m */; };
-		BA7BB2FF04CE1CAFC5238D1807EF0034 /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B884441C3E6EB408D1140E5498CB0 /* DPDKeyboardListener.swift */; };
-		C0C3599ACA55C73B91775496BD391800 /* Pods-BLT-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97DE78AC8341F9919CDDB6E45DCB516F /* Pods-BLT-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE4CEA0FDC98144AE8BC791B4DA94569 /* Pods-BLT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD858F54FDB11E575209B06BE4A5917 /* Pods-BLT-dummy.m */; };
-		EB3D83C05EC7793D23A1192C11B9F631 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68AA3BA6D485B5AF8E3295850977F403 /* DropDownCell.xib */; };
+		754241F14FA0C053A26F9761C874F697 /* Hue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC921A366CAC01FF3A63C97D68C1B8AA /* Hue.swift */; };
+		842DFBB1471889C2CA329AE05620BBE7 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5D3754B26311D3957F7399EE0EFB15 /* DropDown.swift */; };
+		8B4B174C0DC9C0DC0AE2C0861EA6C7C9 /* Pods-BLT-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97DE78AC8341F9919CDDB6E45DCB516F /* Pods-BLT-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C9FA24840A6AAF39E0A404256CE40A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		9518195DB69E904D77247E0A55A0043C /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6F3DF03E2D4152362C50DC257A5392 /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95897DCFD4071A7D61AEAE1DA86BB539 /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0FE224921926E9E95CB34D953BAC5B /* DropDown-dummy.m */; };
+		A772F15F940D66AA3DB91D74C662CAE5 /* Luminosity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2983F4BC3DBE80E7988FB341C9606B /* Luminosity.swift */; };
+		B80C138CA273FC3913A82D1666714095 /* RandomColorSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CF7B218C9A77236084E89AAB1BAD9 /* RandomColorSwift-dummy.m */; };
+		BA7BB2FF04CE1CAFC5238D1807EF0034 /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B69E2D99CB7CB303F504BD53A22191 /* DPDKeyboardListener.swift */; };
+		BF51C637B9AF6E87D8D758D91A1D2366 /* Pods-BLT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD858F54FDB11E575209B06BE4A5917 /* Pods-BLT-dummy.m */; };
+		C2311B4FE593EB0669EF7192ED3EC0A6 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39E784E0BA92C7FB7EA7E6CFB633657 /* RandomColor.swift */; };
+		C90AC582B3E4DE3CC04ACFC5E6AFECBB /* ColorDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A46363F90A3C490E28EC749020153D9 /* ColorDefinition.swift */; };
+		DC4302597E0C7571AF42A41ABEE751E4 /* RandomColorSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 910496B9361DB298313B48B05EF2EEA2 /* RandomColorSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA4978F54949C58DCC807324F03B0273 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		EB3D83C05EC7793D23A1192C11B9F631 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D2EE612C54E258451E0CA515F45FE19 /* DropDownCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		65E7E04EC547AC543DB3EDC2546C13A2 /* PBXContainerItemProxy */ = {
+		3F53BBD8AB85B7D4362ECD37F8A04326 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E9F9401E9C74C0C393164FD8D86D0068;
 			remoteInfo = DropDown;
 		};
+		69F175B5CFF83F7B4157D80C3D510D71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EACC729606987BB9A741820906B3F1E;
+			remoteInfo = RandomColorSwift;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1AF2CD9B1170280DDA5901A46EABD623 /* DropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DropDown-Info.plist"; sourceTree = "<group>"; };
-		29DAF3194AE78F853BAD5BA0910EE3EC /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
-		2B7016EA4890B334B6819FAE0E4B8A0B /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
+		0A46363F90A3C490E28EC749020153D9 /* ColorDefinition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorDefinition.swift; path = RandomColor/ColorDefinition.swift; sourceTree = "<group>"; };
+		0AA7FEA2F9E2E375BA95F1A391F3D210 /* DropDown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.xcconfig; sourceTree = "<group>"; };
+		1C2E1C937E3A896616DE5D577E1342AE /* RandomColorSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RandomColorSwift.xcconfig; sourceTree = "<group>"; };
+		232E6F04E272ED234CE1EFCA50A522FE /* DropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DropDown-Info.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		393EAD55E46AE5EA23976D883F34D90F /* Pods-BLT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLT.debug.xcconfig"; sourceTree = "<group>"; };
-		3ACC459FA892744918F4561F8ACF365D /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
+		3C2A8362AD06F0767F28995043C2D299 /* RandomColorSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RandomColorSwift-prefix.pch"; sourceTree = "<group>"; };
+		3E2D04413ED3291626BF736E59FBB866 /* RandomColorSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RandomColorSwift.modulemap; sourceTree = "<group>"; };
+		40BCA3117B2684CD2AD5B251D3B028D5 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
 		4DC846CFBFCEAA2AAA1432D6B1AC5C29 /* Pods-BLT-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLT-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6457024B0A03264FFAE3EB85EFADB199 /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
+		50B69E2D99CB7CB303F504BD53A22191 /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
+		5F1282CA90153E296E815D59B87584DE /* RandomColorSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RandomColorSwift.framework; path = RandomColorSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F5D3754B26311D3957F7399EE0EFB15 /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
 		64E8134549B7558F47636E7F3B4822EB /* Pods-BLT-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLT-Info.plist"; sourceTree = "<group>"; };
-		68AA3BA6D485B5AF8E3295850977F403 /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
+		66A90BD1EDA4F983FB7ADBC7314864CE /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
 		6CC41D08D6B55FB858C97C74D597FBFA /* Pods_BLT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLT.framework; path = "Pods-BLT.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		733B884441C3E6EB408D1140E5498CB0 /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
-		82272215F187B3B8CF473A95156F1D5B /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DropDown.modulemap; sourceTree = "<group>"; };
+		6D2EE612C54E258451E0CA515F45FE19 /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
+		87E64A6350BCB5D554FFCA915E28993B /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DropDown.modulemap; sourceTree = "<group>"; };
 		8BD858F54FDB11E575209B06BE4A5917 /* Pods-BLT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLT-dummy.m"; sourceTree = "<group>"; };
+		8E87B75146209AC1A1D54E44412A01B4 /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
+		910496B9361DB298313B48B05EF2EEA2 /* RandomColorSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RandomColorSwift-umbrella.h"; sourceTree = "<group>"; };
 		96C485612DD74468B45BB1010FEA1831 /* Pods-BLT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLT.release.xcconfig"; sourceTree = "<group>"; };
 		97DE78AC8341F9919CDDB6E45DCB516F /* Pods-BLT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLT-umbrella.h"; sourceTree = "<group>"; };
+		9B0FE224921926E9E95CB34D953BAC5B /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
 		9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DropDown.framework; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0A79CC8D9DA62460796410B7E163E0 /* Pods-BLT-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLT-frameworks.sh"; sourceTree = "<group>"; };
+		9D5CF7B218C9A77236084E89AAB1BAD9 /* RandomColorSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RandomColorSwift-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A08F6923CC88B707B128AB0A12404159 /* Pods-BLT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BLT.modulemap"; sourceTree = "<group>"; };
+		A412035D7BEECA68F42766C21F193483 /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
 		ABF0428A896A265FB11714620C23C6E4 /* Pods-BLT-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLT-acknowledgements.plist"; sourceTree = "<group>"; };
-		B31C6F16B4F1E556289A0012E5E44A43 /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
-		C32913CB17328F60F5C81C2E8940771E /* DropDown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.xcconfig; sourceTree = "<group>"; };
-		DA5FE98F02943B3686AC7810F54992AE /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
-		F2828437AFB3ECCB22931EF865157D40 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
-		FC241BA16CA30E45DF33705BC697AE3E /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
+		BC921A366CAC01FF3A63C97D68C1B8AA /* Hue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Hue.swift; path = RandomColor/Hue.swift; sourceTree = "<group>"; };
+		C39E784E0BA92C7FB7EA7E6CFB633657 /* RandomColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomColor.swift; path = RandomColor/RandomColor.swift; sourceTree = "<group>"; };
+		EC0D928B72C4E16B65E4FD78A929B8FB /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
+		EF13309BB9FBF01A9A051EEA7804AE80 /* RandomColorSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RandomColorSwift-Info.plist"; sourceTree = "<group>"; };
+		FC6F3DF03E2D4152362C50DC257A5392 /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
+		FF2983F4BC3DBE80E7988FB341C9606B /* Luminosity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Luminosity.swift; path = RandomColor/Luminosity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6998591D7F8AEDD85AF88C588AC874E2 /* Frameworks */ = {
+		4F5B7ECC7336F860CEB0D0FF97190366 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				308067693E0B4B18EEE6BA4FADFE1189 /* Foundation.framework in Frameworks */,
+				EA4978F54949C58DCC807324F03B0273 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		856FEA9B26FF9BD01A8C13C19D372B2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C9FA24840A6AAF39E0A404256CE40A8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,37 +114,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		057ED11B9D5977F85CBBBEF7C3E69DDB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3BB313130E830E05F5F57D7C3B165946 /* DropDown */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		3B81492AD41AE11D82D27404A4EB419A /* Products */ = {
+		0D47C228FAB31B36D8B8FE5DFF8CAF05 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */,
 				6CC41D08D6B55FB858C97C74D597FBFA /* Pods_BLT.framework */,
+				5F1282CA90153E296E815D59B87584DE /* RandomColorSwift.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3BB313130E830E05F5F57D7C3B165946 /* DropDown */ = {
+		0EA893521D9DCD436CCBD6E58A0A3F83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B31C6F16B4F1E556289A0012E5E44A43 /* DPDConstants.swift */,
-				733B884441C3E6EB408D1140E5498CB0 /* DPDKeyboardListener.swift */,
-				2B7016EA4890B334B6819FAE0E4B8A0B /* DPDUIView+Extension.swift */,
-				3ACC459FA892744918F4561F8ACF365D /* DropDown.swift */,
-				F2828437AFB3ECCB22931EF865157D40 /* DropDown+Appearance.swift */,
-				29DAF3194AE78F853BAD5BA0910EE3EC /* DropDownCell.swift */,
-				F3CB77CA0351B87D28BEA0ACE72637C5 /* Resources */,
-				68FAE0A0F9ACA535262A313B2AB46DDD /* Support Files */,
+				6D2EE612C54E258451E0CA515F45FE19 /* DropDownCell.xib */,
 			);
-			name = DropDown;
-			path = DropDown;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4095001AED0137B4FEFE430DD1550F4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDF13139675A9DA5D8ECC432BC2D89FB /* DropDown */,
+				6FEF6CF8E484357479086B46431F1DC6 /* RandomColorSwift */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		411110D9B6D28E46EF3DE4E9E65AB80F /* Targets Support Files */ = {
@@ -122,18 +149,33 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		68FAE0A0F9ACA535262A313B2AB46DDD /* Support Files */ = {
+		6FEF6CF8E484357479086B46431F1DC6 /* RandomColorSwift */ = {
 			isa = PBXGroup;
 			children = (
-				82272215F187B3B8CF473A95156F1D5B /* DropDown.modulemap */,
-				C32913CB17328F60F5C81C2E8940771E /* DropDown.xcconfig */,
-				FC241BA16CA30E45DF33705BC697AE3E /* DropDown-dummy.m */,
-				1AF2CD9B1170280DDA5901A46EABD623 /* DropDown-Info.plist */,
-				6457024B0A03264FFAE3EB85EFADB199 /* DropDown-prefix.pch */,
-				DA5FE98F02943B3686AC7810F54992AE /* DropDown-umbrella.h */,
+				0A46363F90A3C490E28EC749020153D9 /* ColorDefinition.swift */,
+				BC921A366CAC01FF3A63C97D68C1B8AA /* Hue.swift */,
+				FF2983F4BC3DBE80E7988FB341C9606B /* Luminosity.swift */,
+				C39E784E0BA92C7FB7EA7E6CFB633657 /* RandomColor.swift */,
+				F94CD911C49F109924FF234EB16FDD1A /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/DropDown";
+			name = RandomColorSwift;
+			path = RandomColorSwift;
+			sourceTree = "<group>";
+		};
+		BDF13139675A9DA5D8ECC432BC2D89FB /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				66A90BD1EDA4F983FB7ADBC7314864CE /* DPDConstants.swift */,
+				50B69E2D99CB7CB303F504BD53A22191 /* DPDKeyboardListener.swift */,
+				40BCA3117B2684CD2AD5B251D3B028D5 /* DPDUIView+Extension.swift */,
+				5F5D3754B26311D3957F7399EE0EFB15 /* DropDown.swift */,
+				EC0D928B72C4E16B65E4FD78A929B8FB /* DropDown+Appearance.swift */,
+				A412035D7BEECA68F42766C21F193483 /* DropDownCell.swift */,
+				0EA893521D9DCD436CCBD6E58A0A3F83 /* Resources */,
+				F9EC5C57C25EB6A0D474FCA2888448A0 /* Support Files */,
+			);
+			name = DropDown;
+			path = DropDown;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -149,8 +191,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				057ED11B9D5977F85CBBBEF7C3E69DDB /* Pods */,
-				3B81492AD41AE11D82D27404A4EB419A /* Products */,
+				4095001AED0137B4FEFE430DD1550F4C /* Pods */,
+				0D47C228FAB31B36D8B8FE5DFF8CAF05 /* Products */,
 				411110D9B6D28E46EF3DE4E9E65AB80F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -180,12 +222,32 @@
 			path = "Target Support Files/Pods-BLT";
 			sourceTree = "<group>";
 		};
-		F3CB77CA0351B87D28BEA0ACE72637C5 /* Resources */ = {
+		F94CD911C49F109924FF234EB16FDD1A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				68AA3BA6D485B5AF8E3295850977F403 /* DropDownCell.xib */,
+				3E2D04413ED3291626BF736E59FBB866 /* RandomColorSwift.modulemap */,
+				1C2E1C937E3A896616DE5D577E1342AE /* RandomColorSwift.xcconfig */,
+				9D5CF7B218C9A77236084E89AAB1BAD9 /* RandomColorSwift-dummy.m */,
+				EF13309BB9FBF01A9A051EEA7804AE80 /* RandomColorSwift-Info.plist */,
+				3C2A8362AD06F0767F28995043C2D299 /* RandomColorSwift-prefix.pch */,
+				910496B9361DB298313B48B05EF2EEA2 /* RandomColorSwift-umbrella.h */,
 			);
-			name = Resources;
+			name = "Support Files";
+			path = "../Target Support Files/RandomColorSwift";
+			sourceTree = "<group>";
+		};
+		F9EC5C57C25EB6A0D474FCA2888448A0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				87E64A6350BCB5D554FFCA915E28993B /* DropDown.modulemap */,
+				0AA7FEA2F9E2E375BA95F1A391F3D210 /* DropDown.xcconfig */,
+				9B0FE224921926E9E95CB34D953BAC5B /* DropDown-dummy.m */,
+				232E6F04E272ED234CE1EFCA50A522FE /* DropDown-Info.plist */,
+				8E87B75146209AC1A1D54E44412A01B4 /* DropDown-prefix.pch */,
+				FC6F3DF03E2D4152362C50DC257A5392 /* DropDown-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DropDown";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,30 +261,57 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C79196B3D9A67961EC8FEF3B031C1463 /* Headers */ = {
+		5558392122880C2CD04A5E987621B62B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0C3599ACA55C73B91775496BD391800 /* Pods-BLT-umbrella.h in Headers */,
+				DC4302597E0C7571AF42A41ABEE751E4 /* RandomColorSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A32D2B77DAE623D99640C6ED853F747 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4B174C0DC9C0DC0AE2C0861EA6C7C9 /* Pods-BLT-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CAB279B4CD47F6B365CBDEB3C61267C9 /* Pods-BLT */ = {
+		8EACC729606987BB9A741820906B3F1E /* RandomColorSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37C5253776A8C2A7ADF08DAD2DFDE733 /* Build configuration list for PBXNativeTarget "Pods-BLT" */;
+			buildConfigurationList = 21D8BFB83B3621A4F06C3D85CDE6663F /* Build configuration list for PBXNativeTarget "RandomColorSwift" */;
 			buildPhases = (
-				C79196B3D9A67961EC8FEF3B031C1463 /* Headers */,
-				A308F418E2729B106470187BDE610363 /* Sources */,
-				6998591D7F8AEDD85AF88C588AC874E2 /* Frameworks */,
-				EA13ADF51B14FABB297C4DCEE1E65A50 /* Resources */,
+				5558392122880C2CD04A5E987621B62B /* Headers */,
+				049879EB2A0428AC1DC02A6CDCA590B7 /* Sources */,
+				4F5B7ECC7336F860CEB0D0FF97190366 /* Frameworks */,
+				ACFF978A186EADEF48F16392F915B971 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B2FB5AB8681D0790715D2968F054FAD2 /* PBXTargetDependency */,
+			);
+			name = RandomColorSwift;
+			productName = RandomColorSwift;
+			productReference = 5F1282CA90153E296E815D59B87584DE /* RandomColorSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CAB279B4CD47F6B365CBDEB3C61267C9 /* Pods-BLT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D970ECC595A415BB5DE6E9FA2A57B56E /* Build configuration list for PBXNativeTarget "Pods-BLT" */;
+			buildPhases = (
+				5A32D2B77DAE623D99640C6ED853F747 /* Headers */,
+				DA862E781AFEEF67A8C04F6CBABE052D /* Sources */,
+				856FEA9B26FF9BD01A8C13C19D372B2B /* Frameworks */,
+				7458ADAC8103AE1803FCEF2C1D7D4ECE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C97B9D7503E65601DDAB5F4B741AAD17 /* PBXTargetDependency */,
+				E769F2897B09AD765A77C8A1562CE811 /* PBXTargetDependency */,
 			);
 			name = "Pods-BLT";
 			productName = "Pods-BLT";
@@ -257,7 +346,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -265,17 +354,32 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 3B81492AD41AE11D82D27404A4EB419A /* Products */;
+			productRefGroup = 0D47C228FAB31B36D8B8FE5DFF8CAF05 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */,
 				CAB279B4CD47F6B365CBDEB3C61267C9 /* Pods-BLT */,
+				8EACC729606987BB9A741820906B3F1E /* RandomColorSwift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7458ADAC8103AE1803FCEF2C1D7D4ECE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACFF978A186EADEF48F16392F915B971 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0143B72ED2669C4E98A5B8BBCE72151 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,21 +388,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA13ADF51B14FABB297C4DCEE1E65A50 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A308F418E2729B106470187BDE610363 /* Sources */ = {
+		049879EB2A0428AC1DC02A6CDCA590B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE4CEA0FDC98144AE8BC791B4DA94569 /* Pods-BLT-dummy.m in Sources */,
+				C90AC582B3E4DE3CC04ACFC5E6AFECBB /* ColorDefinition.swift in Sources */,
+				754241F14FA0C053A26F9761C874F697 /* Hue.swift in Sources */,
+				A772F15F940D66AA3DB91D74C662CAE5 /* Luminosity.swift in Sources */,
+				C2311B4FE593EB0669EF7192ED3EC0A6 /* RandomColor.swift in Sources */,
+				B80C138CA273FC3913A82D1666714095 /* RandomColorSwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA862E781AFEEF67A8C04F6CBABE052D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF51C637B9AF6E87D8D758D91A1D2366 /* Pods-BLT-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,56 +428,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B2FB5AB8681D0790715D2968F054FAD2 /* PBXTargetDependency */ = {
+		C97B9D7503E65601DDAB5F4B741AAD17 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DropDown;
 			target = E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */;
-			targetProxy = 65E7E04EC547AC543DB3EDC2546C13A2 /* PBXContainerItemProxy */;
+			targetProxy = 3F53BBD8AB85B7D4362ECD37F8A04326 /* PBXContainerItemProxy */;
+		};
+		E769F2897B09AD765A77C8A1562CE811 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RandomColorSwift;
+			target = 8EACC729606987BB9A741820906B3F1E /* RandomColorSwift */;
+			targetProxy = 69F175B5CFF83F7B4157D80C3D510D71 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		01A3D95EC0AC5BCDE865E6361313D00E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 393EAD55E46AE5EA23976D883F34D90F /* Pods-BLT.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-BLT/Pods-BLT-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BLT/Pods-BLT.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		03C940EAC4EBFB2E09D8039256EB2679 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C32913CB17328F60F5C81C2E8940771E /* DropDown.xcconfig */;
+			baseConfigurationReference = 0AA7FEA2F9E2E375BA95F1A391F3D210 /* DropDown.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -400,6 +477,41 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		0B54875E72478DF96B350DEB406607D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C2E1C937E3A896616DE5D577E1342AE /* RandomColorSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RandomColorSwift/RandomColorSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RandomColorSwift/RandomColorSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RandomColorSwift/RandomColorSwift.modulemap";
+				PRODUCT_MODULE_NAME = RandomColorSwift;
+				PRODUCT_NAME = RandomColorSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		32C2FB3BD9A2402E2347CE50F405010A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -461,9 +573,43 @@
 			};
 			name = Release;
 		};
-		41B62C05C44AA45F7FE851F842A36D0C /* Release */ = {
+		61EC4DF1C94DB8FA06CB51BFBB1E211E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96C485612DD74468B45BB1010FEA1831 /* Pods-BLT.release.xcconfig */;
+			baseConfigurationReference = 1C2E1C937E3A896616DE5D577E1342AE /* RandomColorSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RandomColorSwift/RandomColorSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RandomColorSwift/RandomColorSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RandomColorSwift/RandomColorSwift.modulemap";
+				PRODUCT_MODULE_NAME = RandomColorSwift;
+				PRODUCT_NAME = RandomColorSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		63A6E1A9A373726CA69942A75F915531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 393EAD55E46AE5EA23976D883F34D90F /* Pods-BLT.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -494,11 +640,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		65E8432CA1AC1817F746BE6B5C4F067E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -566,7 +711,7 @@
 		};
 		78AF4DA708D190124ADE261F939FBDD9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C32913CB17328F60F5C81C2E8940771E /* DropDown.xcconfig */;
+			baseConfigurationReference = 0AA7FEA2F9E2E375BA95F1A391F3D210 /* DropDown.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -600,14 +745,53 @@
 			};
 			name = Release;
 		};
+		D684EB2751F7F0E54E36CEC7D5B640C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96C485612DD74468B45BB1010FEA1831 /* Pods-BLT.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BLT/Pods-BLT-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BLT/Pods-BLT.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		37C5253776A8C2A7ADF08DAD2DFDE733 /* Build configuration list for PBXNativeTarget "Pods-BLT" */ = {
+		21D8BFB83B3621A4F06C3D85CDE6663F /* Build configuration list for PBXNativeTarget "RandomColorSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				01A3D95EC0AC5BCDE865E6361313D00E /* Debug */,
-				41B62C05C44AA45F7FE851F842A36D0C /* Release */,
+				61EC4DF1C94DB8FA06CB51BFBB1E211E /* Debug */,
+				0B54875E72478DF96B350DEB406607D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -617,6 +801,15 @@
 			buildConfigurations = (
 				65E8432CA1AC1817F746BE6B5C4F067E /* Debug */,
 				32C2FB3BD9A2402E2347CE50F405010A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D970ECC595A415BB5DE6E9FA2A57B56E /* Build configuration list for PBXNativeTarget "Pods-BLT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63A6E1A9A373726CA69942A75F915531 /* Debug */,
+				D684EB2751F7F0E54E36CEC7D5B640C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

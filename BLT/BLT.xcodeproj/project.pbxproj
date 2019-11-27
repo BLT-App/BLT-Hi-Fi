@@ -30,6 +30,8 @@
 		D721FD602378ACA300ABD1EF /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD5B2378ACA300ABD1EF /* ToDoList.swift */; };
 		D721FD632378ACA600ABD1EF /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD612378ACA600ABD1EF /* NewItemViewController.swift */; };
 		D721FD642378ACA600ABD1EF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721FD622378ACA600ABD1EF /* ListViewController.swift */; };
+		D75B7472238E551000FBE468 /* SubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75B7471238E551000FBE468 /* SubjectCell.xib */; };
+		D75B7474238E554A00FBE468 /* SubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75B7473238E554A00FBE468 /* SubjectCell.swift */; };
 		D7F0D7302378A06E0044E694 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D7F0D72F2378A06E0044E694 /* Podfile */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		D721FD5B2378ACA300ABD1EF /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		D721FD612378ACA600ABD1EF /* NewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		D721FD622378ACA600ABD1EF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		D75B7471238E551000FBE468 /* SubjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectCell.xib; sourceTree = "<group>"; };
+		D75B7473238E554A00FBE468 /* SubjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectCell.swift; sourceTree = "<group>"; };
 		D7F0D72F2378A06E0044E694 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
@@ -156,6 +160,8 @@
 				D721FD552378AA0300ABD1EF /* ToDoTableViewCell.swift */,
 				3FE3EA902378DA82002B5303 /* FocusViewController.swift */,
 				D721FD612378ACA600ABD1EF /* NewItemViewController.swift */,
+				D75B7471238E551000FBE468 /* SubjectCell.xib */,
+				D75B7473238E554A00FBE468 /* SubjectCell.swift */,
 				3FE3EA69237718DB002B5303 /* Assets.xcassets */,
 				3FE3EA6B237718DB002B5303 /* LaunchScreen.storyboard */,
 				3FE3EA6E237718DB002B5303 /* Info.plist */,
@@ -306,6 +312,7 @@
 				3FE3EA6D237718DB002B5303 /* LaunchScreen.storyboard in Resources */,
 				3FE3EA6A237718DB002B5303 /* Assets.xcassets in Resources */,
 				D7F0D7302378A06E0044E694 /* Podfile in Resources */,
+				D75B7472238E551000FBE468 /* SubjectCell.xib in Resources */,
 				3FE3EA68237718D3002B5303 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +392,7 @@
 				3FADDE1C23821718005DC492 /* SettingsTableViewController.swift in Sources */,
 				3FE3EA65237718D3002B5303 /* ViewController.swift in Sources */,
 				D721FD5D2378ACA300ABD1EF /* Milestone.swift in Sources */,
+				D75B7474238E554A00FBE468 /* SubjectCell.swift in Sources */,
 				D721FD642378ACA600ABD1EF /* ListViewController.swift in Sources */,
 				3FE3EA912378DA82002B5303 /* FocusViewController.swift in Sources */,
 				3FE3EA63237718D3002B5303 /* AppDelegate.swift in Sources */,

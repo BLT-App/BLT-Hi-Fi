@@ -23,7 +23,6 @@ class ToDoTableViewCell: UITableViewCell {
         // Initialization code
         
         classLabel.sizeThatFits(CGSize(width: classLabel.frame.size.width, height: 30))
-        
         classLabel.layer.cornerRadius = 11.0
         classLabel.clipsToBounds = true
         
@@ -33,18 +32,8 @@ class ToDoTableViewCell: UITableViewCell {
         itemView.layer.shadowOffset = CGSize(width: 0, height: 4)
         itemView.layer.shadowRadius = 5.0
         itemView.layer.masksToBounds = false
-        
-        blurEffectView.layer.cornerRadius = 20.0
-        blurEffectView.layer.masksToBounds = true
-        
-        let blurEffect = UIBlurEffect(style: .extraLight)
-        let blurView = CustomIntensityVisualEffectView(effect: blurEffect, intensity: 0.3)
-        blurView.frame = itemView.bounds
-        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurView.layer.masksToBounds = false
-        blurEffectView.insertSubview(blurView, at: 0)
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -58,9 +47,11 @@ class ToDoTableViewCell: UITableViewCell {
      */
     func setItem(item: ToDoItem) {
         classLabel.text = item.className
+        if let classColor = globalData.subjects[item.className]?.uiColor {
+            classLabel.backgroundColor = classColor
+        }
         assignmentLabel.text = item.title
         descLabel.text = item.description
-        
         dueLabel.text = item.dueString
     }
 }
@@ -82,5 +73,22 @@ class InsetLabel: UILabel {
         intrinsicSuperViewContentSize.height += topInset + bottomInset
         intrinsicSuperViewContentSize.width += leftInset + rightInset
         return intrinsicSuperViewContentSize
+    }
+}
+
+/// Blurs background of view.
+class BlurView: UIView {
+    // Very buggy right now, I'm not quite sure what's going on. 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.layer.cornerRadius = 20.0
+        self.layer.masksToBounds = true
+        
+        let blurEffect = UIBlurEffect(style: .extraLight)
+        let blurView = CustomIntensityVisualEffectView(effect: blurEffect, intensity: 0.3)
+        blurView.frame = self.bounds
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurView.layer.masksToBounds = false
+        self.insertSubview(blurView, at: 0)
     }
 }
