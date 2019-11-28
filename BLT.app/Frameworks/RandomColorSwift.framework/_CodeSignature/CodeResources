@@ -4,44 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>DropDownCell.nib/objects-13.0+.nib</key>
-		<data>
-		HFwt01Rmx4WdMauc1V2e2PpC5bM=
-		</data>
-		<key>DropDownCell.nib/runtime.nib</key>
-		<data>
-		X0LrmIV+jFUzpNK8YIBRqek7kMQ=
-		</data>
 		<key>Info.plist</key>
 		<data>
-		krx/tI/fClI3LyfPlPwZOkFZaww=
+		fLoeRGHoBfac7S/MxUcC/uGa3+M=
 		</data>
 	</dict>
 	<key>files2</key>
-	<dict>
-		<key>DropDownCell.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			HFwt01Rmx4WdMauc1V2e2PpC5bM=
-			</data>
-			<key>hash2</key>
-			<data>
-			eOMp07cwgG1ffsRDxdC+WCuFVxcaCQi69PxyUv5TV9k=
-			</data>
-		</dict>
-		<key>DropDownCell.nib/runtime.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			X0LrmIV+jFUzpNK8YIBRqek7kMQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			tdhC8+e1MN+819UedeLdMdbf/cNIKhFM6VIKesdatPE=
-			</data>
-		</dict>
-	</dict>
+	<dict/>
 	<key>rules</key>
 	<dict>
 		<key>^.*</key>
