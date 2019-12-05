@@ -15,6 +15,17 @@ class ToDoList: Codable {
     /// The list of to-do items. 
     var list: [ToDoItem]
     
+    /// The list of uncompleted to-do items.
+    var uncompletedList: [ToDoItem] {
+        var uncompleted: [ToDoItem] = []
+        for item: ToDoItem in list {
+            if !item.completed {
+                uncompleted.append(item)
+            }
+        }
+        return uncompleted
+    }
+    
     /// Initializer from decodable.
     init(from:Decodable) {
         self.list = []

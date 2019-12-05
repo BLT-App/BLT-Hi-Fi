@@ -16,13 +16,13 @@ class ToDoTableViewCell: UITableViewCell {
     @IBOutlet weak var dueLabel: UILabel!
     
     @IBOutlet weak var itemView: UIView!
+    @IBOutlet weak var blurEffectView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
         classLabel.sizeThatFits(CGSize(width: classLabel.frame.size.width, height: 30))
-        
         classLabel.layer.cornerRadius = 11.0
         classLabel.clipsToBounds = true
         
@@ -33,7 +33,7 @@ class ToDoTableViewCell: UITableViewCell {
         itemView.layer.shadowRadius = 5.0
         itemView.layer.masksToBounds = false
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -47,9 +47,11 @@ class ToDoTableViewCell: UITableViewCell {
      */
     func setItem(item: ToDoItem) {
         classLabel.text = item.className
+        if let classColor = globalData.subjects[item.className]?.uiColor {
+            classLabel.backgroundColor = classColor
+        }
         assignmentLabel.text = item.title
         descLabel.text = item.description
-        
         dueLabel.text = item.dueString
     }
 }
@@ -71,5 +73,22 @@ class InsetLabel: UILabel {
         intrinsicSuperViewContentSize.height += topInset + bottomInset
         intrinsicSuperViewContentSize.width += leftInset + rightInset
         return intrinsicSuperViewContentSize
+    }
+}
+
+/// Blurs background of view.
+class BlurView: UIView {
+    // Very buggy right now, I'm not quite sure what's going on. 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.layer.cornerRadius = 20.0
+        self.layer.masksToBounds = true
+        
+        let blurEffect = UIBlurEffect(style: .extraLight)
+        let blurView = CustomIntensityVisualEffectView(effect: blurEffect, intensity: 0.3)
+        blurView.frame = self.bounds
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurView.layer.masksToBounds = false
+        self.insertSubview(blurView, at: 0)
     }
 }

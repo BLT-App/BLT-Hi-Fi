@@ -29,6 +29,8 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
     /// Exiting button.
     @IBOutlet weak var exitButton: UIButton!
     
+    var dropDown: DropDown = DropDown()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -42,6 +44,34 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
         descText.delegate = self
         globalData.retrieveUserData()
         
+        // Loads DropDown
+        dropDown.anchorView = classText
+        dropDown.dataSource = globalData.subjectList
+        dropDown.direction = .bottom
+        dropDown.cellNib = UINib(nibName: "SubjectCell", bundle: nil)
+        
+        dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+            guard let cell = cell as? SubjectCell else { return }
+            
+            // Setup your custom UI components
+            if let color = globalData.subjects[item] {
+                cell.subjectLabel.backgroundColor = color.uiColor
+            }
+            cell.subjectLabel.sizeThatFits(CGSize(width: cell.subjectLabel.frame.size.width, height: 30))
+            cell.subjectLabel.layer.cornerRadius = 11.0
+            cell.subjectLabel.clipsToBounds = true
+        }
+        
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.classText.text = item
+            self.updateClassText()
+        }
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+
+        DropDown.appearance().textColor = .white
+        DropDown.appearance().backgroundColor = UIColor.white
+        DropDown.appearance().selectionBackgroundColor = UIColor.lightGray
+        DropDown.appearance().cornerRadius = 15
     }
 
     /// Exits the modal view/screen. 
@@ -49,20 +79,17 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    
     /// Checks if the titles are correct, then adds it to the list.
-    //let classTxt = classText.text
+    // let classTxt = classText.text
     @IBAction func addButton(_ sender: UIButton) {
-        if let titleTxt = titleText.text, let descTxt = descText.text {
+        if let classTxt = classText.text, let titleTxt = titleText.text, let descTxt = descText.text {
             // Debug for clearing/resetting entire list.
             if (titleTxt == "clear_entire_list") {
                 myToDoList.list = []
                 myToDoList.storeList()
-                
             }
-            else if (titleTxt != "" && descTxt != "") {
-                let newToDo = ToDoItem(className: selected, title: titleTxt, description: descTxt, dueDate: datePicker.date, completed: false)
+            else if (classText.text != "" && titleTxt != "" && descTxt != "") {
+                let newToDo = ToDoItem(className: classTxt, title: titleTxt, description: descTxt, dueDate: datePicker.date, completed: false)
                 myToDoList.list.insert(newToDo, at: 0)
                 myToDoList.storeList()
                 
@@ -73,6 +100,47 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
             }
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func showDropDown(_ sender: Any) {
+        updateDropDown()
+        dropDown.show()
+    }
+    
+    @IBAction func hideDropDown(_ sender: Any) {
+        dropDown.hide()
+    }
+    
+    @IBAction func subjectChanged(_ sender: UITextField) {
+        updateDropDown()
+        updateClassText()
+    }
+    
+    func updateDropDown() {
+        dropDown.dataSource = valuesStartingWith(classText.text ?? "", fromArray: globalData.subjectList)
+        dropDown.reloadAllComponents()
+        dropDown.show()
+    }
+    
+    func updateClassText() {
+        let currentClass = classText.text ?? ""
+        if let color = globalData.subjects[currentClass] {
+            classText.backgroundColor = color.uiColor
+            classText.textColor = .white
+        } else {
+            classText.backgroundColor = .white
+            classText.textColor = .black
+        }
+    }
+    
+    func valuesStartingWith(_ prefix: String, fromArray list: [String]) -> [String] {
+        var returnList: [String] = []
+        for testItem in list {
+            if prefix == "" || testItem.contains(prefix) {
+                returnList.append(testItem)
+            }
+        }
+        return returnList
     }
     
     //Tell Text Fields To Close On Hitting Enter

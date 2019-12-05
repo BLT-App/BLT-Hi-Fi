@@ -32,7 +32,7 @@ class ListViewController: UIViewController {
         
         createWave()
         
-        // Programmatically sets up
+        // Programmatically sets up rounded views.
         roundContainerView(cornerRadius: 40, view: tableContainerView, shadowView: shadowView)
         addShadow(view: shadowView, color: UIColor.gray.cgColor, opacity: 0.2, radius: 10, offset: CGSize(width: 0, height: 5))
         addShadow(view: addButton, color: UIColor.blue.cgColor, opacity: 0.1, radius: 5, offset: .zero)
@@ -44,6 +44,8 @@ class ListViewController: UIViewController {
         if myToDoList.list.count == 0 {
             myToDoList.createExampleList()
         }
+        
+        globalData.updateCourses(fromList: myToDoList)
         
         // Sets wave completion percentage, debug only.
         wave.completionInPercent = 30
@@ -82,7 +84,7 @@ class ListViewController: UIViewController {
     func createWave() {
         wave = SPWaterProgressIndicatorView(frame: waterView.bounds)
         wave.center = waterView.center
-        wave.alpha = 0.3
+        wave.alpha = 0.4
         waterView.addSubview(wave)
         
 //        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
@@ -174,6 +176,25 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
         let movedItem = myToDoList.list[sourceIndexPath.row]
         myToDoList.list.remove(at: sourceIndexPath.row)
         myToDoList.list.insert(movedItem, at: destinationIndexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let configuration = UISwipeActionsConfiguration(actions: [contextualCompletedAction(forRowAtIndexPath: indexPath)])
+        return configuration
+    }
+    
+    func contextualCompletedAction(forRowAtIndexPath indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .normal, title: "Complete") { (contextAction: UIContextualAction, sourceView: UIView, completionHandler: (Bool) -> Void) in
+            myToDoList.list.remove(at: indexPath.row)
+            myToDoList.storeList()
+            self.tableView.beginUpdates()
+            self.tableView.deleteRows(at: [indexPath], with: .top)
+            self.tableView.endUpdates()
+            self.tableView.reloadData()
+            completionHandler(true)
+        }
+        action.backgroundColor = .blue
+        return action
     }
     
     /**

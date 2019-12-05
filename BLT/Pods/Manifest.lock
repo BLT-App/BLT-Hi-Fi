@@ -1,16 +1,20 @@
 PODS:
   - DropDown (2.3.4)
+  - RandomColorSwift (1.0.0)
 
 DEPENDENCIES:
   - DropDown (= 2.3.4)
+  - RandomColorSwift
 
 SPEC REPOS:
   trunk:
     - DropDown
+    - RandomColorSwift
 
 SPEC CHECKSUMS:
   DropDown: f225ff0fd09dde064d17aa03db7e4d4e4ff40b6b
+  RandomColorSwift: 9f85058b721665d52d239ca166a913e083506444
 
-PODFILE CHECKSUM: e75c0b25ab226e410e24a5c5e678507d65fa7345
+PODFILE CHECKSUM: e4384092b85e89314a417697939211ef05b81283
 
 COCOAPODS: 1.8.4
