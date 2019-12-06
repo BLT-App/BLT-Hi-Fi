@@ -2,6 +2,8 @@ name: Swift Project Build Test
 
 on: 
   push:
+    branches:
+    - 'master'
     paths-ignore:
     - '**/BLT.app'
     - '**/BLT.app/**'
