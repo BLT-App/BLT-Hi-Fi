@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="154" width="414" height="742"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gx1-ez-8eU">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="742"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="663"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egg-sz-gdj">
@@ -44,7 +44,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="131"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3H-XA-Gj7">
+                                                        <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3H-XA-Gj7">
                                                             <rect key="frame" x="20" y="10" width="374" height="111"/>
                                                             <subviews>
                                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4GW-kH-nia" customClass="BlurView" customModule="BLT" customModuleProvider="target">
@@ -129,13 +129,13 @@
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="Gx1-ez-8eU" firstAttribute="top" secondItem="1fM-dr-zu8" secondAttribute="top" id="9VF-8R-AFK"/>
-                                    <constraint firstAttribute="trailing" secondItem="Gx1-ez-8eU" secondAttribute="trailing" id="FyX-4E-JkF"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gx1-ez-8eU" secondAttribute="trailing" id="Fby-t6-Qy0"/>
                                     <constraint firstItem="egg-sz-gdj" firstAttribute="leading" secondItem="1fM-dr-zu8" secondAttribute="leading" id="GKC-Wb-Ra9"/>
-                                    <constraint firstAttribute="bottom" secondItem="Gx1-ez-8eU" secondAttribute="bottom" id="HWp-Fi-hwh"/>
                                     <constraint firstItem="egg-sz-gdj" firstAttribute="top" secondItem="1fM-dr-zu8" secondAttribute="top" id="J4e-Us-2ql"/>
-                                    <constraint firstItem="Gx1-ez-8eU" firstAttribute="leading" secondItem="1fM-dr-zu8" secondAttribute="leading" id="V6a-im-5Zv"/>
+                                    <constraint firstItem="Gx1-ez-8eU" firstAttribute="leading" secondItem="1fM-dr-zu8" secondAttribute="leading" id="LKo-U2-svz"/>
                                     <constraint firstAttribute="trailing" secondItem="egg-sz-gdj" secondAttribute="trailing" id="iYV-4c-8p0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gx1-ez-8eU" secondAttribute="bottom" constant="79" id="lAr-I9-n2x"/>
+                                    <constraint firstItem="Gx1-ez-8eU" firstAttribute="top" secondItem="1fM-dr-zu8" secondAttribute="top" id="qLn-TP-zAk"/>
                                     <constraint firstAttribute="bottom" secondItem="egg-sz-gdj" secondAttribute="bottom" id="rpL-la-Rmv"/>
                                 </constraints>
                             </view>
