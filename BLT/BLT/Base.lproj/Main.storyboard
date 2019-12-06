@@ -511,6 +511,44 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Focus Mode Preferences" id="ML7-gM-YqE">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Dk7-4l-42n" userLabel="Date Sort">
+                                        <rect key="frame" x="0.0" y="406.5" width="262" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dk7-4l-42n" id="CjL-Tj-FiJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="262" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="teL-5F-rg7">
+                                                    <rect key="frame" x="5" y="7" width="252" height="30"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus Mode End Button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8U-cy-IiM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="198" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vhm-fn-t9O">
+                                                            <rect key="frame" x="203" y="0.0" width="51" height="30"/>
+                                                            <connections>
+                                                                <action selector="focusModeSwitch:" destination="TjU-qM-9mM" eventType="valueChanged" id="vAV-jW-c0n"/>
+                                                                <action selector="sortListSwitch:" destination="TjU-qM-9mM" eventType="valueChanged" id="YxD-BJ-req"/>
+                                                            </connections>
+                                                        </switch>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="teL-5F-rg7" firstAttribute="leading" secondItem="CjL-Tj-FiJ" secondAttribute="leading" constant="5" id="4dL-MH-S9I"/>
+                                                <constraint firstAttribute="trailing" secondItem="teL-5F-rg7" secondAttribute="trailing" constant="5" id="HPm-Fc-8gJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="teL-5F-rg7" secondAttribute="bottom" constant="6.5" id="V8o-5C-W8u"/>
+                                                <constraint firstItem="teL-5F-rg7" firstAttribute="top" secondItem="CjL-Tj-FiJ" secondAttribute="top" constant="7" id="tLf-bf-bFY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="TjU-qM-9mM" id="V8c-vq-Xw5"/>
@@ -518,6 +556,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="FocusModeButton" destination="vhm-fn-t9O" id="KRp-1x-nE9"/>
                         <outlet property="addClassField" destination="WBP-iH-JOU" id="IVq-dc-RYN"/>
                         <outlet property="btnAddClass" destination="swW-Md-KOV" id="F5f-7T-NWV"/>
                         <outlet property="firstNameField" destination="QBY-51-B02" id="Xo4-s5-eBL"/>

@@ -16,7 +16,7 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
     /// Current index of the task displayed
     var currentTaskNum : Int = 0
     /// Timer that handles the countdown
-    var myTimer : FocusTimer = FocusTimer(15,0)
+    var myTimer : FocusTimer = FocusTimer(1,00)
 
     @IBOutlet weak var lblCurrentTask: UILabel!
     
@@ -28,21 +28,34 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupButtons()
         
-        myTimer = FocusTimer(15,0)
+        myTimer = FocusTimer(1,00)
         myTimer.delegate = self
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         hideTabBar()
+        print("view has appeared")
+        if includeEndButton{
+            endFocusModeButton.isEnabled = false
+            endFocusModeButton.isHidden = true
+            print("isEnabled: ", endFocusModeButton.isEnabled)
+        }
+            
+        else{
+            endFocusModeButton.isEnabled = true
+            endFocusModeButton.isHidden = false
+        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         setCurrentTask()
-        myTimer.mins = 15
+        myTimer.mins = 1
         myTimer.secs = 00
         myTimer.runTimer()
     }
@@ -126,7 +139,11 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
     
     ///Runs when the timer has hit zero
     func timerEnded() {
-        
+        print("timerEnded called")
+        if includeEndButton {
+            endFocusModeButton.isEnabled = true
+            endFocusModeButton.isHidden = false
+        }
     }
     
     /// Pressing on complete task that queues the next task.
