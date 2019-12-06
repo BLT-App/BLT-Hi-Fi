@@ -8,15 +8,20 @@
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
+var includeEndButton: Bool = true
 
+class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
+    
+    
     weak var delegate : SettingsTableViewControllerDelegate?
+    
     
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var sortListSwitch: UISwitch!
     @IBOutlet weak var btnAddClass: UIButton!
     
+    @IBOutlet weak var focusModeButton: UISwitch!
     @IBOutlet weak var addClassField: UITextField!
     
     override func viewDidLoad() {
@@ -28,6 +33,7 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
         sortListSwitch.isOn = globalData.wantsListByDate
         addClassField.delegate = self
     }
+    
     //Tell Text Fields To Close On Hitting Enter
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
@@ -38,10 +44,12 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
         globalData.firstName = sender.text ?? ""
         globalData.saveUserData()
     }
+    
     @IBAction func lastNameEntered(_ sender: UITextField) {
         globalData.lastName = sender.text ?? ""
         globalData.saveUserData()
     }
+    
     @IBAction func sortListSwitch(_ sender: UISwitch) {
         globalData.wantsListByDate = sender.isOn
         globalData.saveUserData()
@@ -51,6 +59,7 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
             myToDoList.sortList()
         }
     }
+    
     @IBAction func newClassEntered(_ sender: UITextField) {
         if sender.text != "" {
             btnAddClass.isHidden = false
@@ -65,6 +74,17 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     
+    @IBAction func focusModeSwitch(_ sender: UISwitch) {
+        if focusModeButton.isOn {
+            includeEndButton = true
+            print(includeEndButton)
+        }
+        else if focusModeButton.isOn == false
+        {
+            includeEndButton = false
+            print(includeEndButton)
+        }
+    }
 }
 
 protocol SettingsTableViewControllerDelegate : class {
