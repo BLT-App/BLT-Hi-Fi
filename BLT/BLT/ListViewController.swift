@@ -19,11 +19,13 @@ class ListViewController: UIViewController {
     @IBOutlet weak var tableContainerView: UIView!
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var addButton: UIButton!
-    var wave: SPWaterProgressIndicatorView = SPWaterProgressIndicatorView()
     
     var deleteListIndexPath: IndexPath? = nil
     
     var selectedIndex: Int = -1
+    
+    var waves: WaterView = WaterView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +48,6 @@ class ListViewController: UIViewController {
         }
         
         globalData.updateCourses(fromList: myToDoList)
-        
-        // Sets wave completion percentage, debug only.
-        wave.completionInPercent = 30
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -82,16 +81,10 @@ class ListViewController: UIViewController {
     
     /// Sets up wave view in the background.
     func createWave() {
-        wave = SPWaterProgressIndicatorView(frame: waterView.bounds)
-        wave.center = waterView.center
-        wave.alpha = 0.4
-        waterView.addSubview(wave)
-        
-//        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
-//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-//        blurEffectView.frame = waterView.bounds
-//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        waterView.addSubview(blurEffectView)
+        waves = WaterView(frame: waterView.frame)
+        waves.numberOfWaves = 8
+        waves.amplitude = self.view.frame.height / 40.0
+        waterView.addSubview(waves)
     }
     
     /**
