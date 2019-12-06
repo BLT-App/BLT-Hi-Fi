@@ -34,7 +34,7 @@ class WaterView: UIView, RenderTimerDelegate {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.cyan
+        self.backgroundColor = UIColor.white
         renderTimer = RenderTimer()
         renderTimer.delegate = self
         renderTimer.runTimer(interval: 0.07)
@@ -72,7 +72,7 @@ class WaterView: UIView, RenderTimerDelegate {
             //print(CGFloat(sin(currentWaveStart + xMod)) + yHeight + baseYVal)
             path1.move(to: CGPoint(x: -1, y: CGFloat(sin(currentWaveStart + xMod)) + yHeight + baseYVal))
             for screenLocX in 0..<Int(self.frame.width) {
-                let sinInput : CGFloat = currentWaveStart + ((CGFloat(screenLocX) + xMod) / CGFloat((Double.pi * 20)))
+                let sinInput : CGFloat = currentWaveStart + ((CGFloat(screenLocX) + xMod) / CGFloat(self.frame.width / CGFloat(Double.pi * 2)))
                 let waveAmplitude : CGFloat = (amplitude * (((CGFloat(waveNum) + 10.0) / (CGFloat(numberOfWaves) + 10.0))))
                 path1.addLine(to: CGPoint(x: CGFloat(screenLocX), y: CGFloat(sin(sinInput)) * waveAmplitude + baseYVal + yHeight))
             }
