@@ -54,7 +54,7 @@ class WaterView: UIView, RenderTimerDelegate {
     
     //Called from RenderTimer Class on Interval
     func render() {
-        currentWaveStart = currentWaveStart + 0.2
+        currentWaveStart = currentWaveStart + 0.1
         if currentWaveStart > 4 * CGFloat(Double.pi) {
             currentWaveStart = currentWaveStart - (CGFloat(Double.pi)  * ((currentWaveStart / CGFloat(Double.pi)) - 2))
         }
@@ -73,7 +73,7 @@ class WaterView: UIView, RenderTimerDelegate {
             path1.move(to: CGPoint(x: -1, y: CGFloat(sin(currentWaveStart + xMod)) + yHeight + baseYVal))
             for screenLocX in 0..<Int(self.frame.width) {
                 let sinInput : CGFloat = currentWaveStart + ((CGFloat(screenLocX) + xMod) / CGFloat((Double.pi * 20)))
-                let waveAmplitude : CGFloat = (amplitude * (4.0 / (CGFloat(waveNum) + 4.0)))
+                let waveAmplitude : CGFloat = (amplitude * (((CGFloat(waveNum) + 10.0) / (CGFloat(numberOfWaves) + 10.0))))
                 path1.addLine(to: CGPoint(x: CGFloat(screenLocX), y: CGFloat(sin(sinInput)) * waveAmplitude + baseYVal + yHeight))
             }
             path1.addLine(to: CGPoint(x: self.frame.width, y: self.frame.height))
@@ -84,8 +84,8 @@ class WaterView: UIView, RenderTimerDelegate {
             path1.fill()
             path1.stroke()
             paths.append(path1)
-            yHeight = yHeight + waveVerticalSeparation
-            xMod = xMod + 20
+            yHeight = yHeight + waveVerticalSeparation * ((1.0 / CGFloat(numberOfWaves)) * (CGFloat(numberOfWaves) / (CGFloat(numberOfWaves - waveNum) + 1.0)))
+            xMod = xMod + 10
         }
         
         for path2 in paths {
