@@ -20,11 +20,17 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
 
     @IBOutlet weak var lblCurrentTask: UILabel!
     
+    @IBOutlet weak var lblCurrentTaskDesc: UILabel!
+    
     @IBOutlet weak var btnCompleteTask: UIButton!
     
     @IBOutlet weak var endFocusModeButton: UIButton!
     
     @IBOutlet weak var timerDisplay: UILabel!
+    
+    @IBOutlet weak var itemView: UIView!
+    
+    @IBOutlet weak var classLabel: InsetLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +39,20 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
         myTimer = FocusTimer(1,00)
         myTimer.delegate = self
         
+        setupClassLabel()
         
+        itemView.layer.cornerRadius = 20.0
+        itemView.layer.shadowColor = UIColor.gray.cgColor
+        itemView.layer.shadowOpacity = 0.2
+        itemView.layer.shadowOffset = CGSize(width: 0, height: 4)
+        itemView.layer.shadowRadius = 5.0
+        itemView.layer.masksToBounds = false
+    }
+    
+    func setupClassLabel() {
+        classLabel.sizeThatFits(CGSize(width: classLabel.frame.size.width, height: 30))
+        classLabel.layer.cornerRadius = 15.0
+        classLabel.clipsToBounds = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -119,8 +138,14 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
             if !notFoundNextItem {
                 currentTask = myToDoList.list[currentTaskNum]
                 lblCurrentTask.text = currentTask.title
+                lblCurrentTaskDesc.text = currentTask.description
+                classLabel.text = currentTask.className
+                classLabel.backgroundColor = globalData.subjects[currentTask.className]?.uiColor
+                
             } else {
-                lblCurrentTask.text = "No Items Left Todo"
+                lblCurrentTask.text = "No Items Left To Do"
+                lblCurrentTaskDesc.isHidden = true
+                classLabel.isHidden = true
                 btnCompleteTask.isEnabled = false
                 btnCompleteTask.isHidden = true
             }
