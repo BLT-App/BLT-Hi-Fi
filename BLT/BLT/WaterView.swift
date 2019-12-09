@@ -22,19 +22,23 @@ class WaterView: UIView, RenderTimerDelegate {
     //Number of Wave Layers
     var numberOfWaves : Int = 8
     //Vertical Separation Between Waves
-    var waveVerticalSeparation : CGFloat = 20
+    var waveVerticalSeparation : CGFloat = 10
     //Percent of Screen The Wave Will Take Up
     var percentOfFrameFilled : Double = 30
     //Actual Starting Y Value for Base Wave
     var baseYVal : CGFloat {
         return self.frame.height - (CGFloat(self.percentOfFrameFilled) * 0.01 * self.frame.height)
     }
+    //Wavelength of Wave in Pixels
+    var waveLength : CGFloat = -1
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = UIColor.groupTableViewBackground
+        self.waveLength = self.frame.width / CGFloat(Double.pi * 2)
+        
         renderTimer = RenderTimer()
         renderTimer.delegate = self
         renderTimer.runTimer(interval: 0.07)
@@ -69,23 +73,40 @@ class WaterView: UIView, RenderTimerDelegate {
         for waveNum in 0..<numberOfWaves{
             
             let path1 = UIBezierPath()
-            //print(CGFloat(sin(currentWaveStart + xMod)) + yHeight + baseYVal)
             path1.move(to: CGPoint(x: -1, y: CGFloat(sin(currentWaveStart + xMod)) + yHeight + baseYVal))
+            
             for screenLocX in 0..<Int(self.frame.width) {
-                let sinInput : CGFloat = currentWaveStart + ((CGFloat(screenLocX) + xMod) / CGFloat(self.frame.width / CGFloat(Double.pi * 2)))
-                let waveAmplitude : CGFloat = (amplitude * (((CGFloat(waveNum) + 10.0) / (CGFloat(numberOfWaves) + 10.0))))
+                let sinInput : CGFloat = currentWaveStart + ((CGFloat(screenLocX) + xMod) / waveLength) / (CGFloat(waveNum + 1) / (CGFloat(numberOfWaves) / 6.0))
+                
+                //Increased Amplitude in Front
+                //let waveAmplitude : CGFloat = (amplitude * (((CGFloat(waveNum) + 10.0) / (CGFloat(numberOfWaves) + 10.0))))
+                //Increased Amplitude in Back
+                let waveAmplitude : CGFloat = amplitude * (4.0 / (CGFloat(waveNum) + 4.0))
+                
                 path1.addLine(to: CGPoint(x: CGFloat(screenLocX), y: CGFloat(sin(sinInput)) * waveAmplitude + baseYVal + yHeight))
             }
             path1.addLine(to: CGPoint(x: self.frame.width, y: self.frame.height))
             path1.addLine(to: CGPoint(x: 0.0, y: self.frame.height))
             path1.close()
-            UIColor(hue: CGFloat(202.0 / 360.0) + (0.001 * CGFloat(waveNum)), saturation: ((35.0 / CGFloat(numberOfWaves)) * CGFloat(waveNum) + 40.0) / 100.0, brightness: 0.8, alpha: (0.82 / (CGFloat(numberOfWaves) + 1)) * (CGFloat(waveNum) + 1.0)).setFill()
-            path1.lineWidth = 3.0 / ( (CGFloat(numberOfWaves) - CGFloat(waveNum)) / CGFloat(numberOfWaves) * 2.0 + 1.0)
-            path1.fill()
-            path1.stroke()
+            
+            UIColor(hue: CGFloat(202.0 / 360.0) + (0.001 * CGFloat(waveNum)), saturation: ((35.0 / CGFloat(numberOfWaves)) * CGFloat(waveNum) + 40.0) / 100.0, brightness: 0.8, alpha: (0.85 / (CGFloat(numberOfWaves) + 1)) * (CGFloat(waveNum) + 1.0)).setFill()
+            
+            path1.lineWidth = 0.5 / ( (CGFloat(numberOfWaves) - CGFloat(waveNum)) / CGFloat(numberOfWaves) * 2.0 + 1.0)
+            
+            
+            if waveNum == numberOfWaves {
+                path1.stroke()
+            }
+            if waveNum != numberOfWaves {
+                path1.fill()
+            }
             paths.append(path1)
-            yHeight = yHeight + waveVerticalSeparation * ((1.0 / CGFloat(numberOfWaves)) * (CGFloat(numberOfWaves) / (CGFloat(numberOfWaves - waveNum) + 1.0)))
-            xMod = xMod + 10
+            
+            //Adds Separation Decay
+            //yHeight = yHeight + waveVerticalSeparation * ((1.0 / CGFloat(numberOfWaves)) * (CGFloat(numberOfWaves) / (CGFloat(numberOfWaves - waveNum) + 1.0)))
+            //Without Separation Decay
+            yHeight = yHeight + waveVerticalSeparation
+            xMod = xMod + 20
         }
         
         for path2 in paths {
