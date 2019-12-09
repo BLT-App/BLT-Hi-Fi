@@ -32,7 +32,7 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
         lastNameField.delegate = self
         sortListSwitch.isOn = globalData.wantsListByDate
         addClassField.delegate = self
-        
+        focusModeButton.isOn = globalData.includeEndFocusButton
         
     }
     
@@ -78,6 +78,7 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
     
     @IBAction func focusModeSwitch(_ sender: UISwitch) {
         globalData.includeEndFocusButton = focusModeButton.isOn
+        globalData.saveUserData()
         print(globalData.includeEndFocusButton)
     }
 }

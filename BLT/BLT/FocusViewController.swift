@@ -40,7 +40,7 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
         super.viewDidAppear(animated)
         hideTabBar()
         print("view has appeared")
-        
+        print(globalData.includeEndFocusButton)
         if !globalData.includeEndFocusButton {
             endFocusModeButton.isEnabled = false
             endFocusModeButton.isHidden = true
@@ -149,10 +149,10 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
     ///Runs when the timer has hit zero
     func timerEnded() {
         print("timerEnded called")
-        if !globalData.includeEndFocusButton {
+        
             endFocusModeButton.isEnabled = true
             endFocusModeButton.isHidden = false
-        }
+        
         
 
     }
