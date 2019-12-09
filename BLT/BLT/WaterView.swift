@@ -11,25 +11,24 @@ import Foundation
 
 class WaterView: UIView, RenderTimerDelegate {
     
-    //Path for view
+    /// Path for view
     var path: UIBezierPath!
-    //Class to manage rendering the waves on a set interval
+    /// Class to manage rendering the waves on a set interval
     var renderTimer : RenderTimer = RenderTimer()
-    //Start Position of Waves
+    /// Start Position of Waves
     var currentWaveStart : CGFloat = 0
-    //Amplitude of Base Wave
+    /// Amplitude of Base Wave
     var amplitude : CGFloat = 10
-    //Number of Wave Layers
-    var numberOfWaves : Int = 8
-    //Vertical Separation Between Waves
+    /// Number of Wave Layers
+    var numberOfWaves : Int = 3
+    /// Vertical Separation Between Waves
     var waveVerticalSeparation : CGFloat = 20
-    //Percent of Screen The Wave Will Take Up
+    /// Percent of Screen The Wave Will Take Up
     var percentOfFrameFilled : Double = 30
-    //Actual Starting Y Value for Base Wave
+    /// Actual Starting Y Value for Base Wave
     var baseYVal : CGFloat {
         return self.frame.height - (CGFloat(self.percentOfFrameFilled) * 0.01 * self.frame.height)
     }
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -54,7 +53,7 @@ class WaterView: UIView, RenderTimerDelegate {
     
     //Called from RenderTimer Class on Interval
     func render() {
-        currentWaveStart = currentWaveStart + 0.1
+        currentWaveStart = currentWaveStart + 0.03
         if currentWaveStart > 4 * CGFloat(Double.pi) {
             currentWaveStart = currentWaveStart - (CGFloat(Double.pi)  * ((currentWaveStart / CGFloat(Double.pi)) - 2))
         }

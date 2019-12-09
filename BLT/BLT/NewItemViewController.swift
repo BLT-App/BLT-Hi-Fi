@@ -98,6 +98,7 @@ class NewItemViewController: UIViewController, UITextFieldDelegate  {
                     myToDoList.sortList()
                 }
             }
+            globalData.updateCourses(fromList: myToDoList)
             self.dismiss(animated: true, completion: nil)
         }
     }
