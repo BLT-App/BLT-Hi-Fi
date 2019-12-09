@@ -8,7 +8,7 @@
 
 import UIKit
 
-var includeEndButton: Bool = true
+//var includeEndButton: Bool = true
 
 class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
     
@@ -32,6 +32,8 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
         lastNameField.delegate = self
         sortListSwitch.isOn = globalData.wantsListByDate
         addClassField.delegate = self
+        
+        
     }
     
     //Tell Text Fields To Close On Hitting Enter
@@ -75,15 +77,8 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
     
     
     @IBAction func focusModeSwitch(_ sender: UISwitch) {
-        if focusModeButton.isOn {
-            includeEndButton = true
-            print(includeEndButton)
-        }
-        else if focusModeButton.isOn == false
-        {
-            includeEndButton = false
-            print(includeEndButton)
-        }
+        globalData.includeEndFocusButton = focusModeButton.isOn
+        print(globalData.includeEndFocusButton)
     }
 }
 
