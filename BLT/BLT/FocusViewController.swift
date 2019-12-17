@@ -59,16 +59,25 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
         super.viewDidAppear(animated)
         hideTabBar()
         print("view has appeared")
-        if includeEndButton{
+        print(globalData.includeEndFocusButton)
+        if !globalData.includeEndFocusButton {
             endFocusModeButton.isEnabled = false
             endFocusModeButton.isHidden = true
-            print("isEnabled: ", endFocusModeButton.isEnabled)
         }
-            
         else{
             endFocusModeButton.isEnabled = true
             endFocusModeButton.isHidden = false
         }
+//        if includeEndButton{
+//            endFocusModeButton.isEnabled = false
+//            endFocusModeButton.isHidden = true
+//            print("isEnabled: ", endFocusModeButton.isEnabled)
+//        }
+//
+//        else{
+//            endFocusModeButton.isEnabled = true
+//            endFocusModeButton.isHidden = false
+//        }
 
     }
     
@@ -165,10 +174,12 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
     ///Runs when the timer has hit zero
     func timerEnded() {
         print("timerEnded called")
-        if includeEndButton {
+        
             endFocusModeButton.isEnabled = true
             endFocusModeButton.isHidden = false
-        }
+        
+        
+
     }
     
     /// Pressing on complete task that queues the next task.
