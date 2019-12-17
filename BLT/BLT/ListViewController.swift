@@ -19,6 +19,7 @@ class ListViewController: UIViewController {
     @IBOutlet weak var tableContainerView: UIView!
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var assignmentsLeftLabel: UILabel!
     
     var deleteListIndexPath: IndexPath? = nil
     
@@ -67,7 +68,13 @@ class ListViewController: UIViewController {
         if globalData.wantsListByDate {
             myToDoList.list = myToDoList.list.sorted()
         }
+        updateText()
         tableView.reloadData()
+    }
+    
+    func updateText() {
+        let pluralSingularAssignment = (myToDoList.list.count == 1) ? "assignment" : "assignments"
+        assignmentsLeftLabel.text = "\(myToDoList.list.count) \(pluralSingularAssignment) left."
     }
     
     /**
@@ -191,7 +198,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
             self.tableView.beginUpdates()
             self.tableView.deleteRows(at: [indexPath], with: .top)
             self.tableView.endUpdates()
-            self.tableView.reloadData()
+            self.updateText()
             completionHandler(true)
         }
         action.backgroundColor = .blue
@@ -226,6 +233,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
             tableView.endUpdates()
             
             deleteListIndexPath = nil
+            updateText()
         }
     }
     

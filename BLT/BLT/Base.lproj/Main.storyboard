@@ -146,7 +146,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="194"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 assignments left. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUW-3F-lDT">
-                                                <rect key="frame" x="31" y="150" width="147.5" height="21"/>
+                                                <rect key="frame" x="31" y="150" width="148" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -227,6 +227,7 @@
                     <connections>
                         <outlet property="addButton" destination="UQ4-EY-KfT" id="vgQ-Q2-qTV"/>
                         <outlet property="addTaskButton" destination="Qkn-Qn-9ou" id="Bc1-98-0Zo"/>
+                        <outlet property="assignmentsLeftLabel" destination="xUW-3F-lDT" id="ZM1-Hs-o8U"/>
                         <outlet property="shadowView" destination="vjA-AA-hQo" id="YMN-TZ-hXZ"/>
                         <outlet property="tableContainerView" destination="GcL-1G-LKs" id="ccU-mV-6Ir"/>
                         <outlet property="tableView" destination="egg-sz-gdj" id="WYX-MC-djl"/>
