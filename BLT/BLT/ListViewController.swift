@@ -53,12 +53,20 @@ class ListViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if (myToDoList.list.count != tableView.numberOfRows(inSection: 0)) {
+        if (myToDoList.list.count > tableView.numberOfRows(inSection: 0)) {
             insertNewTask()
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        update()
+    }
+    
     func update() {
+        if globalData.wantsListByDate {
+            myToDoList.list = myToDoList.list.sorted()
+        }
         tableView.reloadData()
     }
     

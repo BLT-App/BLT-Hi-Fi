@@ -60,14 +60,6 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
         hideTabBar()
         print("view has appeared")
         print(globalData.includeEndFocusButton)
-        if !globalData.includeEndFocusButton {
-            endFocusModeButton.isEnabled = false
-            endFocusModeButton.isHidden = true
-        }
-        else{
-            endFocusModeButton.isEnabled = true
-            endFocusModeButton.isHidden = false
-        }
 //        if includeEndButton{
 //            endFocusModeButton.isEnabled = false
 //            endFocusModeButton.isHidden = true
@@ -83,6 +75,16 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         setCurrentTask()
+        
+        if (!globalData.includeEndFocusButton && myToDoList.list.count > 0) {
+            endFocusModeButton.isEnabled = false
+            endFocusModeButton.isHidden = true
+        }
+        else {
+            endFocusModeButton.isEnabled = true
+            endFocusModeButton.isHidden = false
+        }
+        
         myTimer.mins = 1
         myTimer.secs = 00
         myTimer.runTimer()
@@ -150,6 +152,10 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
                 lblCurrentTaskDesc.text = currentTask.description
                 classLabel.text = currentTask.className
                 classLabel.backgroundColor = globalData.subjects[currentTask.className]?.uiColor
+                lblCurrentTaskDesc.isHidden = false
+                classLabel.isHidden = false
+                btnCompleteTask.isEnabled = true
+                btnCompleteTask.isHidden = false
                 
             } else {
                 lblCurrentTask.text = "No Items Left To Do"
@@ -157,12 +163,18 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
                 classLabel.isHidden = true
                 btnCompleteTask.isEnabled = false
                 btnCompleteTask.isHidden = true
+                endFocusModeButton.isEnabled = true
+                endFocusModeButton.isHidden = false
             }
         }
         else {
             lblCurrentTask.text = "No Items In Todo List"
+            lblCurrentTaskDesc.isHidden = true
+            classLabel.isHidden = true
             btnCompleteTask.isEnabled = false
             btnCompleteTask.isHidden = true
+            endFocusModeButton.isEnabled = true
+            endFocusModeButton.isHidden = false
         }
     }
     
@@ -185,6 +197,7 @@ class FocusViewController: UIViewController, FocusTimerDelegate {
     /// Pressing on complete task that queues the next task.
     @IBAction func completeTaskPress(_ sender: UIButton) {
         myToDoList.list[currentTaskNum].completed = true
+        myToDoList.list.remove(at: currentTaskNum)
         setCurrentTask()
     }
     
