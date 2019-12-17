@@ -23,6 +23,7 @@ class UserData: Codable {
     var wantsListByDate: Bool
     var firstName: String
     var lastName: String
+    var includeEndFocusButton: Bool
     
     /// Adds subject
     func addSubject(name: String) {
@@ -49,6 +50,7 @@ class UserData: Codable {
             self.firstName = decodedUserData.firstName
             self.lastName = decodedUserData.lastName
             self.wantsListByDate = decodedUserData.wantsListByDate
+            self.includeEndFocusButton = decodedUserData.includeEndFocusButton
         }
     }
     
@@ -59,7 +61,9 @@ class UserData: Codable {
         wantsListByDate = true
         firstName = ""
         lastName = ""
+        includeEndFocusButton = true
         retrieveUserData()
+        
     }
     
     /// Updates user data. Contains the information about the list of courses.
