@@ -51,15 +51,13 @@ class ItemViewController: UIViewController {
         exitButton.layer.masksToBounds = false
     }
     
-    
-    
-    
     @IBAction func backButton(_ sender: UIButton) {
         if let classTxt = classNameField.text, let titleTxt = assignmentField.text, let descTxt = descriptionField.text, let thisIndex = targetIndex {
             // Debug for clearing/resetting entire list.
             if (classTxt != "" && titleTxt != "") {
                 myToDoList.list[thisIndex] = ToDoItem(className: classTxt, title: titleTxt, description: descTxt, dueDate: datePicker.date, completed: myToDoList.list[thisIndex].completed)
                 myToDoList.storeList()
+                globalData.updateCourses(fromList: myToDoList)
                 
                 //If Users Have it Set, Sort List By Due Date
                 if globalData.wantsListByDate {
